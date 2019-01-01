@@ -1,0 +1,38 @@
+D:\Projects\projects c#\messager\obj\Debug\net6.0-windows\Shkiper.csproj.AssemblyReference.cache
+D:\Projects\projects c#\messager\obj\Debug\net6.0-windows\Shkiper.FormReady.resources
+D:\Projects\projects c#\messager\obj\Debug\net6.0-windows\Shkiper.FormRegistration.resources
+D:\Projects\projects c#\messager\obj\Debug\net6.0-windows\Shkiper.FormWelcome.resources
+D:\Projects\projects c#\messager\obj\Debug\net6.0-windows\Shkiper.csproj.GenerateResource.cache
+D:\Projects\projects c#\messager\obj\Debug\net6.0-windows\Shkiper.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\projects c#\messager\obj\Debug\net6.0-windows\Shkiper.AssemblyInfoInputs.cache
+D:\Projects\projects c#\messager\obj\Debug\net6.0-windows\Shkiper.AssemblyInfo.cs
+D:\Projects\projects c#\messager\obj\Debug\net6.0-windows\Shkiper.csproj.CoreCompileInputs.cache
+D:\Projects\projects c#\messager\bin\Debug\net6.0-windows\Shkiper.exe
+D:\Projects\projects c#\messager\bin\Debug\net6.0-windows\Shkiper.deps.json
+D:\Projects\projects c#\messager\bin\Debug\net6.0-windows\Shkiper.runtimeconfig.json
+D:\Projects\projects c#\messager\bin\Debug\net6.0-windows\Shkiper.dll
+D:\Projects\projects c#\messager\bin\Debug\net6.0-windows\Shkiper.pdb
+D:\Projects\projects c#\messager\obj\Debug\net6.0-windows\Shkiper.dll
+D:\Projects\projects c#\messager\obj\Debug\net6.0-windows\refint\Shkiper.dll
+D:\Projects\projects c#\messager\obj\Debug\net6.0-windows\Shkiper.pdb
+D:\Projects\projects c#\messager\obj\Debug\net6.0-windows\Shkiper.genruntimeconfig.cache
+D:\Projects\projects c#\messager\obj\Debug\net6.0-windows\ref\Shkiper.dll
+D:\PROJECTS_IN_WORK\Messager_Shkiper\bin\Debug\net6.0-windows\Shkiper.exe
+D:\PROJECTS_IN_WORK\Messager_Shkiper\bin\Debug\net6.0-windows\Shkiper.deps.json
+D:\PROJECTS_IN_WORK\Messager_Shkiper\bin\Debug\net6.0-windows\Shkiper.runtimeconfig.json
+D:\PROJECTS_IN_WORK\Messager_Shkiper\bin\Debug\net6.0-windows\Shkiper.dll
+D:\PROJECTS_IN_WORK\Messager_Shkiper\bin\Debug\net6.0-windows\Shkiper.pdb
+D:\PROJECTS_IN_WORK\Messager_Shkiper\obj\Debug\net6.0-windows\Shkiper.csproj.AssemblyReference.cache
+D:\PROJECTS_IN_WORK\Messager_Shkiper\obj\Debug\net6.0-windows\Shkiper.FormReady.resources
+D:\PROJECTS_IN_WORK\Messager_Shkiper\obj\Debug\net6.0-windows\Shkiper.FormRegistration.resources
+D:\PROJECTS_IN_WORK\Messager_Shkiper\obj\Debug\net6.0-windows\Shkiper.FormWelcome.resources
+D:\PROJECTS_IN_WORK\Messager_Shkiper\obj\Debug\net6.0-windows\Shkiper.csproj.GenerateResource.cache
+D:\PROJECTS_IN_WORK\Messager_Shkiper\obj\Debug\net6.0-windows\Shkiper.GeneratedMSBuildEditorConfig.editorconfig
+D:\PROJECTS_IN_WORK\Messager_Shkiper\obj\Debug\net6.0-windows\Shkiper.AssemblyInfoInputs.cache
+D:\PROJECTS_IN_WORK\Messager_Shkiper\obj\Debug\net6.0-windows\Shkiper.AssemblyInfo.cs
+D:\PROJECTS_IN_WORK\Messager_Shkiper\obj\Debug\net6.0-windows\Shkiper.csproj.CoreCompileInputs.cache
+D:\PROJECTS_IN_WORK\Messager_Shkiper\obj\Debug\net6.0-windows\Shkiper.dll
+D:\PROJECTS_IN_WORK\Messager_Shkiper\obj\Debug\net6.0-windows\refint\Shkiper.dll
+D:\PROJECTS_IN_WORK\Messager_Shkiper\obj\Debug\net6.0-windows\Shkiper.pdb
+D:\PROJECTS_IN_WORK\Messager_Shkiper\obj\Debug\net6.0-windows\Shkiper.genruntimeconfig.cache
+D:\PROJECTS_IN_WORK\Messager_Shkiper\obj\Debug\net6.0-windows\ref\Shkiper.dll
