@@ -14,21 +14,23 @@ namespace Shkiper
 
         public StatusMessage Status;
 
-        public override string ToString()
+        public Message(User user, string text, DateTime date, StatusMessage status)
         {
-            return $"\"{Text}\" from {User.Name}"; 
+            User = user;
+            Text = text;
+            Date = date;
+            Status = status;
         }
+
+        public override string ToString() => $"{User.Name}: {Text}"; 
 
         public override bool Equals(object? obj)
         {
-            if (obj is not Message obj2)
+            if (obj is not Message obj2 || !GetType().Equals(obj.GetType()))
                 return false;
             else return Text.Equals(obj2.Text) && Date.Equals(obj2.Date) && Status.Equals(obj2.Status);
         }
 
-        public object Clone()
-        {
-            return MemberwiseClone();
-        }
+        public object Clone() => new Message(User, Text, Date, Status);
     }
 }

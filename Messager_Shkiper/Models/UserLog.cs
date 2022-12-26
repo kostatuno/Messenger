@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,16 +7,10 @@ using System.Threading.Tasks;
 
 namespace Shkiper
 {
-    class Users
+    public static class UserLog
     {
-        public List<User> List = new List<User>();
-        public User this[int i]
-        {
-            get { return List[i]; }
-            set { List[i] = value; }
-        }
-
-        public void AddFromLog(string path)
+        public static List<User> List = new List<User>();
+        public static void AddFromLog(string path)
         {
             var users = File.ReadLines(path);
             foreach (var user in users)

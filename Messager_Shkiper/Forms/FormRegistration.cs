@@ -27,9 +27,29 @@ namespace Shkiper
                 textBox4.Clear();
                 return;
             }
-            UserLogFileManager.Add(new User(textBox3.Text, textBox1.Text, textBox2.Text));
-            MessageBox.Show("Намана, бистріше залітай в чат любчику");
-            this.Close();
+
+            else if (textBox1.Text == "" || textBox3.Text == "" )
+            {
+                MessageBox.Show("Не вистачає параметру якогось. Спробуй знову");
+                foreach (var item in Controls)
+                {
+                    if (item is TextBox obj)
+                        obj.Clear();
+                }
+            }
+
+            else
+            {
+                UserLogFileManager.Add(new User(textBox3.Text, textBox1.Text, textBox2.Text));
+                MessageBox.Show("Намана, бистріше залітай в чат любчику");
+                this.Close();
+            }
+            
+        }
+
+        private void FormRegistration_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

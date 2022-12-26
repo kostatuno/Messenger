@@ -1,0 +1,11 @@
+D:\PROJECTS_IN_WORK\Messager_Shkiper\PracticeWinForm\bin\Release\PracticeWinForm.exe.config
+D:\PROJECTS_IN_WORK\Messager_Shkiper\PracticeWinForm\bin\Release\PracticeWinForm.exe
+D:\PROJECTS_IN_WORK\Messager_Shkiper\PracticeWinForm\bin\Release\PracticeWinForm.pdb
+D:\PROJECTS_IN_WORK\Messager_Shkiper\PracticeWinForm\obj\Release\PracticeWinForm.csproj.AssemblyReference.cache
+D:\PROJECTS_IN_WORK\Messager_Shkiper\PracticeWinForm\obj\Release\PracticeWinForm.csproj.SuggestedBindingRedirects.cache
+D:\PROJECTS_IN_WORK\Messager_Shkiper\PracticeWinForm\obj\Release\PracticeWinForm.Form1.resources
+D:\PROJECTS_IN_WORK\Messager_Shkiper\PracticeWinForm\obj\Release\PracticeWinForm.Properties.Resources.resources
+D:\PROJECTS_IN_WORK\Messager_Shkiper\PracticeWinForm\obj\Release\PracticeWinForm.csproj.GenerateResource.cache
+D:\PROJECTS_IN_WORK\Messager_Shkiper\PracticeWinForm\obj\Release\PracticeWinForm.csproj.CoreCompileInputs.cache
+D:\PROJECTS_IN_WORK\Messager_Shkiper\PracticeWinForm\obj\Release\PracticeWinForm.exe
+D:\PROJECTS_IN_WORK\Messager_Shkiper\PracticeWinForm\obj\Release\PracticeWinForm.pdb
