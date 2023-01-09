@@ -4,10 +4,10 @@
     <Compile Update="Forms\FormReady.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\FormWelcome.cs">
+    <Compile Update="Forms\FormRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\FormRegistration.cs">
+    <Compile Update="Forms\FormWelcome.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

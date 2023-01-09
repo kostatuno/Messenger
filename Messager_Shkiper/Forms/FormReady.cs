@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.CompilerServices;
+using Database;
 
 namespace Shkiper.Forms
 {
@@ -28,6 +29,7 @@ namespace Shkiper.Forms
                 formReady = new FormReady(user);
                 return formReady;
             }
+            listBoxOnline.Items.Remove(formReady.CurrentUser);
             formReady.CurrentUser = user;
             listBoxOnline.Items.Add(user.Name);
             UsersOnline.Add(user);
@@ -64,7 +66,6 @@ namespace Shkiper.Forms
           
             FormClosing += fomrReady_FormClosing;
             textBoxMessage.KeyDown += textBox1_KeyEnter;
-            Shown += FormReady_Launching;
         }
 
         private void textBox1_KeyEnter(object sender, KeyEventArgs e)
@@ -87,12 +88,16 @@ namespace Shkiper.Forms
         {
             listBoxOnline.Items.Remove(CurrentUser.Name);
             UsersOnline.Remove(CurrentUser);
-            listBoxChat.Items.Add($"{new string('-', 10)}{CurrentUser.Name} вишов з чату{new string('-', 10)}");
+            listBoxChat.Items.Add("");
+            listBoxChat.Items.Add($"[{CurrentUser.Name} вишов з чату]");
+            listBoxChat.Items.Add("");
         }
 
-        private void FormReady_Launching(object sender, EventArgs e)
+        public void Show()
         {
-            listBoxChat.Items.Add($"{new string('-', 10)}{CurrentUser.Name} зашов в чат{new string('-', 10)}");
+            base.Show();
+            listBoxChat.Items.Add($"[{CurrentUser.Name} зашов в чат]");
+            listBoxChat.Items.Add("");
         }
     }
 }

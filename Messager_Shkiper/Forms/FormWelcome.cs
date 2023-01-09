@@ -1,12 +1,11 @@
 using Microsoft.VisualBasic.ApplicationServices;
 using Shkiper.Forms;
+using Database;
 
 namespace Shkiper
 {
     public partial class FormWelcome : Form
-    {
-        //private static FormReady formReadyMain;
-        
+    {        
         public FormWelcome()
         {
             InitializeComponent();
@@ -53,26 +52,34 @@ namespace Shkiper
                     return;
                 }
             }
+
+            
+
             MessageBox.Show("Немає такого користувача. Сбробуйте знову, або ж створіть новий аккаунт");
             textBox2.Clear();
         }
 
         private void GetFormReady(User user)
         {
-            //new FormReady((User)user.Clone()).Show();
-            FormReady.GetInstanse(user).Show();
+            var form = FormReady.GetInstanse((User)user.Clone());
+            LockButtons(form);
+            form.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormRegistration formRegistration = new();
-            formRegistration.Show();
-            formRegistration.FormClosed += (sender, e) => {
+            var form = new FormRegistration();
+            LockButtons(form);
+            form.Show();
+        }
+
+        private void LockButtons(Form laucnhingform)
+        {
+            laucnhingform.FormClosing += (sender, e) => {
                 button1.Enabled = true;
                 button2.Enabled = true;
                 textBox1.Enabled = true;
                 textBox2.Enabled = true;
-
             };
             button1.Enabled = false;
             button2.Enabled = false;
@@ -82,7 +89,7 @@ namespace Shkiper
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
         } 
     }
 }

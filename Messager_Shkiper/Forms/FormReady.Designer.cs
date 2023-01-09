@@ -51,12 +51,12 @@
             this.textBoxMessage.Size = new System.Drawing.Size(328, 23);
             this.textBoxMessage.TabIndex = 1;
             // 
-            // listBox1
+            // listBoxChat
             // 
             this.listBoxChat.FormattingEnabled = true;
             this.listBoxChat.ItemHeight = 15;
             this.listBoxChat.Location = new System.Drawing.Point(213, 34);
-            this.listBoxChat.Name = "listBox1";
+            this.listBoxChat.Name = "listBoxChat";
             this.listBoxChat.Size = new System.Drawing.Size(415, 259);
             this.listBoxChat.TabIndex = 2;
             // 
