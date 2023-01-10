@@ -1,11 +1,19 @@
-﻿namespace ShkiperMessenger
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ShkiperMessenger
 {
     public partial class User : ICloneable
     {
+        [Key]
         public int Id { get; set; }
         public string? Name { get; set; }
         public string? Login { get; set; }
         public string? Password { get; set; }
+        
+        public User()
+        {
+        }
+
         public User(string name, string login, string password)
         {
             Name = name;

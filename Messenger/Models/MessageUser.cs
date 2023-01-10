@@ -1,12 +1,21 @@
-﻿namespace ShkiperMessenger
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace ShkiperMessenger
 {
     public class MessageUser : ICloneable
     {
-        public User User { get; set; }
-        public string Text { get; set; }
+        [Key]
+        public int Id { get; set; } 
+        public User? User { get; set; }
+        public string? Text { get; set; }
         public DateTime Date { get; set; }
 
-        public StatusMessage Status;
+        public StatusMessage? Status;
+
+        public MessageUser()
+        {
+        }
 
         public MessageUser(User user, string text, DateTime date, StatusMessage status)
         {

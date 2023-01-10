@@ -1653,11 +1653,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PROJECTS_IN_WORK\\Messenger.Shkiper\\Database\\Database.csproj",
+      "projectUniqueName": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Database\\Database.csproj",
       "projectName": "Database",
-      "projectPath": "D:\\PROJECTS_IN_WORK\\Messenger.Shkiper\\Database\\Database.csproj",
+      "projectPath": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Database\\Database.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "D:\\PROJECTS_IN_WORK\\Messenger.Shkiper\\Database\\obj\\",
+      "outputPath": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Database\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1674,8 +1674,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\PROJECTS_IN_WORK\\Messenger.Shkiper\\Messenger\\Shkiper_Messenger.csproj": {
-              "projectPath": "D:\\PROJECTS_IN_WORK\\Messenger.Shkiper\\Messenger\\Shkiper_Messenger.csproj"
+            "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger\\Shkiper_Messenger.csproj": {
+              "projectPath": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger\\Shkiper_Messenger.csproj"
             }
           }
         }

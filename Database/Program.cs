@@ -1,7 +1,7 @@
 ﻿using Database;
 using ShkiperMessenger;
 
-using (ApplicationDbContext db = new ApplicationDbContext())
+using (var db = ApplicationDbContext.GetInstance())
 {
     // создаем два объекта User
     User ahmed = new User("ahmed", "ahmed", "ahmed");
@@ -21,3 +21,12 @@ using (ApplicationDbContext db = new ApplicationDbContext())
         Console.WriteLine($"{u.Id}.{u.Name}");
     }
 }
+
+/*Console.WriteLine(Directory.GetParent(Directory.GetCurrentDirectory()));
+
+DirectoryInfo directoryInfo = new(Directory.GetCurrentDirectory());
+var list = directoryInfo.GetDirectories();
+foreach (var item in list)
+{
+    Console.Write(item);
+}*/

@@ -42,7 +42,7 @@ namespace ShkiperWinForms
 
             else
             {
-                using (ApplicationDbContext db = new())
+                using (var db = ApplicationDbContext.GetInstance())
                 {
                     db.Users.Add(new User(textBox3.Text, textBox1.Text, textBox2.Text));
                     db.SaveChanges();

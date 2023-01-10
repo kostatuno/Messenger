@@ -1,8 +1,8 @@
 ﻿namespace ShkiperMessenger
 {
-    public enum StatusMessage
+    public enum StatusMessageEnum
     {
-        NotRead,
+        NotRead = 1,
         Read,
         Changed,
     }

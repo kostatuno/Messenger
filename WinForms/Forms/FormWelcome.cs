@@ -42,7 +42,7 @@ namespace ShkiperWinForms
 
         private void button2_Click(object sender, EventArgs e)
         {
-            using (ApplicationDbContext db = new())
+            using (var db = ApplicationDbContext.GetInstance())
             {
                 foreach (var user in db.Users)
                 {

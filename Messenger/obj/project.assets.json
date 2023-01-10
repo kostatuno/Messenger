@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PROJECTS_IN_WORK\\Messenger.Shkiper\\Messenger\\Shkiper_Messenger.csproj",
+      "projectUniqueName": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger\\Shkiper_Messenger.csproj",
       "projectName": "Shkiper_Messenger",
-      "projectPath": "D:\\PROJECTS_IN_WORK\\Messenger.Shkiper\\Messenger\\Shkiper_Messenger.csproj",
+      "projectPath": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger\\Shkiper_Messenger.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "D:\\PROJECTS_IN_WORK\\Messenger.Shkiper\\Messenger\\obj\\",
+      "outputPath": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",

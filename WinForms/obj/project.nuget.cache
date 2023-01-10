@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "s2vFYIJCaW8k0z6IgJtoDUrdnZO6XHc/sd1YUqodA2pcOpUK9PLCFTu/z1Yx6Rov3oFRPWufP4cj/i8iYe8Cxw==",
+  "dgSpecHash": "/wdv0HNXwQWiMcSOQKxgv9cDdQXeudLc+GgtL0qfFZK063tZ5SaSj8K6QjvfVNoPOATVMBGrcLYCIDDtaJtjaw==",
   "success": true,
-  "projectFilePath": "D:\\PROJECTS_IN_WORK\\Messenger.Shkiper\\WinForms\\WinForms.csproj",
+  "projectFilePath": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\WinForms\\WinForms.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.2\\microsoft.data.sqlite.core.7.0.2.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.2\\microsoft.entityframeworkcore.7.0.2.nupkg.sha512",

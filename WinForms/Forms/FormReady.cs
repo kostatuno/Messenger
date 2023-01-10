@@ -73,7 +73,7 @@ namespace ShkiperWinForms
         {
             if (e.KeyCode == Keys.Enter)
             {
-                listBoxChat.Items.Add(new MessageUser(CurrentUser, textBoxMessage.Text, DateTime.Now, StatusMessage.NotRead));
+                listBoxChat.Items.Add(new MessageUser(CurrentUser, textBoxMessage.Text, DateTime.Now, StatusMessageEnum.NotRead));
                 textBoxMessage.Clear();
             }
         }

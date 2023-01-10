@@ -10,3 +10,15 @@ D:\PROJECTS_IN_WORK\Messenger.Shkiper\Messenger\obj\Debug\net6.0\Shkiper_Messeng
 D:\PROJECTS_IN_WORK\Messenger.Shkiper\Messenger\obj\Debug\net6.0\refint\Shkiper_Messenger.dll
 D:\PROJECTS_IN_WORK\Messenger.Shkiper\Messenger\obj\Debug\net6.0\Shkiper_Messenger.pdb
 D:\PROJECTS_IN_WORK\Messenger.Shkiper\Messenger\obj\Debug\net6.0\ref\Shkiper_Messenger.dll
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\Messenger\bin\Debug\net6.0\Shkiper_Messenger.deps.json
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\Messenger\bin\Debug\net6.0\Shkiper_Messenger.dll
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\Messenger\bin\Debug\net6.0\Shkiper_Messenger.pdb
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\Messenger\obj\Debug\net6.0\Shkiper_Messenger.csproj.AssemblyReference.cache
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\Messenger\obj\Debug\net6.0\Shkiper_Messenger.GeneratedMSBuildEditorConfig.editorconfig
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\Messenger\obj\Debug\net6.0\Shkiper_Messenger.AssemblyInfoInputs.cache
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\Messenger\obj\Debug\net6.0\Shkiper_Messenger.AssemblyInfo.cs
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\Messenger\obj\Debug\net6.0\Shkiper_Messenger.csproj.CoreCompileInputs.cache
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\Messenger\obj\Debug\net6.0\Shkiper_Messenger.dll
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\Messenger\obj\Debug\net6.0\refint\Shkiper_Messenger.dll
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\Messenger\obj\Debug\net6.0\Shkiper_Messenger.pdb
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\Messenger\obj\Debug\net6.0\ref\Shkiper_Messenger.dll
