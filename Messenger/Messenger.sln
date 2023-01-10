@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32811.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shkiper_Messenger", "Shkiper_Messenger.csproj", "{19A88340-EFC3-4A7A-87BC-F681ED68AE82}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Database", "..\Database\Database.csproj", "{20206318-4AAB-4EC5-9D7D-081B8125E5BB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinForms", "..\WinForms\WinForms.csproj", "{9563924D-9566-41A1-B0FB-3F3C8066FC38}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19A88340-EFC3-4A7A-87BC-F681ED68AE82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19A88340-EFC3-4A7A-87BC-F681ED68AE82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19A88340-EFC3-4A7A-87BC-F681ED68AE82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19A88340-EFC3-4A7A-87BC-F681ED68AE82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20206318-4AAB-4EC5-9D7D-081B8125E5BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20206318-4AAB-4EC5-9D7D-081B8125E5BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20206318-4AAB-4EC5-9D7D-081B8125E5BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20206318-4AAB-4EC5-9D7D-081B8125E5BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9563924D-9566-41A1-B0FB-3F3C8066FC38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9563924D-9566-41A1-B0FB-3F3C8066FC38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9563924D-9566-41A1-B0FB-3F3C8066FC38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9563924D-9566-41A1-B0FB-3F3C8066FC38}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C8F8CDB-96CB-4119-9161-8F3ACCE9B8FF}
+	EndGlobalSection
+EndGlobal

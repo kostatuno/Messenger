@@ -1,17 +1,17 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
+using ShkiperMessenger;
 
 namespace Database
 {
     public class ApplicationDbContext : DbContext
     {
         public DbSet<User> Users { get; set; } = null!;
-        public ApplicationDbContext() => Database.EnsureCreated();
+        
+        public ApplicationDbContext() 
+        {
+            Database.EnsureCreated();
+        } 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
