@@ -1,6 +1,6 @@
 ﻿using Database;
 
-using (ApplicationContext db = new ApplicationContext())
+using (ApplicationDbContext db = new ApplicationDbContext())
 {
     // создаем два объекта User
     User ahmed = new User("ahmed", "ahmed", "ahmed");
