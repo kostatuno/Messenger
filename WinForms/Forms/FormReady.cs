@@ -73,8 +73,14 @@ namespace ShkiperWinForms
         {
             if (e.KeyCode == Keys.Enter)
             {
-                listBoxChat.Items.Add(new MessageUser(CurrentUser, textBoxMessage.Text, DateTime.Now, StatusMessageEnum.NotRead));
-                textBoxMessage.Clear();
+                using (ApplicationDbContext db = ApplicationDbContext.GetInstance())
+                {
+                    MessageUser message = new MessageUser((User)CurrentUser.Clone(), textBoxMessage.Text, DateTime.Now, StatusMessageEnum.NotRead);
+                    listBoxChat.Items.Add(message);
+                    db.Messages.Add(message);
+                    db.SaveChanges();
+                    textBoxMessage.Clear();
+                }
             }
         }
 

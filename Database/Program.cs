@@ -1,5 +1,8 @@
 ﻿using Database;
+using Microsoft.VisualBasic.FileIO;
+using Shkiper_Messenger.Extensions;
 using ShkiperMessenger;
+using System.Reflection;
 
 using (var db = ApplicationDbContext.GetInstance())
 {
@@ -21,12 +24,3 @@ using (var db = ApplicationDbContext.GetInstance())
         Console.WriteLine($"{u.Id}.{u.Name}");
     }
 }
-
-/*Console.WriteLine(Directory.GetParent(Directory.GetCurrentDirectory()));
-
-DirectoryInfo directoryInfo = new(Directory.GetCurrentDirectory());
-var list = directoryInfo.GetDirectories();
-foreach (var item in list)
-{
-    Console.Write(item);
-}*/

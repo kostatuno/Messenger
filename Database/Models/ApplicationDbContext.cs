@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Shkiper_Messenger.Extensions;
 using ShkiperMessenger;
 using System.Drawing;
 
@@ -10,24 +11,10 @@ namespace Database
         private static ApplicationDbContext applicationDbContext;
         public DbSet<User> Users { get; set; } = null!;
         public DbSet<MessageUser> Messages { get; set; } = null!;
-        public DbSet<StatusMessage> StatusMessage { get; set; } = null!;
         
         private ApplicationDbContext() 
         {
             Database.EnsureCreated();
-        }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            foreach (StatusMessageEnum statusEnum in Enum.GetValues(typeof(StatusMessageEnum)).Cast<StatusMessageEnum>())
-            {
-                StatusMessage status = new StatusMessage
-                {
-                    Id = (int)statusEnum,
-                    Name = statusEnum.ToString(),
-                };
-                modelBuilder.Entity<StatusMessage>().HasData(status);
-            }
         }
 
         public static ApplicationDbContext GetInstance()
@@ -54,13 +41,10 @@ namespace Database
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            /*var builder = new ConfigurationBuilder();
-            builder.SetBasePath(Directory.GetCurrentDirectory());
-            builder.AddJsonFile("appsettings.json");
-            var config = builder.Build();
+            DirectoryInfo currentDirectory = new DirectoryInfo(Directory.GetCurrentDirectory());
+            var pathDb = Path.Combine(currentDirectory.GetParents(4), @"Database\bin\Debug\net6.0\database.db");
 
-            optionsBuilder.UseSqlite(config.GetConnectionString("DefaultConnection"));*/
-            optionsBuilder.UseSqlite("Data Source=database.db");
+            optionsBuilder.UseSqlite($"Data Source={pathDb}");
         }
     }
 }

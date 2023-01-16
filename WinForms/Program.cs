@@ -1,4 +1,6 @@
+using Database;
 using Microsoft.VisualBasic.ApplicationServices;
+using System.Reflection;
 
 namespace ShkiperWinForms
 {

@@ -79,7 +79,6 @@ D:\PROJECTS_IN_WORK\Shkiper_Messenger\WinForms\bin\Debug\net6.0-windows\Database
 D:\PROJECTS_IN_WORK\Shkiper_Messenger\WinForms\bin\Debug\net6.0-windows\Database.runtimeconfig.json
 D:\PROJECTS_IN_WORK\Shkiper_Messenger\WinForms\bin\Debug\net6.0-windows\Database.exe
 D:\PROJECTS_IN_WORK\Shkiper_Messenger\WinForms\bin\Debug\net6.0-windows\WinForms.exe
-D:\PROJECTS_IN_WORK\Shkiper_Messenger\WinForms\bin\Debug\net6.0-windows\appsettings.json
 D:\PROJECTS_IN_WORK\Shkiper_Messenger\WinForms\bin\Debug\net6.0-windows\WinForms.deps.json
 D:\PROJECTS_IN_WORK\Shkiper_Messenger\WinForms\bin\Debug\net6.0-windows\WinForms.runtimeconfig.json
 D:\PROJECTS_IN_WORK\Shkiper_Messenger\WinForms\bin\Debug\net6.0-windows\WinForms.dll

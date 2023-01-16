@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "3lj8n6Ify8fB/kYpVbmrStjj01Qu4oaFbXedDq8XR5mddxgj6H8UfPaelIWxWJneXFeWFRKG2uWsM8Rc78BSgQ==",
+  "dgSpecHash": "JkkyPoUkY/v+B50zVLHuyzaTXYIqxYvnY3OU9YwfwrNQHaUD8Zfgt5Mbvl4M+gpKYORLe9cARmA4+t7BNw6M1g==",
   "success": true,
   "projectFilePath": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger\\Shkiper_Messenger.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.13\\microsoft.aspnetcore.app.ref.6.0.13.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.13\\microsoft.windowsdesktop.app.ref.6.0.13.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.13\\microsoft.netcore.app.ref.6.0.13.nupkg.sha512"
+  ],
   "logs": []
 }

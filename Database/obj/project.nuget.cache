@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7vD97o5oQD3isl3dUOjlRvZ3JsjyErIJdSabjh8PO/m6ickuqZDS7yP1Dh6bDsu67dNEu9Sdct5sFlJZyoJRSw==",
+  "dgSpecHash": "DSw8huodtfWNShFNnNJb/UJfu1YeY19eHnz91/76ChJJla7tkkhSZEuslhF0dtfT3uj1KgkBwhhcA8LfT+AsMw==",
   "success": true,
   "projectFilePath": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Database\\Database.csproj",
   "expectedPackageFiles": [
@@ -39,7 +39,11 @@
     "C:\\Users\\ADMIN\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
-    "C:\\Users\\ADMIN\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"
+    "C:\\Users\\ADMIN\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.13\\microsoft.netcore.app.host.win-x64.6.0.13.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.13\\microsoft.aspnetcore.app.ref.6.0.13.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.13\\microsoft.windowsdesktop.app.ref.6.0.13.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.13\\microsoft.netcore.app.ref.6.0.13.nupkg.sha512"
   ],
   "logs": []
 }
