@@ -1,0 +1,92 @@
+.dialogSection {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   background: rgba(0, 0, 0, 0.09);
+}
+
+.infoAboutDialog {
+   width: calc(100%-20px);
+   height: 15%;
+   display: flex;
+   align-items: center;
+   padding-left: 20px;
+   gap: 10px;
+   border-bottom: 1px solid rgba(201, 201, 201, 0.7);
+   box-shadow: 0px 10px 7px -10px rgba(201, 201, 201, 1);
+}
+
+.name>h1 {
+   font-weight: 400;
+   color: #2d2d2d;
+}
+
+.status {
+   display: flex;
+   align-items: center;
+   gap: 4px;
+}
+
+.status>p {
+   color: #03C988;
+}
+
+.onlineStatus {
+   width: 10px;
+   height: 10px;
+   border-radius: 50%;
+   background: #03C988;
+   position: relative;
+   top: 2px;
+}
+
+.infoAboutDialog>img {
+   border-radius: 50%;
+}
+
+.dialog {
+   width: calc(100% - 100px);
+   height: 80%;
+   padding: 50px;
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+   overflow-y: scroll;
+}
+
+
+
+.sendMessage {
+   width: calc(100% - 40px);
+   height: 10%;
+   padding: 20px;
+   display: flex;
+   justify-content: center;
+   border-top: 1px solid rgba(201, 201, 201, 0.7);
+   box-shadow: 0px 10px 7px -10px rgba(201, 201, 201, 1);
+}
+
+.sendMessage .addMessage {
+   width: 90%;
+   border: none;
+   background: none;
+   font-family: monospace;
+   outline: none;
+   font-size: 21px;
+   color: #2d2d2d;
+   letter-spacing: -1px;
+}
+
+.sendMessage .sendMessageBtn {
+   width: 10%;
+   border: none;
+   outline: none;
+   background: none;
+}
+
+.iconSendMessageBtn {
+   color: #03C988;
+   font-size: 30px;
+   cursor: pointer;
+}

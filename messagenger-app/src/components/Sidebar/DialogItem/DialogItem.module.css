@@ -1,0 +1,31 @@
+.dialogItem {
+   width: calc(100% - 20px);
+   height: 75px;
+   display: flex;
+   align-items: center;
+   background: rgba(255, 255, 255, 0.3);
+   gap: 10px;
+   padding-left: 20px;
+   border-bottom: 0.5px solid rgba(255, 255, 255, 0.9);
+}
+
+.nameLastMessage {
+   display: flex;
+   flex-direction: column;
+}
+
+.name {
+   font-size: 21px;
+   color: #ffffff;
+}
+
+.lastMessage {
+   font-size: 16px;
+   color: #ffffff;
+   opacity: 0.6;
+}
+
+.avatar>img {
+   border-radius: 50%;
+   border: 2px solid #ffffff;
+}

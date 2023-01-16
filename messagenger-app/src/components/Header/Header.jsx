@@ -1,8 +1,14 @@
 import React from "react";
 import classes from "./Header.module.css";
-import { AiOutlineMenu, AiOutlineSearch, AiFillMessage } from "react-icons/ai";
+import {
+	AiOutlineMenu,
+	AiOutlineLogin,
+	AiFillMessage,
+	AiOutlineUserAdd,
+} from "react-icons/ai";
+import AuthButton from "./AuthButton/AuthButton";
 
-const Header = () => {
+const Header = (props) => {
 	return (
 		<div className={classes.header}>
 			<div className={classes.menuLogo}>
@@ -13,16 +19,11 @@ const Header = () => {
 				</div>
 			</div>
 
-			<div className={classes.search}>
-				<div className={classes.searchIconDiv}>
-					<AiOutlineSearch className={classes.searchIcon} />
-				</div>
-				<input
-					type="text"
-					className={classes.searchInput}
-					placeholder="Search"
-				/>
-			</div>
+			{props.auth === false ? (
+				<AuthButton pageChange={props.pageChange} />
+			) : (
+				""
+			)}
 		</div>
 	);
 };

@@ -1,0 +1,68 @@
+.login {
+   width: 500px;
+   height: 500px;
+   border-radius: 10px;
+   background-color: #eee;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;   
+   padding: 20px;
+   gap: 20px;
+}
+
+.login > h1 {
+   color: #2d2d2d;
+}
+
+.login > form {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 20px;
+}
+
+.titleLogin {
+   display: flex;
+   align-items: center;
+   gap: 3px;
+}
+
+.iconTitle {
+   font-size: 31px;
+   position: relative;
+   top: 2px;
+   color: #2d2d2d;
+}
+
+.login>form>input {
+   width: 80%;
+   font-family: monospace;
+   font-weight: 400;
+   padding: 10px 20px;
+   font-size: 21px;
+   outline: none;
+   background: #ffffff;
+   border: none;
+   border-top-left-radius: 10px;
+   border-bottom-right-radius: 10px;
+}
+
+.login > form > button {
+   background: rgba(40, 49, 73, 1);
+   font-family: monospace;
+   font-weight: 700;
+   padding: 10px 30px;
+   font-size: 18px;
+   color: #ffffff;
+   border: none;
+   border-radius: 10px;
+   transition: all 0.4s;
+}
+
+.login>form>button:hover {
+   transition: all 0.4s;
+   box-shadow: 0px 0px 10px rgba(40, 49, 73, 1);
+   cursor: pointer;
+}

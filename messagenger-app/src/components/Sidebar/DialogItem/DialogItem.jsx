@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./../Sidebar.module.css";
+import classes from "./DialogItem.module.css";
 
 const DialogItem = (props) => {
 	return (
