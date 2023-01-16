@@ -4,10 +4,14 @@
 }
 
 body {
-  background-color: #DBEDF3;
+  background-color: #ffffff;
   font-family: 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+button, input, select, option, span, div {
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen',
 }
