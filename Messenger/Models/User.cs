@@ -1,10 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Messenger
+namespace Messenger.Models
 {
     public partial class User : ICloneable
     {
-        [Key]
         public int Id { get; set; }
         public string? Name { get; set; }
         public string? Login { get; set; }

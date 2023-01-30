@@ -3,8 +3,9 @@ using Microsoft.VisualBasic.FileIO;
 using Messenger.Extensions;
 using Messenger;
 using System.Reflection;
+using Messenger.Models;
 
-using (var db = ApplicationDbContext.GetInstance())
+/*using (var db = ApplicationDbContext.GetInstance())
 {
     // создаем два объекта User
     User ahmed = new User("ahmed", "ahmed", "ahmed");
@@ -23,4 +24,5 @@ using (var db = ApplicationDbContext.GetInstance())
     {
         Console.WriteLine($"{u.Id}.{u.Name}");
     }
-}
+}*/
+

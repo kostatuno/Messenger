@@ -1,31 +1,32 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Messenger.Extensions;
-using Messenger;
+using Messenger.Models;
 using System.Drawing;
+using Database.Configuration;
 
 namespace Database
 {
     public class ApplicationDbContext : DbContext
     {
-        private static ApplicationDbContext applicationDbContext;
+        static ApplicationDbContext? applicationDbContext;
+
         public DbSet<User> Users { get; set; } = null!;
         public DbSet<MessageUser> Messages { get; set; } = null!;
-        
-        private ApplicationDbContext() 
+        public DbSet<StatusMessage> StatusMessege { get; set; } = null!;
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            Database.EnsureCreated();
+            optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=Messenger(Shkiper);Trusted_Connection=true;");
         }
 
-        public static ApplicationDbContext GetInstance()
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            if (applicationDbContext == null || IsDisposed())
-            {
-                applicationDbContext = new ApplicationDbContext();
-            }
-            return applicationDbContext;
-        }
+            modelBuilder.ApplyConfiguration(new UserConfiguration());
+            modelBuilder.ApplyConfiguration(new UserConfiguration());
+            modelBuilder.ApplyConfiguration(new UserConfiguration());
 
+        }
         private static bool IsDisposed()
         {
             try
@@ -39,12 +40,17 @@ namespace Database
             return false;
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        private ApplicationDbContext() 
         {
-            DirectoryInfo currentDirectory = new DirectoryInfo(Directory.GetCurrentDirectory());
-            var pathDb = Path.Combine(currentDirectory.GetParents(4), @"Database\bin\Debug\net6.0\database.db");
-
-            optionsBuilder.UseSqlite($"Data Source={pathDb}");
         }
+
+        public static ApplicationDbContext GetInstance()
+        {
+            if (applicationDbContext == null || IsDisposed())
+            {
+                applicationDbContext = new ApplicationDbContext();
+            }
+            return applicationDbContext;
+        }  
     }
 }
