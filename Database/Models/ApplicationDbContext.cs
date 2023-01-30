@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using Shkiper_Messenger.Extensions;
-using ShkiperMessenger;
+using Messenger.Extensions;
+using Messenger;
 using System.Drawing;
 
 namespace Database

@@ -133,9 +133,7 @@ D:\PROJECTS_IN_WORK\Shkiper_Messenger\WinForms\bin\Debug\net6.0-windows\runtimes
 D:\PROJECTS_IN_WORK\Shkiper_Messenger\WinForms\bin\Debug\net6.0-windows\runtimes\win-x86\native\e_sqlite3.dll
 D:\PROJECTS_IN_WORK\Shkiper_Messenger\WinForms\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 D:\PROJECTS_IN_WORK\Shkiper_Messenger\WinForms\bin\Debug\net6.0-windows\Database.dll
-D:\PROJECTS_IN_WORK\Shkiper_Messenger\WinForms\bin\Debug\net6.0-windows\Shkiper_Messenger.dll
 D:\PROJECTS_IN_WORK\Shkiper_Messenger\WinForms\bin\Debug\net6.0-windows\Database.pdb
-D:\PROJECTS_IN_WORK\Shkiper_Messenger\WinForms\bin\Debug\net6.0-windows\Shkiper_Messenger.pdb
 D:\PROJECTS_IN_WORK\Shkiper_Messenger\WinForms\obj\Debug\net6.0-windows\WinForms.csproj.AssemblyReference.cache
 D:\PROJECTS_IN_WORK\Shkiper_Messenger\WinForms\obj\Debug\net6.0-windows\ShkiperWinForms.FormReady.resources
 D:\PROJECTS_IN_WORK\Shkiper_Messenger\WinForms\obj\Debug\net6.0-windows\ShkiperWinForms.FormRegistration.resources
@@ -151,3 +149,5 @@ D:\PROJECTS_IN_WORK\Shkiper_Messenger\WinForms\obj\Debug\net6.0-windows\refint\W
 D:\PROJECTS_IN_WORK\Shkiper_Messenger\WinForms\obj\Debug\net6.0-windows\WinForms.pdb
 D:\PROJECTS_IN_WORK\Shkiper_Messenger\WinForms\obj\Debug\net6.0-windows\WinForms.genruntimeconfig.cache
 D:\PROJECTS_IN_WORK\Shkiper_Messenger\WinForms\obj\Debug\net6.0-windows\ref\WinForms.dll
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\WinForms\bin\Debug\net6.0-windows\Messenger.dll
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\WinForms\bin\Debug\net6.0-windows\Messenger.pdb

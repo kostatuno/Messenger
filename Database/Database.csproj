@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Messenger\Shkiper_Messenger.csproj" />
+    <ProjectReference Include="..\Messenger\Messenger.csproj" />
   </ItemGroup>
 
 </Project>

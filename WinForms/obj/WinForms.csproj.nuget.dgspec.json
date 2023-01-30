@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger\\Shkiper_Messenger.csproj": {
-                "projectPath": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger\\Shkiper_Messenger.csproj"
+              "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger\\Messenger.csproj": {
+                "projectPath": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger\\Messenger.csproj"
               }
             }
           }
@@ -79,12 +79,12 @@
         }
       }
     },
-    "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger\\Shkiper_Messenger.csproj": {
+    "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger\\Messenger.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger\\Shkiper_Messenger.csproj",
-        "projectName": "Shkiper_Messenger",
-        "projectPath": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger\\Shkiper_Messenger.csproj",
+        "projectUniqueName": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger\\Messenger.csproj",
+        "projectName": "Messenger",
+        "projectPath": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger\\Messenger.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
         "outputPath": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger\\obj\\",
         "projectStyle": "PackageReference",
@@ -125,20 +125,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.13, 6.0.13]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.13, 6.0.13]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.13, 6.0.13]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -175,8 +161,8 @@
               "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Database\\Database.csproj": {
                 "projectPath": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Database\\Database.csproj"
               },
-              "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger\\Shkiper_Messenger.csproj": {
-                "projectPath": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger\\Shkiper_Messenger.csproj"
+              "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger\\Messenger.csproj": {
+                "projectPath": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger\\Messenger.csproj"
               }
             }
           }

@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ShkiperMessenger
+namespace Messenger
 {
     public class MessageUser : ICloneable
     {

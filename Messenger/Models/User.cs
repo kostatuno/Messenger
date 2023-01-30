@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ShkiperMessenger
+namespace Messenger
 {
     public partial class User : ICloneable
     {

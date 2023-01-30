@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.CompilerServices;
 using Database;
-using ShkiperMessenger;
+using Messenger;
 
 namespace ShkiperWinForms
 {

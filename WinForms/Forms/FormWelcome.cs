@@ -1,4 +1,4 @@
-using ShkiperMessenger;
+using Messenger;
 using Database;
 
 namespace ShkiperWinForms

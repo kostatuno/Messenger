@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shkiper_Messenger.Extensions
+namespace Messenger.Extensions
 {
     /// <summary>
     /// Moves up the directory by a certain amount.

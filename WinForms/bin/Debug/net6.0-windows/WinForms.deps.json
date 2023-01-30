@@ -9,7 +9,7 @@
       "WinForms/1.0.0": {
         "dependencies": {
           "Database": "1.0.0",
-          "Shkiper_Messenger": "1.0.0"
+          "Messenger": "1.0.0"
         },
         "runtime": {
           "WinForms.dll": {}
@@ -451,17 +451,17 @@
       },
       "Database/1.0.0": {
         "dependencies": {
+          "Messenger": "1.0.0",
           "Microsoft.EntityFrameworkCore.Sqlite": "7.0.2",
-          "Microsoft.Extensions.Configuration.Json": "7.0.0",
-          "Shkiper_Messenger": "1.0.0"
+          "Microsoft.Extensions.Configuration.Json": "7.0.0"
         },
         "runtime": {
           "Database.dll": {}
         }
       },
-      "Shkiper_Messenger/1.0.0": {
+      "Messenger/1.0.0": {
         "runtime": {
-          "Shkiper_Messenger.dll": {}
+          "Messenger.dll": {}
         }
       }
     }
@@ -694,7 +694,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Shkiper_Messenger/1.0.0": {
+    "Messenger/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

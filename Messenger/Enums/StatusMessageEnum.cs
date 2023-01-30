@@ -1,4 +1,4 @@
-﻿namespace ShkiperMessenger
+﻿namespace Messenger
 {
     public enum StatusMessageEnum
     {

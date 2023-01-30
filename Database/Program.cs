@@ -1,7 +1,7 @@
 ﻿using Database;
 using Microsoft.VisualBasic.FileIO;
-using Shkiper_Messenger.Extensions;
-using ShkiperMessenger;
+using Messenger.Extensions;
+using Messenger;
 using System.Reflection;
 
 using (var db = ApplicationDbContext.GetInstance())

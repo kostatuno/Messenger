@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Database\Database.csproj" />
-    <ProjectReference Include="..\Messenger\Shkiper_Messenger.csproj" />
+    <ProjectReference Include="..\Messenger\Messenger.csproj" />
   </ItemGroup>
 
 </Project>

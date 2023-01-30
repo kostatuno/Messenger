@@ -639,9 +639,9 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Messenger": "1.0.0",
           "Microsoft.EntityFrameworkCore.Sqlite": "7.0.2",
-          "Microsoft.Extensions.Configuration.Json": "7.0.0",
-          "Shkiper_Messenger": "1.0.0"
+          "Microsoft.Extensions.Configuration.Json": "7.0.0"
         },
         "compile": {
           "bin/placeholder/Database.dll": {}
@@ -650,14 +650,14 @@
           "bin/placeholder/Database.dll": {}
         }
       },
-      "Shkiper_Messenger/1.0.0": {
+      "Messenger/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
-          "bin/placeholder/Shkiper_Messenger.dll": {}
+          "bin/placeholder/Messenger.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Shkiper_Messenger.dll": {}
+          "bin/placeholder/Messenger.dll": {}
         }
       }
     }
@@ -1491,16 +1491,16 @@
       "path": "../Database/Database.csproj",
       "msbuildProject": "../Database/Database.csproj"
     },
-    "Shkiper_Messenger/1.0.0": {
+    "Messenger/1.0.0": {
       "type": "project",
-      "path": "../Messenger/Shkiper_Messenger.csproj",
-      "msbuildProject": "../Messenger/Shkiper_Messenger.csproj"
+      "path": "../Messenger/Messenger.csproj",
+      "msbuildProject": "../Messenger/Messenger.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
       "Database >= 1.0.0",
-      "Shkiper_Messenger >= 1.0.0"
+      "Messenger >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1533,8 +1533,8 @@
             "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Database\\Database.csproj": {
               "projectPath": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Database\\Database.csproj"
             },
-            "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger\\Shkiper_Messenger.csproj": {
-              "projectPath": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger\\Shkiper_Messenger.csproj"
+            "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger\\Messenger.csproj": {
+              "projectPath": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger\\Messenger.csproj"
             }
           }
         }
