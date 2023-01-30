@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger\\Messenger.csproj": {}
+    "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\MessengerTests\\MessengerTests.csproj": {}
   },
   "projects": {
-    "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger\\Messenger.csproj": {
+    "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\MessengerTests\\MessengerTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger\\Messenger.csproj",
-        "projectName": "Messenger",
-        "projectPath": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger\\Messenger.csproj",
+        "projectUniqueName": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\MessengerTests\\MessengerTests.csproj",
+        "projectName": "MessengerTests",
+        "projectPath": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\MessengerTests\\MessengerTests.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger\\obj\\",
+        "outputPath": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\MessengerTests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,24 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[2.2.10, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[2.2.10, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.3.2, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

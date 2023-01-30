@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "kZgRtwWbupmoD/829vx3bThrvc4m/JHFwZP4z2s7TY6gj1nJXKbth8uDVEnEXqPiR3rcdmPMRS51ETH5b64XnA==",
+  "dgSpecHash": "C4cLjx2fvVyFcmHj9bptv10n15I7LBWa6sP/sOsbSTS5Km0ur+GqGZKmd1ANMzJayklulUI10URykwx1yatLyA==",
   "success": true,
   "projectFilePath": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\WinForms\\WinForms.csproj",
   "expectedPackageFiles": [
@@ -34,11 +34,7 @@
     "C:\\Users\\ADMIN\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
-    "C:\\Users\\ADMIN\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
-    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.13\\microsoft.netcore.app.host.win-x64.6.0.13.nupkg.sha512",
-    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.13\\microsoft.aspnetcore.app.ref.6.0.13.nupkg.sha512",
-    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.13\\microsoft.windowsdesktop.app.ref.6.0.13.nupkg.sha512",
-    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.13\\microsoft.netcore.app.ref.6.0.13.nupkg.sha512"
+    "C:\\Users\\ADMIN\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }
