@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Messenger.Models
 {
-    public class StatusMessage
+    public class MessageStatus
     {
         public int Id { get; set; } 
         public string Status { get; private set; }
-        public StatusMessage(StatusMessageEnum statusMessage)
+        public MessageStatus(MessageStatusEnum statusMessage)
         {
             Status = statusMessage.ToString();
         }

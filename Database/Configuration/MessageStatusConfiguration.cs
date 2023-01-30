@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace Database.Configuration
 {
-    public class StatusMessageConfiguration : IEntityTypeConfiguration<StatusMessage>
+    public class MessageStatusConfiguration : IEntityTypeConfiguration<MessageStatus>
     {
-        public void Configure(EntityTypeBuilder<StatusMessage> builder)
+        public void Configure(EntityTypeBuilder<MessageStatus> builder)
         {
             builder.HasAlternateKey(p => p.Status);
         }

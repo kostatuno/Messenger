@@ -13,7 +13,7 @@ namespace Database
 
         public DbSet<User> Users { get; set; } = null!;
         public DbSet<MessageUser> Messages { get; set; } = null!;
-        public DbSet<StatusMessage> StatusMessege { get; set; } = null!;
+        public DbSet<MessageStatus> StatusMessege { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -23,9 +23,8 @@ namespace Database
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new UserConfiguration());
-            modelBuilder.ApplyConfiguration(new UserConfiguration());
-            modelBuilder.ApplyConfiguration(new UserConfiguration());
-
+            modelBuilder.ApplyConfiguration(new MessageStatusConfiguration());
+            modelBuilder.ApplyConfiguration(new MessageUserConfiguration());
         }
         private static bool IsDisposed()
         {

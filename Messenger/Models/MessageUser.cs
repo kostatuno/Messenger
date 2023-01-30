@@ -21,13 +21,13 @@ namespace Messenger.Models
         public MessageUser(User user, 
             string text, 
             DateTime date, 
-            StatusMessageEnum status = StatusMessageEnum.NotRead)
+            MessageStatusEnum status = MessageStatusEnum.NotRead)
         {
             User = user;
             UserId = user.Id;
             Text = text;
             Date = date;
-            Status = Enum.GetName(typeof(StatusMessageEnum), status);
+            Status = Enum.GetName(typeof(MessageStatusEnum), status);
         }
 
         public override string ToString() => $"{User.Name}: {Text} | {Date:HH:mm:ss}"; 
@@ -39,6 +39,6 @@ namespace Messenger.Models
             else return Text.Equals(obj2.Text) && Date.Equals(obj2.Date) && Status.Equals(obj2.Status);
         }
 
-        public object Clone() => new MessageUser(User, Text, Date, StatusMessageEnum.NotRead);
+        public object Clone() => new MessageUser(User, Text, Date, MessageStatusEnum.NotRead);
     }
 }

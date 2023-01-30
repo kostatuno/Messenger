@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Database.Configuration
 {
-    public class MessageUserConfiguration
+    public class MessageUserConfiguration : IEntityTypeConfiguration<MessageUser>
     {
         public void Configure(EntityTypeBuilder<MessageUser> builder)
         {

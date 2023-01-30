@@ -75,7 +75,7 @@ namespace ShkiperWinForms
             {
                 using (ApplicationDbContext db = ApplicationDbContext.GetInstance())
                 {
-                    MessageUser message = new MessageUser((User)CurrentUser.Clone(), textBoxMessage.Text, DateTime.Now, StatusMessageEnum.NotRead);
+                    MessageUser message = new MessageUser((User)CurrentUser.Clone(), textBoxMessage.Text, DateTime.Now, MessageStatusEnum.NotRead);
                     listBoxChat.Items.Add(message);
                     db.Messages.Add(message);
                     db.SaveChanges();

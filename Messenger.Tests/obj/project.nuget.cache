@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "A5jyIJ+FDJP7+CJmMPCK9MQ1gFXXrNrK3QAlRTgrTF+qZExq62pUrNLcp/kMcsMZT8y+vn/0jly5okcz+IZg9g==",
+  "dgSpecHash": "Eu5gdbd9I2N4vvJFmHNIiCRr+8F5h4IdQ0HP0Wh2DhWbK3jGm7g9x4VhClMbMrnK14RzISLhMNFJoVCt6FiPJg==",
   "success": true,
-  "projectFilePath": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\MessengerTests\\MessengerTests.csproj",
+  "projectFilePath": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger.Tests\\Messenger.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.codecoverage\\17.3.2\\microsoft.codecoverage.17.3.2.nupkg.sha512",

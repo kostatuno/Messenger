@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\MessengerTests\\MessengerTests.csproj": {}
+    "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger.Tests\\Messenger.Tests.csproj": {}
   },
   "projects": {
-    "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\MessengerTests\\MessengerTests.csproj": {
+    "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger.Tests\\Messenger.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\MessengerTests\\MessengerTests.csproj",
-        "projectName": "MessengerTests",
-        "projectPath": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\MessengerTests\\MessengerTests.csproj",
+        "projectUniqueName": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger.Tests\\Messenger.Tests.csproj",
+        "projectName": "Messenger.Tests",
+        "projectPath": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger.Tests\\Messenger.Tests.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\MessengerTests\\obj\\",
+        "outputPath": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
