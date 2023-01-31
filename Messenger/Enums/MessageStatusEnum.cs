@@ -1,6 +1,6 @@
 ﻿namespace Messenger
 {
-    public enum MessageStatusEnum
+    public enum MessageStatusEnum : ushort
     {
         NotRead = 1,
         Read = 2,

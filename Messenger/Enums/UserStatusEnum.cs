@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Messenger.Enums
+namespace Messenger
 {
-    public enum UserStatus : ushort
+    public enum UserStatusEnum : ushort
     {
         Offline = 0,
         Busy = 1,
-        Away = 2,
+        Invisible = 2,
         Available = 3
     }
 }

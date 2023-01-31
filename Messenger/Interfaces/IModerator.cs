@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Messenger
+namespace Messenger.Interfaces
 {
-    public enum RoomStatusEnum : ushort
+    interface IModerator
     {
-        Сlosed,
-        Open,
-        Full,
+        void OfferToRemoveUser(IUser user);
     }
 }

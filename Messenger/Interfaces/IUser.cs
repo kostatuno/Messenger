@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Messenger
+namespace Messenger.Interfaces
 {
-    public enum RoomStatusEnum : ushort
+    public interface IUser
     {
-        Сlosed,
-        Open,
-        Full,
     }
 }

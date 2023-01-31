@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace Database.Configuration
 {
-    public class UserConfiguration : IEntityTypeConfiguration<User>
+    public class RoomConfiguration : IEntityTypeConfiguration<Room>
     {
-        public void Configure(EntityTypeBuilder<User> builder)
+        public void Configure(EntityTypeBuilder<Room> builder)
         {
-            builder.HasKey(p => p.Login);
+            throw new NotImplementedException();
         }
     }
 }

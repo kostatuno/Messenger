@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Messenger.Models
 {
-    internal class UserStatus
+    public class UserStatus
     {
+        public int Id { get; set; }
+        public string Status { get; set; }
+        public UserStatus(UserStatusEnum status)
+        {
+            Status = status.ToString();
+        }
     }
 }

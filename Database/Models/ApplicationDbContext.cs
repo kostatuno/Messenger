@@ -10,8 +10,9 @@ namespace Database
     public class ApplicationDbContext : DbContext
     {
         static ApplicationDbContext? applicationDbContext;
-
+        public DbSet<Room> Rooms { get; set; } = null!;
         public DbSet<User> Users { get; set; } = null!;
+        public DbSet<RoomStatus> RoomStatus { get; set; } = null!;
         public DbSet<MessageUser> Messages { get; set; } = null!;
         public DbSet<MessageStatus> StatusMessege { get; set; } = null!;
 
@@ -23,6 +24,8 @@ namespace Database
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new UserConfiguration());
+            modelBuilder.ApplyConfiguration(new RoomConfiguration());
+            modelBuilder.ApplyConfiguration(new RoomStatusConfiguration());
             modelBuilder.ApplyConfiguration(new MessageStatusConfiguration());
             modelBuilder.ApplyConfiguration(new MessageUserConfiguration());
         }

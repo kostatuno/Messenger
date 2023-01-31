@@ -5,14 +5,13 @@ namespace Messenger.Models
 {
     public class MessageUser : ICloneable
     {
-        [Key]
         public int Id { get; set; }
-        public int UserId { get; set; }
-        [NotMapped]
+        public string UserName { get; set; }
+
         public User? User { get; set; }
         public string? Text { get; set; }
         public DateTime Date { get; set; }
-        public string Status { get; set; }
+        public MessageStatus Status { get; set; }
 
         public MessageUser()
         {
@@ -24,10 +23,9 @@ namespace Messenger.Models
             MessageStatusEnum status = MessageStatusEnum.NotRead)
         {
             User = user;
-            UserId = user.Id;
             Text = text;
             Date = date;
-            Status = Enum.GetName(typeof(MessageStatusEnum), status);
+            Status = new MessageStatus(status);
         }
 
         public override string ToString() => $"{User.Name}: {Text} | {Date:HH:mm:ss}"; 

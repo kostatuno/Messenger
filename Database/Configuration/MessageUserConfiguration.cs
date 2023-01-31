@@ -13,7 +13,7 @@ namespace Database.Configuration
     {
         public void Configure(EntityTypeBuilder<MessageUser> builder)
         {
-            throw new NotImplementedException();
+            
         }
     }
 }

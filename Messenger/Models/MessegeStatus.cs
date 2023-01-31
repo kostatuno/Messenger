@@ -17,7 +17,7 @@ namespace Messenger.Models
 
         public override string ToString()
         {
-            return $"StatusMessage: {Status}";
+            return $"MessageStatus: {Status}";
         }
     }
 }
