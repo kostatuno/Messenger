@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Messenger.Models
+namespace Messenger.Enums
 {
-    public class Room
+    public enum RoomStatus
     {
-        public int Id { get; set; }
-
+        Сlosed,
+        Open,
+        Full,
     }
 }

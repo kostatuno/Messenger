@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Messenger.Enums
+namespace Messenger.Models
 {
-    internal class RoomStatus
+    internal class UserStatus
     {
     }
 }

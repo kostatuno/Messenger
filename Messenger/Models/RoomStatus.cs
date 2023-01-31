@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace Messenger.Models
 {
-    public class Room
+    internal class RoomStatus
     {
-        public int Id { get; set; }
-
     }
 }

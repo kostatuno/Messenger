@@ -10,9 +10,9 @@ namespace Messenger.Models
     {
         public int Id { get; set; } 
         public string Status { get; private set; }
-        public MessageStatus(MessageStatusEnum statusMessage)
+        public MessageStatus(MessageStatusEnum status)
         {
-            Status = statusMessage.ToString();
+            Status = status.ToString();
         }
 
         public override string ToString()
