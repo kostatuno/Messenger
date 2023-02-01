@@ -24,6 +24,7 @@ namespace Database
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new UserConfiguration());
+            modelBuilder.ApplyConfiguration(new UserStatusConfiguration());
             modelBuilder.ApplyConfiguration(new RoomConfiguration());
             modelBuilder.ApplyConfiguration(new RoomStatusConfiguration());
             modelBuilder.ApplyConfiguration(new MessageStatusConfiguration());

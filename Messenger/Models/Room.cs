@@ -13,11 +13,12 @@ namespace Messenger.Models
         public Moderator Moderator { get; set; }
         public List<User> Users { get; set; }
         public int Length { get; private set; }
-        public Room(string name, int length)
+        public Room(Moderator moderator, string name, int length)
         {
             Name = name;
             Length = length;
             Users = new List<User>(length);
+            
         }
 
         public void AddUser(int id)

@@ -13,7 +13,8 @@ namespace Database.Configuration
     {
         public void Configure(EntityTypeBuilder<MessageStatus> builder)
         {
-            builder.HasAlternateKey(p => p.Status);
+            builder.HasKey(x => x.Id);
+            builder.HasAlternateKey(x => x.Status);
         }
     }
 }

@@ -9,8 +9,7 @@ namespace Messenger.Models
 {
     public class Moderator : User, IModerator
     {
-        public Room Room { get; private set; }
-        public Moderator(User user) : base(user.Id, user.Name, user.Login, user.Password)
+        public Moderator(User user) : base(user.Name, user.Login, user.Password)
         {
 
         }

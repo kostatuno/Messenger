@@ -13,7 +13,8 @@ namespace Database.Configuration
     {
         public void Configure(EntityTypeBuilder<RoomStatus> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(x => x.Id);
+            builder.HasAlternateKey(x => x.Status);
         }
     }
 }

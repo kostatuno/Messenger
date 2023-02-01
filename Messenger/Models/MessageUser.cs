@@ -7,15 +7,16 @@ namespace Messenger.Models
     {
         public int Id { get; set; }
         public string UserName { get; set; }
-
+        [ForeignKey("UserName")]
         public User? User { get; set; }
         public string? Text { get; set; }
         public DateTime Date { get; set; }
-        public MessageStatus Status { get; set; }
+        public int? StatusId { get; set; }
+        [ForeignKey("StatusId")]
+        public MessageStatus? Status { get; set; }
 
         public MessageUser()
-        {
-        }
+        { }
 
         public MessageUser(User user, 
             string text, 
