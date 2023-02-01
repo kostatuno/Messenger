@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using System.Runtime.CompilerServices;
 using Database;
 using Messenger;
+using Messenger.Models;
 
 namespace ShkiperWinForms
 {
@@ -73,7 +74,7 @@ namespace ShkiperWinForms
         {
             if (e.KeyCode == Keys.Enter)
             {
-                using (ApplicationDbContext db = ApplicationDbContext.GetInstance())
+                using (ApplicationDbContext db = new ApplicationDbContext())
                 {
                     MessageUser message = new MessageUser((User)CurrentUser.Clone(), textBoxMessage.Text, DateTime.Now, MessageStatusEnum.NotRead);
                     listBoxChat.Items.Add(message);

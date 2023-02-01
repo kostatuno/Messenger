@@ -5,9 +5,8 @@ using Messenger;
 using System.Reflection;
 using Messenger.Models;
 
-using (var db = ApplicationDbContext.GetInstance())
+using (var db = new ApplicationDbContext())
 {
-    db.Database.EnsureDeleted();
     db.Database.EnsureCreated();
 }
 

@@ -3,22 +3,30 @@ using Microsoft.Extensions.Configuration;
 using Messenger.Extensions;
 using Messenger.Models;
 using System.Drawing;
-using Database.Configuration;
+using Database.Models.Configuration;
+using Microsoft.Extensions.Logging;
 
 namespace Database
 {
     public class ApplicationDbContext : DbContext
     {
-        static ApplicationDbContext? applicationDbContext;
         public DbSet<Room> Rooms { get; set; } = null!;
         public DbSet<User> Users { get; set; } = null!;
         public DbSet<RoomStatus> RoomStatus { get; set; } = null!;
         public DbSet<MessageUser> Messages { get; set; } = null!;
         public DbSet<MessageStatus> StatusMessege { get; set; } = null!;
 
+        public ApplicationDbContext()
+        {
+
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=Messenger(Shkiper);Trusted_Connection=true;");
+            optionsBuilder
+                .UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=Messenger_Shkiper;Trusted_Connection=true;")
+                .EnableDetailedErrors()
+                .LogTo(Console.WriteLine, new[] { DbLoggerCategory.Database.Command.Name }, LogLevel.Information);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -29,30 +37,8 @@ namespace Database
             modelBuilder.ApplyConfiguration(new RoomStatusConfiguration());
             modelBuilder.ApplyConfiguration(new MessageStatusConfiguration());
             modelBuilder.ApplyConfiguration(new MessageUserConfiguration());
-        }
-        private static bool IsDisposed()
-        {
-            try
-            {
-                applicationDbContext?.Database.EnsureCreated();
-            }
-            catch
-            {
-                return true;
-            }
-            return false;
-        }
 
-        private ApplicationDbContext() 
-        { }
-
-        public static ApplicationDbContext GetInstance()
-        {
-            if (applicationDbContext == null || IsDisposed())
-            {
-                applicationDbContext = new ApplicationDbContext();
-            }
-            return applicationDbContext;
-        }  
+            modelBuilder.UseCollation("Cyrillic_General_CI_AS_KS");
+        }
     }
 }

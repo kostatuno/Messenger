@@ -1,4 +1,5 @@
 using Messenger;
+using Messenger.Models;
 using Database;
 
 namespace ShkiperWinForms
@@ -42,7 +43,7 @@ namespace ShkiperWinForms
 
         private void button2_Click(object sender, EventArgs e)
         {
-            using (var db = ApplicationDbContext.GetInstance())
+            using (var db = new ApplicationDbContext())
             {
                 foreach (var user in db.Users)
                 {

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Database;
 using Messenger;
+using Messenger.Models;
 
 namespace ShkiperWinForms
 {
@@ -42,7 +43,7 @@ namespace ShkiperWinForms
 
             else
             {
-                using (var db = ApplicationDbContext.GetInstance())
+                using (var db = new ApplicationDbContext())
                 {
                     db.Users.Add(new User(textBox3.Text, textBox1.Text, textBox2.Text));
                     db.SaveChanges();

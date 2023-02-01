@@ -82,16 +82,10 @@ D:\PROJECTS_IN_WORK\Shkiper_Messenger\Database\bin\Debug\net6.0\Microsoft.Entity
 D:\PROJECTS_IN_WORK\Shkiper_Messenger\Database\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
 D:\PROJECTS_IN_WORK\Shkiper_Messenger\Database\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
 D:\PROJECTS_IN_WORK\Shkiper_Messenger\Database\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
-D:\PROJECTS_IN_WORK\Shkiper_Messenger\Database\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
 D:\PROJECTS_IN_WORK\Shkiper_Messenger\Database\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
-D:\PROJECTS_IN_WORK\Shkiper_Messenger\Database\bin\Debug\net6.0\Microsoft.Extensions.Configuration.FileExtensions.dll
-D:\PROJECTS_IN_WORK\Shkiper_Messenger\Database\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Json.dll
 D:\PROJECTS_IN_WORK\Shkiper_Messenger\Database\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
 D:\PROJECTS_IN_WORK\Shkiper_Messenger\Database\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 D:\PROJECTS_IN_WORK\Shkiper_Messenger\Database\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
-D:\PROJECTS_IN_WORK\Shkiper_Messenger\Database\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Abstractions.dll
-D:\PROJECTS_IN_WORK\Shkiper_Messenger\Database\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Physical.dll
-D:\PROJECTS_IN_WORK\Shkiper_Messenger\Database\bin\Debug\net6.0\Microsoft.Extensions.FileSystemGlobbing.dll
 D:\PROJECTS_IN_WORK\Shkiper_Messenger\Database\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
 D:\PROJECTS_IN_WORK\Shkiper_Messenger\Database\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
 D:\PROJECTS_IN_WORK\Shkiper_Messenger\Database\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
