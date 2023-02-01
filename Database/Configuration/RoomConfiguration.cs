@@ -13,7 +13,15 @@ namespace Database.Configuration
     {
         public void Configure(EntityTypeBuilder<Room> builder)
         {
-            throw new NotImplementedException();
+            builder
+                .HasMany(p => p.Users)
+                .WithMany(p => p.Rooms)
+                .UsingEntity(j => j.ToTable("UsersRooms"));
+
+            builder
+                .HasOne(p => p.Moderator)
+                .WithOne(p => p.Room)
+                .OnDelete(DeleteBehavior.SetNull);
         }
     }
 }

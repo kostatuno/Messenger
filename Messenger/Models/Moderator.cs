@@ -9,12 +9,17 @@ namespace Messenger.Models
 {
     public class Moderator : User, IModerator
     {
-        public Moderator(User user) : base(user.Name, user.Login, user.Password)
-        {
+        public Room? Room;
 
-        }
+        public Moderator()
+        { }
+
+        public Moderator(User user) : base(user.Name, user.Login, user.Password)
+        { }
+
         public void OfferToRemoveUser(IUser user)
         {
+
         }
     }
 }

@@ -13,7 +13,10 @@ namespace Database.Configuration
     {
         public void Configure(EntityTypeBuilder<MessageUser> builder)
         {
-            builder.HasOne(p => p.User).WithMany(p => p.MessageUser).OnDelete(DeleteBehavior.Restrict);
+            builder
+                .HasOne(p => p.User)
+                .WithMany(p => p.Messages)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

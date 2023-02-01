@@ -10,6 +10,10 @@ namespace Messenger.Models
     {
         public int Id { get; set; } 
         public string Status { get; private set; }
+        
+        public MessageStatus()
+        { }
+
         public MessageStatus(MessageStatusEnum status)
         {
             Status = status.ToString();

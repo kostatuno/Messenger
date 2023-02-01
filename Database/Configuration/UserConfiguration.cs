@@ -13,6 +13,7 @@ namespace Database.Configuration
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {
+            builder.UseTphMappingStrategy();
             builder.HasKey(p => p.Login);
         }
     }

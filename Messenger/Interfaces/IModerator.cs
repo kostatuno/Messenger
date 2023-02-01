@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Messenger.Interfaces
 {
-    interface IModerator
+    public interface IModerator
     {
         void OfferToRemoveUser(IUser user);
     }

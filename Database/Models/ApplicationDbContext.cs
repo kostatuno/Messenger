@@ -34,7 +34,7 @@ namespace Database
         {
             try
             {
-                applicationDbContext.Database.EnsureCreated();
+                applicationDbContext?.Database.EnsureCreated();
             }
             catch
             {
@@ -44,8 +44,7 @@ namespace Database
         }
 
         private ApplicationDbContext() 
-        {
-        }
+        { }
 
         public static ApplicationDbContext GetInstance()
         {

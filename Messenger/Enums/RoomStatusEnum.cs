@@ -8,7 +8,7 @@ namespace Messenger
 {
     public enum RoomStatusEnum : ushort
     {
-        Сlosed,
+        Сlosed = 1,
         Open,
         Full,
     }

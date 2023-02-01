@@ -1,4 +1,5 @@
-﻿using Messenger.Models;
+﻿using Messenger;
+using Messenger.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -15,6 +16,12 @@ namespace Database.Configuration
         {
             builder.HasKey(x => x.Id);
             builder.HasAlternateKey(x => x.Status);
+
+            builder.HasData(
+                new RoomStatus(RoomStatusEnum.Сlosed) { Id = 1 },
+                new RoomStatus(RoomStatusEnum.Open) { Id = 2 },
+                new RoomStatus(RoomStatusEnum.Full) { Id = 3 }
+                );
         }
     }
 }

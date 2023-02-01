@@ -8,9 +8,9 @@ namespace Messenger
 {
     public enum UserStatusEnum : ushort
     {
-        Offline = 0,
-        Busy = 1,
-        Invisible = 2,
-        Available = 3
+        Offline = 1,
+        Busy,
+        Invisible,
+        Available
     }
 }
