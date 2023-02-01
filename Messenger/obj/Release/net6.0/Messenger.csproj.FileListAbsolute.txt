@@ -1,0 +1,12 @@
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\Messenger\bin\Release\net6.0\Messenger.deps.json
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\Messenger\bin\Release\net6.0\Messenger.dll
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\Messenger\bin\Release\net6.0\Messenger.pdb
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\Messenger\obj\Release\net6.0\Messenger.csproj.AssemblyReference.cache
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\Messenger\obj\Release\net6.0\Messenger.GeneratedMSBuildEditorConfig.editorconfig
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\Messenger\obj\Release\net6.0\Messenger.AssemblyInfoInputs.cache
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\Messenger\obj\Release\net6.0\Messenger.AssemblyInfo.cs
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\Messenger\obj\Release\net6.0\Messenger.csproj.CoreCompileInputs.cache
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\Messenger\obj\Release\net6.0\Messenger.dll
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\Messenger\obj\Release\net6.0\refint\Messenger.dll
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\Messenger\obj\Release\net6.0\Messenger.pdb
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\Messenger\obj\Release\net6.0\ref\Messenger.dll

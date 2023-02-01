@@ -23,8 +23,13 @@ namespace Database
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            var config = new ConfigurationBuilder()
+                .SetBasePath(new DirectoryInfo(Directory.GetCurrentDirectory()).GetParents(3))
+                .AddJsonFile("appsettings.json")
+                .Build();
+
             optionsBuilder
-                .UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=Messenger_Shkiper;Trusted_Connection=true;")
+                .UseSqlServer(config.GetConnectionString("DefaultConnection"))
                 .EnableDetailedErrors()
                 .LogTo(Console.WriteLine, new[] { DbLoggerCategory.Database.Command.Name }, LogLevel.Information);
         }
