@@ -138,3 +138,13 @@ D:\PROJECTS_IN_WORK\Shkiper_Messenger\WinForms\bin\Debug\net6.0-windows\runtimes
 D:\PROJECTS_IN_WORK\Shkiper_Messenger\WinForms\bin\Debug\net6.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 D:\PROJECTS_IN_WORK\Shkiper_Messenger\WinForms\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 D:\PROJECTS_IN_WORK\Shkiper_Messenger\WinForms\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\WinForms\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.dll
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\WinForms\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\WinForms\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Json.dll
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\WinForms\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\WinForms\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\WinForms\bin\Debug\net6.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\WinForms\bin\Debug\net6.0-windows\System.Text.Encodings.Web.dll
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\WinForms\bin\Debug\net6.0-windows\System.Text.Json.dll
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\WinForms\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\WinForms\bin\Debug\net6.0-windows\appsettings.json

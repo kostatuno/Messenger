@@ -15,6 +15,9 @@ namespace Database.Models.Configuration
         {
             builder.UseTphMappingStrategy();
             builder.HasKey(p => p.Login);
+
+            builder.Property(p => p.Password).IsRequired();
+            builder.Property(p => p.Name).IsRequired();
         }
     }
 }

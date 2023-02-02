@@ -24,7 +24,7 @@ namespace Database
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var config = new ConfigurationBuilder()
-                .SetBasePath(new DirectoryInfo(Directory.GetCurrentDirectory()).GetParents(3))
+                .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json")
                 .Build();
 
