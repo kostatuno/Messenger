@@ -10,7 +10,7 @@ namespace Messenger.Models
 {
     public class Room
     {
-        public List<User> Users { get; set; } = new();
+        public ICollection<User> Users { get; set; }
         public int Id { get; set; }
         public string Name { get; set; }
         public int StatusId { get; set; }

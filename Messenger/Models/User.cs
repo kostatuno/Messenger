@@ -4,8 +4,8 @@ namespace Messenger.Models
 {
     public partial class User : ICloneable
     {
-        public List<MessageUser> Messages { get; set; } = new(); // was created for database syntax
-        public List<Room> Rooms { get; set; } = new(); // was created for database syntax
+        public ICollection<MessageUser> Messages { get; set; } // was created for database syntax
+        public ICollection<Room> Rooms { get; set; } // was created for database syntax
         public string Login { get; set; }
         public string? Password { get; set; }
         public string? Name { get; set; }

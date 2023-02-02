@@ -17,6 +17,8 @@ namespace Database.Models.Configuration
                 .HasOne(p => p.User)
                 .WithMany(p => p.Messages)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            builder.Property(p => p.Text).HasMaxLength(200);
         }
     }
 }

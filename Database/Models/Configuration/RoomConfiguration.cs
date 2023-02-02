@@ -22,6 +22,12 @@ namespace Database.Models.Configuration
                 .HasOne(p => p.Moderator)
                 .WithOne(p => p.Room)
                 .OnDelete(DeleteBehavior.SetNull);
+
+            //
+            builder
+                .Property(p => p.Name)
+                .IsRequired()
+                .HasMaxLength(20);
         }
     }
 }

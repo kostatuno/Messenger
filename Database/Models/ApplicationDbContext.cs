@@ -36,12 +36,14 @@ namespace Database
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new UserConfiguration());
+            /*modelBuilder.ApplyConfiguration(new UserConfiguration());
             modelBuilder.ApplyConfiguration(new UserStatusConfiguration());
             modelBuilder.ApplyConfiguration(new RoomConfiguration());
             modelBuilder.ApplyConfiguration(new RoomStatusConfiguration());
             modelBuilder.ApplyConfiguration(new MessageStatusConfiguration());
-            modelBuilder.ApplyConfiguration(new MessageUserConfiguration());
+            modelBuilder.ApplyConfiguration(new MessageUserConfiguration());*/
+
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
 
             modelBuilder.UseCollation("Cyrillic_General_CI_AS_KS");
         }
