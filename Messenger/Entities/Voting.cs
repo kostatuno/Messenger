@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Messenger.Models
+namespace Messenger.Entities
 {
-    interface IModerator
+    public class Voting
     {
-        void OfferToRemoveUser(IUser user);
     }
 }

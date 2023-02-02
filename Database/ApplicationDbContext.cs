@@ -1,10 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Messenger.Extensions;
-using Messenger.Models;
+using Messenger.Entities;
 using System.Drawing;
-using Database.Models.Configuration;
 using Microsoft.Extensions.Logging;
+using Messenger.EntitiesStatus;
 
 namespace Database
 {

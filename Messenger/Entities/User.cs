@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Messenger.EntitiesStatus;
 
-namespace Messenger.Models
+namespace Messenger.Entities
 {
     public partial class User : ICloneable
     {

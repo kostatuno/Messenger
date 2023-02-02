@@ -1,5 +1,5 @@
 using Messenger;
-using Messenger.Models;
+using Messenger.Entities;
 using Database;
 
 namespace ShkiperWinForms

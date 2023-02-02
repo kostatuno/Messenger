@@ -12,7 +12,7 @@ using System.Windows.Forms;
 using System.Runtime.CompilerServices;
 using Database;
 using Messenger;
-using Messenger.Models;
+using Messenger.Entities;
 
 namespace ShkiperWinForms
 {

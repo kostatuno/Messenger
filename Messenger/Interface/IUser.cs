@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Messenger.Interfaces
+namespace Messenger.Interface
 {
-    public interface IModerator
+    public interface IUser
     {
-        void OfferToRemoveUser(IUser user);
+
     }
 }

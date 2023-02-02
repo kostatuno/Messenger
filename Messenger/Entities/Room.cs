@@ -5,8 +5,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Messenger.EntitiesStatus;
 
-namespace Messenger.Models
+namespace Messenger.Entities
 {
     public class Room
     {

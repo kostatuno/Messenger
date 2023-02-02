@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Messenger.Models
+namespace Messenger.EntitiesStatus
 {
     public class RoomStatus
     {
@@ -13,7 +13,7 @@ namespace Messenger.Models
 
         public RoomStatus()
         { }
-        
+
         public RoomStatus(RoomStatusEnum status)
         {
             Status = status.ToString();

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Database;
 using Messenger;
-using Messenger.Models;
+using Messenger.Entities;
 
 namespace ShkiperWinForms
 {

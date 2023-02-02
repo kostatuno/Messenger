@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Messenger.Interfaces
+namespace Messenger.Entities
 {
-    public interface IUser
+    internal class Client
     {
     }
 }

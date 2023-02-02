@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Messenger.Models
+namespace Messenger.Services
 {
-    public interface IUser
+    internal class Authorization
     {
     }
 }

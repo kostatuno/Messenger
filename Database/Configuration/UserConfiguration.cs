@@ -1,4 +1,5 @@
-﻿using Messenger.Models;
+﻿using Messenger.EntitiesStatus;
+using Messenger.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -7,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Database.Models.Configuration
+namespace Database.Configuration
 {
     public class UserConfiguration : IEntityTypeConfiguration<User>
     {
