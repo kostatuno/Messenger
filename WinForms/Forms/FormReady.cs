@@ -10,9 +10,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.CompilerServices;
-using Database;
 using Messenger;
 using Messenger.Entities;
+using Messenger.Data;
 
 namespace ShkiperWinForms
 {

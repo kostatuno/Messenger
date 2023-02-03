@@ -17,11 +17,12 @@ namespace Messenger.Entities
         public User()
         { }
 
-        public User(string? name, string login, string? password)
+        public User(string login, string? password, string? name)
         {
-            Name = name;
+            StatusId = 1;
             Login = login;
             Password = password;
+            Name = name;    
         }
 
         public object Clone() => new User(Name, Login, Password);

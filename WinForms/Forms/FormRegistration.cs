@@ -9,14 +9,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Database;
 using Messenger;
+using Messenger.Data;
 using Messenger.Entities;
+using Messenger.Services;
 
 namespace ShkiperWinForms
 {
     public partial class FormRegistration : Form
     {
+        Registration registration { get; set; }
         public FormRegistration()
         {
+            registration = new Registration();  
             InitializeComponent();
         }
 
@@ -43,13 +47,9 @@ namespace ShkiperWinForms
 
             else
             {
-                using (var db = new ApplicationDbContext())
-                {
-                    db.Users.Add(new User(textBox3.Text, textBox1.Text, textBox2.Text));
-                    db.SaveChanges();
-                    MessageBox.Show("Намана, бистріше залітай в чат любчику");
-                    this.Close();
-                }
+                registration.CreateAccount(new User(textBox3.Text, textBox1.Text, textBox2.Text));       
+                MessageBox.Show("Намана, бистріше залітай в чат любчику");
+                this.Close();
             }
             
         }

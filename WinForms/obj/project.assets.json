@@ -1188,24 +1188,13 @@
           }
         }
       },
-      "Database/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "Messenger": "1.0.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.2",
-          "Microsoft.Extensions.Configuration.Json": "7.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Database.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Database.dll": {}
-        }
-      },
       "Messenger/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.2",
+          "Microsoft.Extensions.Configuration.Json": "7.0.0"
+        },
         "compile": {
           "bin/placeholder/Messenger.dll": {}
         },
@@ -3602,11 +3591,6 @@
         "version.txt"
       ]
     },
-    "Database/1.0.0": {
-      "type": "project",
-      "path": "../Database/Database.csproj",
-      "msbuildProject": "../Database/Database.csproj"
-    },
     "Messenger/1.0.0": {
       "type": "project",
       "path": "../Messenger/Messenger.csproj",
@@ -3615,7 +3599,6 @@
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
-      "Database >= 1.0.0",
       "Messenger >= 1.0.0"
     ]
   },
@@ -3646,9 +3629,6 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Database\\Database.csproj": {
-              "projectPath": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Database\\Database.csproj"
-            },
             "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger\\Messenger.csproj": {
               "projectPath": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger\\Messenger.csproj"
             }

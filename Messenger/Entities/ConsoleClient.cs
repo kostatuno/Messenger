@@ -21,14 +21,17 @@ namespace Messenger.Entities
 
         public void Run()
         {
-            Console.WriteLine($"You are welcome. It's your Shkiper\n");
+            var welcomeClient = new StringBuilder();
+            welcomeClient.AppendLine($"You are welcome. It's your Shkiper\n");
 
             for (int i = 0; i < services.Count; i++)
             {
-                Console.WriteLine($"{i + 1}. {services[i].GetType().Name}");
+                welcomeClient.AppendLine($"{i + 1}. {services[i].GetType().Name}");
             }
 
-            Console.WriteLine("\nSelect your action (number):");
+            welcomeClient.Append("\nSelect your action (number):");
+
+            Console.WriteLine(welcomeClient.ToString());
 
             while (true)
             {

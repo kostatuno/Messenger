@@ -11,7 +11,7 @@ namespace Messenger.Services
     {
         public void Run()
         {
-            Console.WriteLine("nice");
+            Console.WriteLine();            
         }
     }
 }

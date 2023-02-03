@@ -8,7 +8,6 @@
     ".NETCoreApp,Version=v6.0": {
       "WinForms/1.0.0": {
         "dependencies": {
-          "Database": "1.0.0",
           "Messenger": "1.0.0"
         },
         "runtime": {
@@ -639,17 +638,11 @@
           "System.Drawing.Common": "5.0.0"
         }
       },
-      "Database/1.0.0": {
+      "Messenger/1.0.0": {
         "dependencies": {
-          "Messenger": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.2",
           "Microsoft.Extensions.Configuration.Json": "7.0.0"
         },
-        "runtime": {
-          "Database.dll": {}
-        }
-      },
-      "Messenger/1.0.0": {
         "runtime": {
           "Messenger.dll": {}
         }
@@ -1137,11 +1130,6 @@
       "sha512": "sha512-c1ho9WU9ZxMZawML+ssPKZfdnrg/OjR3pe0m9v8230z3acqphwvPJqzAkH54xRYm5ntZHGG1EPP3sux9H3qSPg==",
       "path": "system.windows.extensions/5.0.0",
       "hashPath": "system.windows.extensions.5.0.0.nupkg.sha512"
-    },
-    "Database/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     },
     "Messenger/1.0.0": {
       "type": "project",
