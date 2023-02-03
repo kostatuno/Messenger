@@ -5,8 +5,5 @@ using Messenger;
 using System.Reflection;
 using Messenger.Entities;
 
-using (var db = new ApplicationDbContext())
-{
-    db.Database.EnsureCreated();
-}
 
+var client = new ConsoleClient();

@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Messenger.Entities
+namespace Messenger.Interface
 {
-    internal class Client
+    interface IService
     {
+        void Run();
     }
 }

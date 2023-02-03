@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Messenger.Interface;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,11 @@ using System.Threading.Tasks;
 
 namespace Messenger.Services
 {
-    internal class Authorization
+    public class Authorization : IService
     {
+        public void Run()
+        {
+            Console.WriteLine("nice");
+        }
     }
 }
