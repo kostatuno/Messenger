@@ -32,8 +32,8 @@ namespace Messenger.Data
 
             optionsBuilder
                 .UseSqlServer(config.GetConnectionString("DefaultConnection"))
-                .EnableDetailedErrors()
-                .LogTo(Console.WriteLine, new[] { DbLoggerCategory.Database.Command.Name }, LogLevel.Information);
+                .EnableDetailedErrors();
+                //.LogTo(Console.WriteLine, new[] { DbLoggerCategory.Database.Command.Name }, LogLevel.Information);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

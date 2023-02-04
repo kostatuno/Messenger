@@ -32,6 +32,7 @@ namespace Messenger.Services
         {
             var user = ConsoleInputInformationAboutNewAccount();
             CreateAccount(user);
+            client.RunWelcome();
         }
 
         User ConsoleInputInformationAboutNewAccount()

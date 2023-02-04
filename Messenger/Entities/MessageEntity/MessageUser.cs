@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Messenger.Entities.ChatEntity;
 using Messenger.Entities.UserEnity;
 
 namespace Messenger.Entities.MessageEntity
@@ -15,6 +16,15 @@ namespace Messenger.Entities.MessageEntity
         public int? StatusId { get; set; }
         [ForeignKey("StatusId")]
         public MessageStatus? Status { get; set; }
+
+        // Implementation problem 
+
+        /*public int? PersonalChatId { get; set; }
+        public PersonalChat? PersonalChat { get; set; }
+        public int? GroupChatId { get; set; }
+        public GroupChat? GroupChat { get; set; }*/
+
+
 
         public MessageUser()
         { }
