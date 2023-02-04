@@ -1,4 +1,6 @@
-﻿using Messenger.Interface;
+﻿using Messenger.Data;
+using Messenger.Entities;
+using Messenger.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +11,19 @@ namespace Messenger.Services
 {
     public class Authorization : IService
     {
-        public void Run()
+        public Authorization()
         {
-            Console.WriteLine();            
+            db = new ApplicationDbContext();
+        }
+
+        public bool Validate(User user)
+        {
+            return db.Users.Any(x => x.Login == user.Login && x.Password == user.Password);
+        }
+
+        public override void Run()
+        {
+            throw new NotImplementedException();
         }
     }
 }

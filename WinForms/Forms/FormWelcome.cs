@@ -2,13 +2,20 @@ using Messenger;
 using Messenger.Entities;
 using Database;
 using Messenger.Data;
+using Messenger.Services;
+using Microsoft.VisualBasic.ApplicationServices;
+using Messenger.Interface;
+using Microsoft.EntityFrameworkCore;
+using User = Messenger.Entities.User;
 
 namespace ShkiperWinForms
 {
     public partial class FormWelcome : Form
     {        
+        Authorization authorization { get; set; }
         public FormWelcome()
         {
+            authorization = new Authorization();
             InitializeComponent();
             textBox1.Validating += textBox1_Validation;
             textBox2.Validating += textBox2_Validation;
@@ -44,16 +51,11 @@ namespace ShkiperWinForms
 
         private void button2_Click(object sender, EventArgs e)
         {
-            using (var db = new ApplicationDbContext())
+            var user = new User() { Login = textBox1.Text, Password = textBox2.Text };
+            if (authorization.Validate(user))
+                GetFormReady(user);
+            else
             {
-                foreach (var user in db.Users)
-                {
-                    if (textBox1.Text == user.Login && textBox2.Text == user.Password)
-                    {
-                        GetFormReady(user);
-                        return;
-                    }
-                }
                 MessageBox.Show("Немає такого користувача. Сбробуйте знову, або ж створіть новий аккаунт");
                 textBox2.Clear();
             }

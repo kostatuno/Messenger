@@ -6,4 +6,6 @@ using Messenger.Entities;
 using Messenger.Services;
 using Messenger.Data;
 
-using var db = new ApplicationDbContext();
+var client = new ConsoleClient(
+    new Registration(),
+    new Authorization());

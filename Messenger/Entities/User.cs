@@ -3,7 +3,7 @@ using Messenger.EntitiesStatus;
 
 namespace Messenger.Entities
 {
-    public partial class User : ICloneable
+    public class User : ICloneable
     {
         public ICollection<MessageUser> Messages { get; set; } // was created for database syntax
         public ICollection<Room> Rooms { get; set; } // was created for database syntax

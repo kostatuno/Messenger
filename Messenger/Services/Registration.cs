@@ -15,7 +15,6 @@ namespace Messenger.Services
 {
     public class Registration : IService
     {
-        ApplicationDbContext db;
         public User? User { get; set; }
         
         public Registration()
@@ -27,10 +26,9 @@ namespace Messenger.Services
         {
             db.Users.Add(user);
             db.SaveChanges();
-            db.Dispose();
         }
 
-        public void Run()
+        public override void Run()
         {
             throw new NotImplementedException();
         }

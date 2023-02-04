@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Messenger.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace Messenger.Interface
 {
-    interface IService
+    public abstract class IService
     {
-        void Run();
+        protected ApplicationDbContext db { get; set; }
+        public abstract void Run();
     }
 }

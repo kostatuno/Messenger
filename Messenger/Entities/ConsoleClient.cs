@@ -11,11 +11,14 @@ namespace Messenger.Entities
     public class ConsoleClient
     {
         List<IService> services;
-        public ConsoleClient()
+        
+        public ConsoleClient(params IService[] iServices)
         {
             services = new List<IService>();
-            services.Add(new Authorization());
-            services.Add(new Registration());
+            foreach (var service in iServices)
+            {
+                services.Add(service);
+            }
             Run();
         }
 

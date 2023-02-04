@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Database.Configuration
+namespace Messenger.Data.Configuration
 {
     public class RoomConfiguration : IEntityTypeConfiguration<Room>
     {

@@ -9,6 +9,6 @@ namespace Messenger.Interface
 {
     public interface IModerator : IUser
     {
-        void OfferToRemoveUser(Voting voting);
+        void RemoveUser(User user);
     }
 }

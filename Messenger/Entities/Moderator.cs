@@ -18,7 +18,7 @@ namespace Messenger.Entities
         public Moderator(User user) : base(user.Name, user.Login, user.Password)
         { }
 
-        public void OfferToRemoveUser(Voting user)
+        public void RemoveUser(User user)
         {
 
         }
