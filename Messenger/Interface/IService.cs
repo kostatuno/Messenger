@@ -1,4 +1,5 @@
 ﻿using Messenger.Data;
+using Messenger.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,6 @@ namespace Messenger.Interface
     public abstract class IService
     {
         protected ApplicationDbContext db { get; set; }
-        public abstract void Run();
+        public abstract void Run(IClient client);
     }
 }

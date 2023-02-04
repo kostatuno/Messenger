@@ -9,3 +9,4 @@ using Messenger.Data;
 var client = new ConsoleClient(
     new Registration(),
     new Authorization());
+

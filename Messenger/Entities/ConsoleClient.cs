@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Messenger.Entities
 {
-    public class ConsoleClient
+    public class ConsoleClient : IClient
     {
         List<IService> services;
         
@@ -19,10 +19,15 @@ namespace Messenger.Entities
             {
                 services.Add(service);
             }
-            Run();
+            RunWelcome();
         }
 
-        public void Run()
+        public void RunReady()
+        {
+            
+        }
+
+        public void RunWelcome()
         {
             var welcomeClient = new StringBuilder();
             welcomeClient.AppendLine($"You are welcome. It's your Shkiper\n");
@@ -44,7 +49,7 @@ namespace Messenger.Entities
                     Console.WriteLine("\rIncorrect input. Try again");
                 else
                 {
-                    services[answer-1].Run();
+                    services[answer-1].Run(this);
                     break;
                 }
             }

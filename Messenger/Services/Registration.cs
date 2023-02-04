@@ -28,9 +28,31 @@ namespace Messenger.Services
             db.SaveChanges();
         }
 
-        public override void Run()
+        public override void Run(IClient client)
         {
-            throw new NotImplementedException();
+            var user = ConsoleInputInformationAboutNewAccount();
+            CreateAccount(user);
+        }
+
+        User ConsoleInputInformationAboutNewAccount()
+        {
+            Console.WriteLine("\nRegistration\n");
+            Console.WriteLine($"Login: ");
+            var login = Console.ReadLine();
+            Console.WriteLine($"Name: ");
+            var name = Console.ReadLine();
+            Console.WriteLine($"Password: ");
+            var password = Console.ReadLine();
+            Console.WriteLine($"Password again: ");
+            var pwAgain = Console.ReadLine();
+
+            if (password != pwAgain)
+            {
+                Console.WriteLine("Your passwords aren't equal. Try again");
+                ConsoleInputInformationAboutNewAccount();
+            }
+
+            return new User(login, password, name);
         }
     }
 }

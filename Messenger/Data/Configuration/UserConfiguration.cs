@@ -16,6 +16,7 @@ namespace Messenger.Data.Configuration
         {
             builder.UseTphMappingStrategy();
             builder.HasKey(p => p.Login);
+            builder.Ignore(p => p.IsWriting);
 
             builder
                 .Property(p => p.Password)
