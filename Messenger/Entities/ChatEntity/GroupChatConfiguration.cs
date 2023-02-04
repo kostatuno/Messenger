@@ -1,5 +1,4 @@
 ﻿using Messenger.Entities;
-using Messenger.EntitiesStatus;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -8,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Messenger.Data.Configuration
+namespace Messenger.Entities.ChatEntity
 {
-    public class RoomConfiguration : IEntityTypeConfiguration<Room>
+    public class GroupChatConfiguration : IEntityTypeConfiguration<GroupChat>
     {
-        public void Configure(EntityTypeBuilder<Room> builder)
+        public void Configure(EntityTypeBuilder<GroupChat> builder)
         {
             builder
                 .HasMany(p => p.Users)
@@ -21,7 +20,7 @@ namespace Messenger.Data.Configuration
 
             builder
                 .HasOne(p => p.Moderator)
-                .WithOne(p => p.Room)
+                .WithOne(p => p.Chat)
                 .OnDelete(DeleteBehavior.SetNull);
 
             //

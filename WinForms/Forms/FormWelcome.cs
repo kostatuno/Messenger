@@ -1,12 +1,11 @@
 using Messenger;
-using Messenger.Entities;
 using Database;
 using Messenger.Data;
 using Messenger.Services;
 using Microsoft.VisualBasic.ApplicationServices;
 using Messenger.Interface;
 using Microsoft.EntityFrameworkCore;
-using User = Messenger.Entities.User;
+using User = Messenger.Entities.UserEnity.User;
 
 namespace ShkiperWinForms
 {

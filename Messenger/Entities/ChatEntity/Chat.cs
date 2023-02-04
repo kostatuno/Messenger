@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Messenger.Interface
+namespace Messenger.Entities.ChatEntity
 {
-    public interface IClient
+    internal class Chat
     {
-        void RunWelcome();
-        void RunReady();
     }
 }

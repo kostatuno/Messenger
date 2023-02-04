@@ -6,15 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Messenger.Entities
+namespace Messenger.Entities.ClientEntity
 {
-    public class ConsoleClient : IClient
+    public class ConsoleClient : Client
     {
-        List<IService> services;
-        
-        public ConsoleClient(params IService[] iServices)
+        List<Service> services;
+        public ConsoleClient(params Service[] iServices)
         {
-            services = new List<IService>();
+            services = new List<Service>();
             foreach (var service in iServices)
             {
                 services.Add(service);
@@ -22,12 +21,12 @@ namespace Messenger.Entities
             RunWelcome();
         }
 
-        public void RunReady()
+        public override void RunReady()
         {
-            
+            Console.WriteLine("");
         }
 
-        public void RunWelcome()
+        public override void RunWelcome()
         {
             var welcomeClient = new StringBuilder();
             welcomeClient.AppendLine($"You are welcome. It's your Shkiper\n");
@@ -49,7 +48,7 @@ namespace Messenger.Entities
                     Console.WriteLine("\rIncorrect input. Try again");
                 else
                 {
-                    services[answer-1].Run(this);
+                    services[answer - 1].Run(this);
                     break;
                 }
             }

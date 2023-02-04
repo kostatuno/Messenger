@@ -13,7 +13,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 
 namespace Messenger.Services
 {
-    public class Registration : IService
+    public class Registration : Service
     {
         public User? User { get; set; }
         
@@ -28,7 +28,7 @@ namespace Messenger.Services
             db.SaveChanges();
         }
 
-        public override void Run(IClient client)
+        public override void Run(Client client)
         {
             var user = ConsoleInputInformationAboutNewAccount();
             CreateAccount(user);

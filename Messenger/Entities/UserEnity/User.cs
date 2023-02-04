@@ -1,19 +1,19 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Messenger.EntitiesStatus;
 
-namespace Messenger.Entities
+namespace Messenger.Entities.UserEnity
 {
     public class User : ICloneable
     {
         public ICollection<MessageUser> Messages { get; set; } // was created for database syntax
-        public ICollection<Room> Rooms { get; set; } // was created for database syntax
+        public ICollection<GroupChat> Rooms { get; set; } // was created for database syntax
         public string Login { get; set; }
         public string? Password { get; set; }
         public string? Name { get; set; }
         public bool IsWriting { get; set; }
         public int StatusId { get; set; }
         public UserStatus? Status { get; set; }
-        
+
         public User()
         { }
 
@@ -22,7 +22,7 @@ namespace Messenger.Entities
             StatusId = 1;
             Login = login;
             Password = password;
-            Name = name;    
+            Name = name;
         }
 
         public object Clone() => new User(Name, Login, Password);

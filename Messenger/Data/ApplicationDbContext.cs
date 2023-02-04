@@ -10,7 +10,7 @@ namespace Messenger.Data
 {
     public class ApplicationDbContext : DbContext
     {
-        public DbSet<Room> Rooms { get; set; } = null!;
+        public DbSet<GroupChat> Rooms { get; set; } = null!;
         public DbSet<User> Users { get; set; } = null!;
         public DbSet<RoomStatus> RoomStatus { get; set; } = null!;
         public DbSet<MessageUser> Messages { get; set; } = null!;

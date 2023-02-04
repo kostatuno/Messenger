@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Messenger.EntitiesStatus
+namespace Messenger.Entities.UserEnity
 {
     public class UserStatus
     {

@@ -4,17 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Messenger.EntitiesStatus
+namespace Messenger.Entities.ChatEntity
 {
-    public class RoomStatus
+    public class GroupChatStatus
     {
         public int Id { get; set; }
         public string Status { get; private set; }
 
-        public RoomStatus()
+        public GroupChatStatus()
         { }
 
-        public RoomStatus(RoomStatusEnum status)
+        public GroupChatStatus(GroupChatStatusEnum status)
         {
             Status = status.ToString();
         }

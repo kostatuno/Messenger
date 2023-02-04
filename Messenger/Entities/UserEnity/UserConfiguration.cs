@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Messenger.Data.Configuration
+namespace Messenger.Entities.UserEnity
 {
     public class UserConfiguration : IEntityTypeConfiguration<User>
     {

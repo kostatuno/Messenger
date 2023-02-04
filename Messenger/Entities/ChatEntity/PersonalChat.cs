@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Messenger
+namespace Messenger.Entities.ChatEntity
 {
-    public enum RoomStatusEnum : ushort
+    internal class PersonalChat
     {
-        Сlosed = 1,
-        Open,
-        Full,
     }
 }

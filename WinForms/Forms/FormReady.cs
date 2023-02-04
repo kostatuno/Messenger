@@ -11,8 +11,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.CompilerServices;
 using Messenger;
-using Messenger.Entities;
 using Messenger.Data;
+using Messenger.Entities.MessageEntity;
+using Messenger.Entities.UserEnity;
 
 namespace ShkiperWinForms
 {

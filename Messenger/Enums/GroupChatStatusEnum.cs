@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Messenger.Entities
+namespace Messenger
 {
-    public class Voting
+    public enum ChatStatusEnum : ushort
     {
+        Сlosed = 1,
+        Open,
+        Full,
     }
 }

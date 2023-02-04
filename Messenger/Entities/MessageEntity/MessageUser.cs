@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using Messenger.EntitiesStatus;
 
-namespace Messenger.Entities
+namespace Messenger.Entities.MessageEntity
 {
     public class MessageUser : ICloneable
     {
@@ -19,9 +19,9 @@ namespace Messenger.Entities
         public MessageUser()
         { }
 
-        public MessageUser(User user, 
-            string text, 
-            DateTime date, 
+        public MessageUser(User user,
+            string text,
+            DateTime date,
             MessageStatusEnum status = MessageStatusEnum.NotRead)
         {
             User = user;
@@ -30,7 +30,7 @@ namespace Messenger.Entities
             Status = new MessageStatus(status);
         }
 
-        public override string ToString() => $"{User.Name}: {Text} | {Date:HH:mm:ss}"; 
+        public override string ToString() => $"{User.Name}: {Text} | {Date:HH:mm:ss}";
 
         public override bool Equals(object? obj)
         {

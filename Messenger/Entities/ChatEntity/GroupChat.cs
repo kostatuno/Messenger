@@ -7,9 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Messenger.EntitiesStatus;
 
-namespace Messenger.Entities
+namespace Messenger.Entities.ChatEntity
 {
-    public class Room
+    public class GroupChat
     {
         public ICollection<User> Users { get; set; }
         public int Id { get; set; }
@@ -21,10 +21,10 @@ namespace Messenger.Entities
         public Moderator? Moderator { get; set; }
         public int Count { get; private set; }
 
-        public Room()
+        public GroupChat()
         { }
 
-        public Room(User moderator, string name, int count)
+        public GroupChat(User moderator, string name, int count)
         {
             Name = name;
             Count = count;
