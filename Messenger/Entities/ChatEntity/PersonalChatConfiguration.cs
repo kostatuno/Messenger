@@ -16,13 +16,17 @@ namespace Messenger.Entities.ChatEntity
 
             builder
                 .HasOne(p => p.FirstUser)
-                .WithMany(p => p.PersonalChats)
+                .WithMany(p => p.PersonalChatsFromSelf)
+                .HasForeignKey(p => p.FirstUserLogin)
+                .HasPrincipalKey(p => p.Login)
                 .OnDelete(DeleteBehavior.Cascade);
 
             builder
                 .HasOne(p => p.SecondUser)
-                .WithMany(p => p.PersonalChats)
-                .OnDelete(DeleteBehavior.Cascade);
+                .WithMany(p => p.PersonalChatsFromInterlocutor)
+                .HasForeignKey(p => p.SecondUserLogin)
+                .HasPrincipalKey(p => p.Login)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

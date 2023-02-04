@@ -11,9 +11,9 @@ namespace Messenger.Entities.ChatEntity
 {
     public class PersonalChat : Chat
     {
-        public int FirstUserId { get; set; }
+        public string FirstUserLogin { get; set; }
         public User? FirstUser { get; init; }
-        public int SecondUserId { get; set; }
+        public string SecondUserLogin { get; set; }
         public User? SecondUser { get; init; }
         public PersonalChat(User firstUser, User secondUser)
         {

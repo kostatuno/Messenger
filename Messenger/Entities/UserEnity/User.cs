@@ -8,7 +8,8 @@ namespace Messenger.Entities.UserEnity
     {
         public IList<MessageUser> Messages { get; set; } // was created for database syntax
         public IList<GroupChat> GroupChats { get; set; } // was created for database syntax
-        public IList<PersonalChat> PersonalChats { get; set; } // was created for database syntax
+        public IList<PersonalChat> PersonalChatsFromSelf { get; set; } // was created for database syntax
+        public IList<PersonalChat> PersonalChatsFromInterlocutor { get; set; } // was created for database syntax
         public string Login { get; set; }
         public string? Password { get; set; }
         public string? Name { get; set; }
