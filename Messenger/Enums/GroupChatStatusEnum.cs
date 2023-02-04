@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Messenger
 {
-    public enum ChatStatusEnum : ushort
+    public enum GroupChatStatusEnum : ushort
     {
         Сlosed = 1,
         Open,

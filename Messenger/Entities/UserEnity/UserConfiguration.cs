@@ -1,5 +1,4 @@
-﻿using Messenger.EntitiesStatus;
-using Messenger.Entities;
+﻿using Messenger.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;

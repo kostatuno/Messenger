@@ -1,6 +1,6 @@
 ﻿using Messenger.Data;
-using Messenger.Entities;
-using Messenger.Interface;
+using Messenger.Entities.ClientEntity;
+using Messenger.Entities.UserEnity;
 using System;
 using System.Collections.Generic;
 using System.Linq;

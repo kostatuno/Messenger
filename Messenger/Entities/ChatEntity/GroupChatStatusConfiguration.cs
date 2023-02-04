@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Messenger.Entities.ChatEntity
 {
-    public class RoomStatusConfiguration : IEntityTypeConfiguration<GroupChatStatus>
+    public class GroupChatStatusConfiguration : IEntityTypeConfiguration<GroupChatStatus>
     {
         public void Configure(EntityTypeBuilder<GroupChatStatus> builder)
         {

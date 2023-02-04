@@ -5,6 +5,7 @@ using System.Reflection;
 using Messenger.Entities;
 using Messenger.Services;
 using Messenger.Data;
+using Messenger.Entities.ClientEntity;
 
 var client = new ConsoleClient(
     new Registration(),

@@ -6,8 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Messenger.Data;
-using Messenger.Entities;
-using Messenger.Interface;
+using Messenger.Entities.ClientEntity;
+using Messenger.Entities.UserEnity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Messenger.EntitiesStatus;
+using Messenger.Entities.UserEnity;
 
 namespace Messenger.Entities.MessageEntity
 {

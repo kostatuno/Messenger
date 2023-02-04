@@ -10,7 +10,7 @@ namespace Messenger.Entities.UserEnity
 {
     public class Moderator : User, IModerator
     {
-        public GroupChat? Chat;
+        public GroupChat? GroupChat;
 
         public Moderator()
         { }

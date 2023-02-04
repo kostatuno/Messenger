@@ -1,12 +1,14 @@
-﻿using System.ComponentModel.DataAnnotations;
-using Messenger.EntitiesStatus;
+﻿using Messenger.Entities.ChatEntity;
+using Messenger.Entities.MessageEntity;
+using System.ComponentModel.DataAnnotations;
 
 namespace Messenger.Entities.UserEnity
 {
     public class User : ICloneable
     {
-        public ICollection<MessageUser> Messages { get; set; } // was created for database syntax
-        public ICollection<GroupChat> Rooms { get; set; } // was created for database syntax
+        public IList<MessageUser> Messages { get; set; } // was created for database syntax
+        public IList<GroupChat> GroupChats { get; set; } // was created for database syntax
+        public IList<PersonalChat> PersonalChats { get; set; } // was created for database syntax
         public string Login { get; set; }
         public string? Password { get; set; }
         public string? Name { get; set; }

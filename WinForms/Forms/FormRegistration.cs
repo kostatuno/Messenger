@@ -11,6 +11,7 @@ using Database;
 using Messenger;
 using Messenger.Data;
 using Messenger.Entities;
+using Messenger.Entities.UserEnity;
 using Messenger.Services;
 
 namespace ShkiperWinForms

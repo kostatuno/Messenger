@@ -5,30 +5,28 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Messenger.EntitiesStatus;
+using Messenger.Entities.UserEnity;
 
 namespace Messenger.Entities.ChatEntity
 {
-    public class GroupChat
+    public class GroupChat : Chat
     {
-        public ICollection<User> Users { get; set; }
-        public int Id { get; set; }
+        public IList<User> Users { get; set; }
         public string Name { get; set; }
         public int StatusId { get; set; }
-        public RoomStatus? Status { get; set; }
+        public GroupChatStatus? Status { get; set; }
         public string? ModeratorId { get; set; }
         [ForeignKey("ModeratorId")]
         public Moderator? Moderator { get; set; }
-        public int Count { get; private set; }
 
         public GroupChat()
         { }
 
-        public GroupChat(User moderator, string name, int count)
+        public GroupChat(User moderator, string name, int length)
         {
             Name = name;
-            Count = count;
-            Users = new List<User>(count);
+            Length = length;
+            Users = new List<User>(length);
             AddUser(moderator);
         }
 
@@ -37,7 +35,7 @@ namespace Messenger.Entities.ChatEntity
             if (Users.Contains(user))
                 throw new Exception("User is already existing");
 
-            if (Users.Count < Count)
+            if (Users.Count < Length)
             {
                 Users.Add(user);
             }

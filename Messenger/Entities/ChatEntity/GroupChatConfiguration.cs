@@ -15,15 +15,14 @@ namespace Messenger.Entities.ChatEntity
         {
             builder
                 .HasMany(p => p.Users)
-                .WithMany(p => p.Rooms)
-                .UsingEntity(j => j.ToTable("UsersRooms"));
+                .WithMany(p => p.GroupChats)
+                .UsingEntity(j => j.ToTable("Users_GroupChats"));
 
             builder
                 .HasOne(p => p.Moderator)
-                .WithOne(p => p.Chat)
+                .WithOne(p => p.GroupChat)
                 .OnDelete(DeleteBehavior.SetNull);
 
-            //
             builder
                 .Property(p => p.Name)
                 .IsRequired()
