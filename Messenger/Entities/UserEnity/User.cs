@@ -20,6 +20,8 @@ namespace Messenger.Entities.UserEnity
         public User()
         { }
 
+        //public void SendMessage(new )
+
         public User(string login, string? password, string? name)
         {
             StatusId = 1;

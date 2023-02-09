@@ -6,7 +6,20 @@ using System.Threading.Tasks;
 
 namespace Messenger.Entities.ManagerEntities
 {
-    internal class ChatManager
+    public class ChatManager
     {
+        public ChatManager() { }
+        
+        public void CreateChat()
+        {
+
+        }
+
+        public void DeleteChat() 
+        {
+        
+        }
+
+
     }
 }
