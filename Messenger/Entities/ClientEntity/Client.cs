@@ -12,6 +12,5 @@ namespace Messenger.Entities.ClientEntity
         public User? User { get; set; }
         public abstract void RunWelcome();
         public abstract void RunReady();
-
     }
 }

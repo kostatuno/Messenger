@@ -15,17 +15,6 @@ namespace Messenger.Console.Entities
     public class ConsoleClient : Client
     {
         List<Service> services;
-       /* public User? User
-        {
-            get
-            {
-                if (User is null)
-            }
-            private set
-            {
-
-            }
-        }*/
 
         public ConsoleClient(params Service[] iServices)
         {
@@ -49,6 +38,8 @@ namespace Messenger.Console.Entities
                 System.Console.WriteLine($"{i + 1}. {methods[i].Name}");
             }
 
+            System.Console.WriteLine("\nSelect your action(number):");
+
             while (true)
             {
                 int.TryParse(System.Console.ReadLine(), out int answer);
@@ -57,8 +48,15 @@ namespace Messenger.Console.Entities
                     System.Console.WriteLine("\rIncorrect input. Try again");
                 else
                 {
-                    
-                    break;
+                    switch (methods[answer - 1].Name)
+                    {
+                        case "CreateRoom":
+                            User.CreateRoom();
+                            break;
+                        default:
+                            break;
+                    }
+                    RunReady();
                 }
             }
         }

@@ -24,8 +24,6 @@ namespace Messenger.Entities.MessageEntity
         public int? GroupChatId { get; set; }
         public GroupChat? GroupChat { get; set; }*/
 
-
-
         public MessageUser()
         { }
 

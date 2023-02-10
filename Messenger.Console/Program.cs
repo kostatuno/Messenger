@@ -15,12 +15,9 @@ namespace Messenger.Console
     {
         static void Main(string[] args)
         {
-            /*var client = new ConsoleClient(
+            var client = new ConsoleClient(
                 new Registration(),
                 new Authorization());
-*/
-            User user = null;
-            System.Console.WriteLine(user);
         }
     }
 }
