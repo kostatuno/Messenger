@@ -10,3 +10,8 @@
 3. messaging;
 3. authorization;
 4. registration.
+
+## Current used technologies in project (can be modified)
+1. Linq 
+2. Entity Framework Core
+
