@@ -18,6 +18,16 @@ namespace Messenger.Data.Configuration
                 .WithMany(p => p.Messages)
                 .OnDelete(DeleteBehavior.Restrict);
 
+            builder
+                .HasMany(p => p.GroupChats)
+                .WithMany(p => p.Messages)
+                .UsingEntity(j => j.ToTable("GroupChats_Messages"));
+
+            builder
+                .HasMany(p => p.PersonalChats)
+                .WithMany(p => p.Messages)
+                .UsingEntity(j => j.ToTable("PersonalChats_Messages"));
+
             builder.Property(p => p.Text).HasMaxLength(200);
         }
     }

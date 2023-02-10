@@ -7,7 +7,7 @@ namespace Messenger.Entities.UserEnity
 {
     public class User : ICloneable
     {
-        public ICollection<MessageUser>? Messages { get; set; }// was created for database syntax
+        public ICollection<MessageUser>? Messages { get; set; } // was created for database syntax
         public ICollection<GroupChat>? GroupChats { get; set; } // was created for database syntax
         public ICollection<PersonalChat>? PersonalChatsFromSelf { get; set; } // was created for database syntax
         public ICollection<PersonalChat>? PersonalChatsFromInterlocutor { get; set; } // was created for database syntax
@@ -30,20 +30,34 @@ namespace Messenger.Entities.UserEnity
             Name = name;
         }
 
-        /*public void CreateGroupChat()
+        public void CreateGroupChat(string nameChat, params string[] logins)
         {
-            chatFactory.Create();
+            using (var db = new ApplicationDbContext())
+            {
+
+            }
         }
-*/
+
         public void CreatePersonalChat(string login)
         {
             using (var db = new ApplicationDbContext())
             {
-                /*if (!db.Users.Any(p => p.Login == login))
-                    throw new Exception("There is no such login");*/
-
-                var @as = db.Users.FirstOrDefault(p => p.Login == login);
+                var interlocutor = db.Users.FirstOrDefault(p => p.Login == login);
+                
+                if (interlocutor is null)
+                    throw new Exception("There is no such login");
+                else
+                {
+                    var chat = new PersonalChat(this, interlocutor);
+                    db.PersonalChats.Add(chat);
+                    db.SaveChanges();
+                }
             }
+        }
+
+        public void SendMessage(Chat chat)
+        {
+
         }
 
         public object Clone() => new User(Name!, Login, Password);
@@ -54,5 +68,6 @@ namespace Messenger.Entities.UserEnity
                 return false;
             else return Login.Equals(obj2.Login);
         }
+        public override int GetHashCode() => (Login, Password, Name).GetHashCode();  
     }
 }

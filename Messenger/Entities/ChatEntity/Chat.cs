@@ -1,4 +1,5 @@
-﻿using Messenger.Entities.UserEnity;
+﻿using Messenger.Entities.MessageEntity;
+using Messenger.Entities.UserEnity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -12,5 +13,6 @@ namespace Messenger.Entities.ChatEntity
     {
         public int Id { get; set; }
         public int Length { get; protected init; }
+        public ICollection<MessageUser>? Messages { get; set; }
     }
 }

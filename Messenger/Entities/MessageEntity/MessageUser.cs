@@ -7,22 +7,17 @@ namespace Messenger.Entities.MessageEntity
 {
     public class MessageUser : ICloneable
     {
+        public ICollection<PersonalChat>? PersonalChats { get; set; } // was created for database syntax
+        public ICollection<GroupChat>? GroupChats { get; set; } // was created for database syntax
         public int Id { get; set; }
-        public string UserName { get; set; }
+        public string UserName { get; set; } = null!;
         [ForeignKey("UserName")]
         public User? User { get; set; }
-        public string? Text { get; set; }
+        public string Text { get; set; } = null!;
         public DateTime Date { get; set; }
-        public int? StatusId { get; set; }
+        public int StatusId { get; set; }
         [ForeignKey("StatusId")]
         public MessageStatus? Status { get; set; }
-
-        // Implementation problem 
-
-        /*public int? PersonalChatId { get; set; }
-        public PersonalChat? PersonalChat { get; set; }
-        public int? GroupChatId { get; set; }
-        public GroupChat? GroupChat { get; set; }*/
 
         public MessageUser()
         { }
@@ -38,15 +33,16 @@ namespace Messenger.Entities.MessageEntity
             Status = new MessageStatus(status);
         }
 
-        public override string ToString() => $"{User.Name}: {Text} | {Date:HH:mm:ss}";
+        public override string ToString() => $"{User!.Name}: {Text} | {Date:HH:mm:ss}";
 
         public override bool Equals(object? obj)
         {
             if (obj is not MessageUser obj2 || !GetType().Equals(obj.GetType()))
                 return false;
-            else return Text.Equals(obj2.Text) && Date.Equals(obj2.Date) && Status.Equals(obj2.Status);
+            else return Text.Equals(obj2.Text) && Date.Equals(obj2.Date) && Status!.Equals(obj2.Status);
         }
 
-        public object Clone() => new MessageUser(User, Text, Date, MessageStatusEnum.NotRead);
+        public object Clone() => new MessageUser(User!, Text, Date, MessageStatusEnum.NotRead);
+        public override int GetHashCode() => (Id, UserName, Text, Date).GetHashCode();
     }
 }

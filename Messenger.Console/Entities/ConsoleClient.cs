@@ -48,14 +48,6 @@ namespace Messenger.Console.Entities
                     System.Console.WriteLine("\rIncorrect input. Try again");
                 else
                 {
-                    /*switch (methods[answer - 1].Name)
-                    {
-                        case "CreateRoom":
-                            User.CreateRoom();
-                            break;
-                        default:
-                            break;
-                    }*/
                     RunReady();
                 }
             }

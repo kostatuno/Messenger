@@ -11,13 +11,13 @@ namespace Messenger.Entities.ChatEntity
 {
     public class GroupChat : Chat
     {
-        public ICollection<User>? Users { get; set; }
+        public ICollection<User>? Users { get; set; } // was created for database syntax
         public string Name { get; set; }
         public int StatusId { get; set; }
-        public GroupChatStatus? Status { get; set; }
+        public GroupChatStatus? Status { get; set; } // was created for database syntax
         public string? ModeratorId { get; set; }
         [ForeignKey("ModeratorId")]
-        public Moderator? Moderator { get; set; }
+        public Moderator? Moderator { get; set; } // was created for database syntax
 
         public GroupChat()
         { }

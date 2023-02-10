@@ -1,12 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Messenger.Extensions;
-using System.Drawing;
 using Microsoft.Extensions.Logging;
 using Messenger.Entities.ChatEntity;
 using Messenger.Entities.MessageEntity;
 using Messenger.Entities.UserEnity;
 using Messenger.Data.Configuration;
+using System.Drawing;
 
 namespace Messenger.Data
 {
@@ -16,7 +16,7 @@ namespace Messenger.Data
         public DbSet<GroupChat> GroupChats { get; set; } = null!;
         public DbSet<GroupChatStatus> GroupChatStatus { get; set; } = null!;
         public DbSet<User> Users { get; set; } = null!;
-        public DbSet<MessageUser> Messages { get; set; } = null!;
+        //public DbSet<MessageUser> Messages { get; set; } = null!;
         public DbSet<MessageStatus> StatusMessege { get; set; } = null!;
 
         public ApplicationDbContext()
