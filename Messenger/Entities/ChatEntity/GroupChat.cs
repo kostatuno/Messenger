@@ -11,7 +11,7 @@ namespace Messenger.Entities.ChatEntity
 {
     public class GroupChat : Chat
     {
-        public IList<User> Users { get; set; }
+        public ICollection<User>? Users { get; set; }
         public string Name { get; set; }
         public int StatusId { get; set; }
         public GroupChatStatus? Status { get; set; }

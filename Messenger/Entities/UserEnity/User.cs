@@ -1,4 +1,5 @@
-﻿using Messenger.Entities.ChatEntity;
+﻿using Messenger.Data;
+using Messenger.Entities.ChatEntity;
 using Messenger.Entities.MessageEntity;
 using System.ComponentModel.DataAnnotations;
 
@@ -29,11 +30,21 @@ namespace Messenger.Entities.UserEnity
             Name = name;
         }
 
-        public void CreateRoom()
+        /*public void CreateGroupChat()
         {
-            return;
+            chatFactory.Create();
         }
+*/
+        public void CreatePersonalChat(string login)
+        {
+            using (var db = new ApplicationDbContext())
+            {
+                /*if (!db.Users.Any(p => p.Login == login))
+                    throw new Exception("There is no such login");*/
 
+                var @as = db.Users.FirstOrDefault(p => p.Login == login);
+            }
+        }
 
         public object Clone() => new User(Name!, Login, Password);
         public override string ToString() => $"Name: {Name}, Login: {Login}, Password: {Password}";

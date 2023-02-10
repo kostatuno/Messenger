@@ -15,9 +15,11 @@ namespace Messenger.Console
     {
         static void Main(string[] args)
         {
-            var client = new ConsoleClient(
+            /*var client = new ConsoleClient(
                 new Registration(),
-                new Authorization());
+                new Authorization());*/
+
+            new User().CreatePersonalChat("1231");
         }
     }
 }
