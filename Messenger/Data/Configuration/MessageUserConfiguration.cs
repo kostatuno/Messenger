@@ -5,8 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Messenger.Entities.MessageEntity;
 
-namespace Messenger.Entities.MessageEntity
+namespace Messenger.Data.Configuration
 {
     public class MessageUserConfiguration : IEntityTypeConfiguration<MessageUser>
     {

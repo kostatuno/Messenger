@@ -17,10 +17,10 @@ namespace Messenger.Entities.UserEnity
         public int StatusId { get; set; }
         public UserStatus? Status { get; set; }
 
+        public event EventHandler CreatingRoom;
+
         public User()
         { }
-
-        //public void SendMessage(new )
 
         public User(string login, string? password, string? name)
         {
@@ -28,6 +28,16 @@ namespace Messenger.Entities.UserEnity
             Login = login;
             Password = password;
             Name = name;
+        }
+
+        public void CreateRoom()
+        {
+            return;
+        }
+
+        public void OnCreatingRoomEvent(EventArgs creatingRoom)
+        {
+            CreatingRoom?.Invoke(this, creatingRoom);
         }
 
         public object Clone() => new User(Name, Login, Password);

@@ -6,6 +6,7 @@ using Microsoft.Extensions.Logging;
 using Messenger.Entities.ChatEntity;
 using Messenger.Entities.MessageEntity;
 using Messenger.Entities.UserEnity;
+using Messenger.Data.Configuration;
 
 namespace Messenger.Data
 {

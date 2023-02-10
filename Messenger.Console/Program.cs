@@ -7,6 +7,7 @@ using Messenger.Services;
 using Messenger.Data;
 using Messenger.Entities.ClientEntity;
 using Messenger.Console.Entities;
+using Messenger.Entities.UserEnity;
 
 namespace Messenger.Console
 {
@@ -14,9 +15,12 @@ namespace Messenger.Console
     {
         static void Main(string[] args)
         {
-            var client = new ConsoleClient(
+            /*var client = new ConsoleClient(
                 new Registration(),
                 new Authorization());
+*/
+            User user = null;
+            System.Console.WriteLine(user);
         }
     }
 }
