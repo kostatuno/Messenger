@@ -7,8 +7,10 @@ namespace Messenger.Entities.MessageEntity
 {
     public class MessageUser : ICloneable
     {
-        public ICollection<PersonalChat>? PersonalChats { get; set; } // was created for database syntax
-        public ICollection<GroupChat>? GroupChats { get; set; } // was created for database syntax
+        public ICollection<PersonalChat> PersonalChats { get; set; }
+            = new HashSet<PersonalChat>(); // was created for database syntax
+        public ICollection<GroupChat> GroupChats { get; set; }
+            = new HashSet<GroupChat>(); // was created for database syntax
         public int Id { get; set; }
         public string UserName { get; set; } = null!;
         [ForeignKey("UserName")]
@@ -24,12 +26,11 @@ namespace Messenger.Entities.MessageEntity
 
         public MessageUser(User user,
             string text,
-            DateTime date,
             MessageStatusEnum status = MessageStatusEnum.NotRead)
         {
             User = user;
             Text = text;
-            Date = date;
+            Date = DateTime.Now;
             Status = new MessageStatus(status);
         }
 

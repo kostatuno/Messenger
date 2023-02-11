@@ -13,6 +13,7 @@ namespace Messenger.Entities.ChatEntity
     {
         public int Id { get; set; }
         public int Length { get; protected init; }
-        public ICollection<MessageUser>? Messages { get; set; }
+        public ICollection<MessageUser> Messages { get; set; } 
+            = new HashSet<MessageUser>(); // was created for database syntax
     }
 }

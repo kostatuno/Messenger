@@ -1,16 +1,23 @@
 ﻿using Messenger.Data;
 using Messenger.Entities.ChatEntity;
 using Messenger.Entities.MessageEntity;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
+using System.Xml.Linq;
 
 namespace Messenger.Entities.UserEnity
 {
     public class User : ICloneable
     {
-        public ICollection<MessageUser>? Messages { get; set; } // was created for database syntax
-        public ICollection<GroupChat>? GroupChats { get; set; } // was created for database syntax
-        public ICollection<PersonalChat>? PersonalChatsFromSelf { get; set; } // was created for database syntax
-        public ICollection<PersonalChat>? PersonalChatsFromInterlocutor { get; set; } // was created for database syntax
+        public ICollection<MessageUser> Messages { get; set; } 
+            = new HashSet<MessageUser>(); // was created for database syntax
+        public ICollection<GroupChat> GroupChats { get; set; } 
+            = new HashSet<GroupChat>(); // was created for database syntax
+        public ICollection<PersonalChat> PersonalChatsFromSelf { get; set; } 
+            = new HashSet<PersonalChat>(); // was created for database syntax
+        public ICollection<PersonalChat> PersonalChatsFromInterlocutor { get; set; } 
+            = new HashSet<PersonalChat>(); // was created for database syntax
+
         public string Login { get; set; } = null!;
         public string Password { get; set; } = null!;
         public string Name { get; set; } = null!;
@@ -55,9 +62,34 @@ namespace Messenger.Entities.UserEnity
             }
         }
 
-        public void SendMessage(Chat chat)
+        public void SendMessageTo(User user, string text)
         {
-            
+            using (var db = new ApplicationDbContext())
+            {
+                var chat = PersonalChatsFromSelf.FirstOrDefault(p => p.SecondUser!.Equals(user));
+                if (chat is not null)
+                {
+                    chat.Messages.Add(new MessageUser(this, text));
+                    db.SaveChanges();
+                }
+                else CreatePersonalChat(user.Login);
+            }
+        }
+
+        public void DeleteChat(Chat chat, bool deleteForAll)
+        {
+            using var db = new ApplicationDbContext();
+            if (typeof(GroupChat).Equals(chat.GetType()))
+            {
+                GroupChats
+                    .Select(p => p.Users)
+                    .ToList()
+                    .Remove();
+            }
+            else if (typeof(PersonalChat).Equals(chat.GetType()))
+            {
+                GroupChats.Remove((GroupChat)chat);
+            }
         }
 
         public object Clone() => new User(Name!, Login, Password);

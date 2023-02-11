@@ -5,14 +5,16 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Messenger.Entities.MessageEntity;
 using Messenger.Entities.UserEnity;
 
 namespace Messenger.Entities.ChatEntity
 {
     public class GroupChat : Chat
     {
-        public ICollection<User>? Users { get; set; } // was created for database syntax
-        public string Name { get; set; }
+        public ICollection<User> Users { get; set; }
+            = new HashSet<User>(); // was created for database syntax
+        public string Name { get; set; } = null!;
         public int StatusId { get; set; }
         public GroupChatStatus? Status { get; set; } // was created for database syntax
         public string? ModeratorId { get; set; }
