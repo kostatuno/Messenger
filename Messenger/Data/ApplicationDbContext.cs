@@ -16,7 +16,7 @@ namespace Messenger.Data
         public DbSet<GroupChat> GroupChats { get; set; } = null!;
         public DbSet<GroupChatStatus> GroupChatStatus { get; set; } = null!;
         public DbSet<User> Users { get; set; } = null!;
-        //public DbSet<MessageUser> Messages { get; set; } = null!;
+        public DbSet<MessageUser> Messages { get; set; } = null!;
         public DbSet<MessageStatus> StatusMessege { get; set; } = null!;
 
         public ApplicationDbContext()

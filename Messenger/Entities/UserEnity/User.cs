@@ -57,7 +57,7 @@ namespace Messenger.Entities.UserEnity
 
         public void SendMessage(Chat chat)
         {
-
+            
         }
 
         public object Clone() => new User(Name!, Login, Password);
