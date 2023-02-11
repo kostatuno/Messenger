@@ -15,3 +15,7 @@
 1. Linq 
 2. Entity Framework Core
 
+## Plans in the future
+1. To connect ASP.NET SignalR
+2. Try to implement WebAPI
+

@@ -13,6 +13,7 @@ namespace Messenger.Data
     public class ApplicationDbContext : DbContext
     {
         public DbSet<PersonalChat> PersonalChats { get; set; } = null!;
+        public DbSet<Moderator> Moderators { get; set; } = null!;
         public DbSet<GroupChat> GroupChats { get; set; } = null!;
         public DbSet<GroupChatStatus> GroupChatStatus { get; set; } = null!;
         public DbSet<User> Users { get; set; } = null!;

@@ -20,7 +20,7 @@ namespace Messenger.Data.Configuration
 
             builder
                 .HasOne(p => p.Moderator)
-                .WithOne(p => p.GroupChat)
+                .WithMany(p => p.ModeratorOfGroupChats)
                 .OnDelete(DeleteBehavior.SetNull);
 
             builder

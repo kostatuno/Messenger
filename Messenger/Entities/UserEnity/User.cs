@@ -37,11 +37,19 @@ namespace Messenger.Entities.UserEnity
             Name = name;
         }
 
-        public void CreateGroupChat(string nameChat, params string[] logins)
+        public void CreateGroupChat(string nameChat, int length, params string[] logins)
         {
+            if (logins.Length > length)
+                throw new Exception
+                    ("Count users that you want adding to GroupChat is more than the specified chat length");
+
             using (var db = new ApplicationDbContext())
             {
-
+                foreach (var login in logins)
+                {
+                    var users = db.Users.Where(p => p.Login == login).ToList();
+                    db.GroupChats.Add(new GroupChat(this, nameChat, length));
+                }
             }
         }
 
@@ -57,7 +65,7 @@ namespace Messenger.Entities.UserEnity
                 {
                     var chat = new PersonalChat(this, interlocutor);
                     db.PersonalChats.Add(chat);
-                    db.SaveChanges();
+                    db.SaveChanges(); 
                 }
             }
         }
@@ -79,17 +87,23 @@ namespace Messenger.Entities.UserEnity
         public void DeleteChat(Chat chat, bool deleteForAll)
         {
             using var db = new ApplicationDbContext();
-            if (typeof(GroupChat).Equals(chat.GetType()))
+            if (chat is GroupChat gChat)
             {
-                GroupChats
-                    .Select(p => p.Users)
-                    .ToList()
-                    .Remove();
+                GroupChats.Remove(gChat);
+                if (this is Moderator)
+                {
+                    db.Users.Select(p => p.GroupChats.Remove(gChat));
+                }
             }
-            else if (typeof(PersonalChat).Equals(chat.GetType()))
+            else if (chat is PersonalChat pChat)
             {
-                GroupChats.Remove((GroupChat)chat);
+                PersonalChatsFromSelf.Remove(pChat);
+                if (deleteForAll)
+                {
+                    PersonalChatsFromInterlocutor.Remove(pChat);
+                }
             }
+            db.SaveChanges();
         }
 
         public object Clone() => new User(Name!, Login, Password);

@@ -43,7 +43,7 @@ namespace Messenger.Entities.MessageEntity
             else return Text.Equals(obj2.Text) && Date.Equals(obj2.Date) && Status!.Equals(obj2.Status);
         }
 
-        public object Clone() => new MessageUser(User!, Text, Date, MessageStatusEnum.NotRead);
+        public object Clone() => new MessageUser(User!, Text, MessageStatusEnum.NotRead);
         public override int GetHashCode() => (Id, UserName, Text, Date).GetHashCode();
     }
 }

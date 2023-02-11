@@ -10,7 +10,8 @@ namespace Messenger.Entities.UserEnity
 {
     public class Moderator : User, IModerator
     {
-        public GroupChat? GroupChat;
+        public ICollection<GroupChat> ModeratorOfGroupChats { get; set; } 
+            = new HashSet<GroupChat>(); // was created for database syntax
 
         public Moderator()
         { }
