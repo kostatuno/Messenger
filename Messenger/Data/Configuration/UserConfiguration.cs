@@ -13,11 +13,17 @@ namespace Messenger.Data.Configuration
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {
-            builder.UseTptMappingStrategy();
+            builder.UseTpcMappingStrategy();
+
             builder.HasKey(p => p.Login);
             builder.Ignore(p => p.IsWriting);
             builder.Property(p => p.Name).IsRequired();
             builder.Property(p => p.Password).IsRequired();
+
+            builder
+                .HasMany(p => p.GroupChats)
+                .WithMany(p => p.Users)
+                .UsingEntity(j => j.ToTable("Users_GroupChats"));
 
             builder
                 .Property(p => p.Password)

@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Database.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230211223942_AddedSeparateTableForModerators")]
+    [Migration("20230211231350_AddedSeparateTableForModerators")]
     partial class AddedSeparateTableForModerators
     {
         /// <inheritdoc />
@@ -255,7 +255,7 @@ namespace Database.Migrations
 
                     b.ToTable("Users");
 
-                    b.UseTptMappingStrategy();
+                    b.UseTpcMappingStrategy();
                 });
 
             modelBuilder.Entity("Messenger.Entities.UserEnity.UserStatus", b =>
@@ -416,15 +416,6 @@ namespace Database.Migrations
                         .IsRequired();
 
                     b.Navigation("Status");
-                });
-
-            modelBuilder.Entity("Messenger.Entities.UserEnity.Moderator", b =>
-                {
-                    b.HasOne("Messenger.Entities.UserEnity.User", null)
-                        .WithOne()
-                        .HasForeignKey("Messenger.Entities.UserEnity.Moderator", "Login")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("Messenger.Entities.UserEnity.User", b =>
