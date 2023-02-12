@@ -13,10 +13,10 @@ namespace Messenger.Data.Configuration
     {
         public void Configure(EntityTypeBuilder<GroupChat> builder)
         {
-            /*builder
+            builder
                 .HasMany(p => p.Users)
                 .WithMany(p => p.GroupChats)
-                .UsingEntity(j => j.ToTable("Users_GroupChats"));*/
+                .UsingEntity(j => j.ToTable("Users_GroupChats"));
 
             builder
                 .HasOne(p => p.Moderator)

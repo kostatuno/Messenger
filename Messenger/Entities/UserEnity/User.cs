@@ -9,6 +9,8 @@ namespace Messenger.Entities.UserEnity
 {
     public class User : ICloneable
     {
+        public ICollection<User> Friends { get; set; }
+            = new HashSet<User>(); // was created for database syntax
         public ICollection<MessageUser> Messages { get; set; } 
             = new HashSet<MessageUser>(); // was created for database syntax
         public ICollection<GroupChat> GroupChats { get; set; } 
@@ -104,6 +106,31 @@ namespace Messenger.Entities.UserEnity
                 }
             }
             db.SaveChanges();
+        }
+
+        public void BlockUser(User user)
+        {
+
+        }
+
+        public void ClearMessages(Chat chat, bool deleteForAll)
+        {
+
+        }
+
+        public void AddToFriends()
+        {
+
+        }
+
+        public void LeaveChat(Chat chat)
+        {
+
+        }
+
+        public void CreateVotingKickTheUser(User user)
+        {
+
         }
 
         public object Clone() => new User(Name!, Login, Password);

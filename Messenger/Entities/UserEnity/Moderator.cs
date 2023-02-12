@@ -13,6 +13,11 @@ namespace Messenger.Entities.UserEnity
         public ICollection<GroupChat> ModeratorOfGroupChats { get; set; } 
             = new HashSet<GroupChat>(); // was created for database syntax
 
+        public void KickTheUser(User user)
+        {
+
+        }
+
         public Moderator()
         { }
 
