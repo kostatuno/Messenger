@@ -18,8 +18,6 @@ namespace Messenger.Console
             /*var client = new ConsoleClient(
                 new Registration(),
                 new Authorization());*/
-
-            new User().CreatePersonalChat("1231");
         }
     }
 }

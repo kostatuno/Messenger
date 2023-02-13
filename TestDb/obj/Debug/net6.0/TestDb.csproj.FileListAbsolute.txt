@@ -1,0 +1,15 @@
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\TestDb\bin\Debug\net6.0\TestDb.exe
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\TestDb\bin\Debug\net6.0\TestDb.deps.json
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\TestDb\bin\Debug\net6.0\TestDb.runtimeconfig.json
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\TestDb\bin\Debug\net6.0\TestDb.dll
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\TestDb\bin\Debug\net6.0\TestDb.pdb
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\TestDb\obj\Debug\net6.0\TestDb.csproj.AssemblyReference.cache
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\TestDb\obj\Debug\net6.0\TestDb.GeneratedMSBuildEditorConfig.editorconfig
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\TestDb\obj\Debug\net6.0\TestDb.AssemblyInfoInputs.cache
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\TestDb\obj\Debug\net6.0\TestDb.AssemblyInfo.cs
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\TestDb\obj\Debug\net6.0\TestDb.csproj.CoreCompileInputs.cache
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\TestDb\obj\Debug\net6.0\TestDb.dll
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\TestDb\obj\Debug\net6.0\refint\TestDb.dll
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\TestDb\obj\Debug\net6.0\TestDb.pdb
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\TestDb\obj\Debug\net6.0\TestDb.genruntimeconfig.cache
+D:\PROJECTS_IN_WORK\Shkiper_Messenger\TestDb\obj\Debug\net6.0\ref\TestDb.dll

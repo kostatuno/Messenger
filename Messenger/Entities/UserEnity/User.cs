@@ -9,8 +9,8 @@ namespace Messenger.Entities.UserEnity
 {
     public class User : ICloneable
     {
-        public ICollection<User> MyFriends { get; set; }
-            = new HashSet<User>(); // was created for database syntax
+        /*public ICollection<User> MyFriends { get; set; }
+            = new HashSet<User>(); // was created for database syntax*/
         /*public ICollection<User> ItsFriends { get; set; }
             = new HashSet<User>(); // was created for database syntax*/
         public ICollection<MessageUser> Messages { get; set; } 
