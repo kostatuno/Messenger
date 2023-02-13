@@ -96,7 +96,7 @@ namespace Database.Migrations
 
                     b.HasIndex("StatusId");
 
-                    b.ToTable("GroupChats");
+                    b.ToTable("GroupChats", (string)null);
                 });
 
             modelBuilder.Entity("Messenger.Entities.ChatEntity.GroupChatStatus", b =>
@@ -115,7 +115,7 @@ namespace Database.Migrations
 
                     b.HasAlternateKey("Status");
 
-                    b.ToTable("GroupChatStatus");
+                    b.ToTable("GroupChatStatus", (string)null);
 
                     b.HasData(
                         new
@@ -157,7 +157,7 @@ namespace Database.Migrations
 
                     b.HasIndex("SecondUserLogin");
 
-                    b.ToTable("PersonalChats");
+                    b.ToTable("PersonalChats", (string)null);
                 });
 
             modelBuilder.Entity("Messenger.Entities.MessageEntity.MessageStatus", b =>
@@ -176,7 +176,7 @@ namespace Database.Migrations
 
                     b.HasAlternateKey("Status");
 
-                    b.ToTable("StatusMessege");
+                    b.ToTable("StatusMessege", (string)null);
 
                     b.HasData(
                         new
@@ -225,7 +225,7 @@ namespace Database.Migrations
 
                     b.HasIndex("UserName");
 
-                    b.ToTable("Messages");
+                    b.ToTable("Messages", (string)null);
                 });
 
             modelBuilder.Entity("Messenger.Entities.UserEnity.User", b =>
@@ -250,7 +250,7 @@ namespace Database.Migrations
 
                     b.HasIndex("StatusId");
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
 
                     b.UseTpcMappingStrategy();
                 });
@@ -271,7 +271,7 @@ namespace Database.Migrations
 
                     b.HasAlternateKey("Status");
 
-                    b.ToTable("UserStatus");
+                    b.ToTable("UserStatus", (string)null);
 
                     b.HasData(
                         new
@@ -300,7 +300,7 @@ namespace Database.Migrations
                 {
                     b.HasBaseType("Messenger.Entities.UserEnity.User");
 
-                    b.ToTable("Moderators");
+                    b.ToTable("Moderators", (string)null);
                 });
 
             modelBuilder.Entity("GroupChatMessageUser", b =>

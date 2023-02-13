@@ -1,4 +1,6 @@
-# Messanger-Shkiper
+# Messanger Shkiper
+
+# Status: is being developed; doesn't work correctly (13.02.2023)
 
 ## The main goal of creating a messenger:
  1. practice in programming;
