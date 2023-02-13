@@ -22,7 +22,6 @@ namespace Messenger.Data
 
         public ApplicationDbContext()
         {
-
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -40,15 +39,14 @@ namespace Messenger.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            /*modelBuilder.ApplyConfiguration(new UserConfiguration());
-            modelBuilder.ApplyConfiguration(new UserStatusConfiguration());
+            modelBuilder.ApplyConfiguration(new ChatConfiguration());
             modelBuilder.ApplyConfiguration(new PersonalChatConfiguration());
             modelBuilder.ApplyConfiguration(new GroupChatConfiguration());
             modelBuilder.ApplyConfiguration(new GroupChatStatusConfiguration());
+            modelBuilder.ApplyConfiguration(new UserConfiguration());
+            modelBuilder.ApplyConfiguration(new UserStatusConfiguration());
             modelBuilder.ApplyConfiguration(new MessageStatusConfiguration());
-            modelBuilder.ApplyConfiguration(new MessageUserConfiguration());*/
-
-            modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
+            modelBuilder.ApplyConfiguration(new MessageUserConfiguration());
 
             modelBuilder.UseCollation("Cyrillic_General_CI_AS_KS");
         }

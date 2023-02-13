@@ -18,6 +18,8 @@ namespace Messenger.Console
             /*var client = new ConsoleClient(
                 new Registration(),
                 new Authorization());*/
+
+            using var db = new ApplicationDbContext();
         }
     }
 }
