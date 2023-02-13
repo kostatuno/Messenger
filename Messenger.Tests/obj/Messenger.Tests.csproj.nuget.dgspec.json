@@ -1,32 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger.WinForms\\Messenger.WinForms.csproj": {}
+    "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger.Tests\\Messenger.Tests.csproj": {}
   },
   "projects": {
-    "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger.WinForms\\Messenger.WinForms.csproj": {
+    "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger.Tests\\Messenger.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger.WinForms\\Messenger.WinForms.csproj",
-        "projectName": "Messenger.WinForms",
-        "projectPath": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger.WinForms\\Messenger.WinForms.csproj",
+        "projectUniqueName": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger.Tests\\Messenger.Tests.csproj",
+        "projectName": "Messenger.Tests",
+        "projectPath": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger.Tests\\Messenger.Tests.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger.WinForms\\obj\\",
+        "outputPath": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0-windows"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0-windows7.0": {
-            "targetAlias": "net6.0-windows",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {
               "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger\\Messenger.csproj": {
                 "projectPath": "D:\\PROJECTS_IN_WORK\\Shkiper_Messenger\\Messenger\\Messenger.csproj"
@@ -41,8 +41,26 @@
         }
       },
       "frameworks": {
-        "net6.0-windows7.0": {
-          "targetAlias": "net6.0-windows",
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[2.2.10, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[2.2.10, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.3.2, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -57,9 +75,6 @@
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
-            },
-            "Microsoft.WindowsDesktop.App.WindowsForms": {
-              "privateAssets": "none"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
