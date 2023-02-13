@@ -13,8 +13,6 @@ namespace Messenger.Data.Configuration
     {
         public void Configure(EntityTypeBuilder<PersonalChat> builder)
         {
-            builder.Ignore(p => p.Length);
-
             builder
                 .HasOne(p => p.FirstUser)
                 .WithMany(p => p.PersonalChatsFromSelf)

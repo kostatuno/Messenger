@@ -21,6 +21,8 @@ namespace Messenger.Data.Configuration
                 new GroupChatStatus(GroupChatStatusEnum.Open) { Id = 2 },
                 new GroupChatStatus(GroupChatStatusEnum.Full) { Id = 3 }
                 );
+
+            builder.ToTable("GroupChatStatus");
         }
     }
 }

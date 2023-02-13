@@ -4,6 +4,7 @@ using Messenger.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Database.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230213173542_initialCasually")]
+    partial class initialCasually
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -302,21 +305,6 @@ namespace Database.Migrations
                         });
                 });
 
-            modelBuilder.Entity("UserUser", b =>
-                {
-                    b.Property<string>("ItsFriendsLogin")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("MyFriendsLogin")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("ItsFriendsLogin", "MyFriendsLogin");
-
-                    b.HasIndex("MyFriendsLogin");
-
-                    b.ToTable("UserFriends", (string)null);
-                });
-
             modelBuilder.Entity("Messenger.Entities.UserEnity.Moderator", b =>
                 {
                     b.HasBaseType("Messenger.Entities.UserEnity.User");
@@ -434,21 +422,6 @@ namespace Database.Migrations
                         .IsRequired();
 
                     b.Navigation("Status");
-                });
-
-            modelBuilder.Entity("UserUser", b =>
-                {
-                    b.HasOne("Messenger.Entities.UserEnity.User", null)
-                        .WithMany()
-                        .HasForeignKey("ItsFriendsLogin")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Messenger.Entities.UserEnity.User", null)
-                        .WithMany()
-                        .HasForeignKey("MyFriendsLogin")
-                        .OnDelete(DeleteBehavior.ClientCascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("Messenger.Entities.UserEnity.User", b =>

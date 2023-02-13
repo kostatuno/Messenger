@@ -20,6 +20,7 @@ namespace Messenger.Entities.ChatEntity
         public string? ModeratorId { get; set; }
         [ForeignKey("ModeratorId")]
         public Moderator? Moderator { get; set; } // was created for database syntax
+        public int Length { get; protected init; }
 
         public GroupChat()
         { }
@@ -29,6 +30,7 @@ namespace Messenger.Entities.ChatEntity
             Name = name;
             Length = length;
             Users = new List<User>(length);
+            Moderator = new Moderator(moderator);
             AddUser(moderator);
         }
 

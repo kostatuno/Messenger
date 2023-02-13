@@ -22,6 +22,8 @@ namespace Messenger.Data.Configuration
                 new UserStatus(UserStatusEnum.Invisible) { Id = 3 },
                 new UserStatus(UserStatusEnum.Available) { Id = 4 }
                 );
+
+            builder.ToTable("UserStatus");
         }
     }
 }

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Database.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230213152923_initialCasually")]
-    partial class initialCasually
+    [Migration("20230213174605_FriendTable")]
+    partial class FriendTable
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -118,7 +118,7 @@ namespace Database.Migrations
 
                     b.HasAlternateKey("Status");
 
-                    b.ToTable("GroupChatStatus");
+                    b.ToTable("GroupChatStatus", (string)null);
 
                     b.HasData(
                         new
@@ -179,7 +179,7 @@ namespace Database.Migrations
 
                     b.HasAlternateKey("Status");
 
-                    b.ToTable("StatusMessege");
+                    b.ToTable("MessageStatus", (string)null);
 
                     b.HasData(
                         new
@@ -236,6 +236,10 @@ namespace Database.Migrations
                     b.Property<string>("Login")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(30)
@@ -255,7 +259,9 @@ namespace Database.Migrations
 
                     b.ToTable("Users");
 
-                    b.UseTpcMappingStrategy();
+                    b.HasDiscriminator<string>("Discriminator").HasValue("User");
+
+                    b.UseTphMappingStrategy();
                 });
 
             modelBuilder.Entity("Messenger.Entities.UserEnity.UserStatus", b =>
@@ -274,7 +280,7 @@ namespace Database.Migrations
 
                     b.HasAlternateKey("Status");
 
-                    b.ToTable("UserStatus");
+                    b.ToTable("UserStatus", (string)null);
 
                     b.HasData(
                         new
@@ -299,11 +305,26 @@ namespace Database.Migrations
                         });
                 });
 
+            modelBuilder.Entity("UserUser", b =>
+                {
+                    b.Property<string>("ItsFriendsLogin")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("MyFriendsLogin")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("ItsFriendsLogin", "MyFriendsLogin");
+
+                    b.HasIndex("MyFriendsLogin");
+
+                    b.ToTable("UserFriends", (string)null);
+                });
+
             modelBuilder.Entity("Messenger.Entities.UserEnity.Moderator", b =>
                 {
                     b.HasBaseType("Messenger.Entities.UserEnity.User");
 
-                    b.ToTable("Moderators");
+                    b.HasDiscriminator().HasValue("Moderator");
                 });
 
             modelBuilder.Entity("GroupChatMessageUser", b =>
@@ -416,6 +437,21 @@ namespace Database.Migrations
                         .IsRequired();
 
                     b.Navigation("Status");
+                });
+
+            modelBuilder.Entity("UserUser", b =>
+                {
+                    b.HasOne("Messenger.Entities.UserEnity.User", null)
+                        .WithMany()
+                        .HasForeignKey("ItsFriendsLogin")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Messenger.Entities.UserEnity.User", null)
+                        .WithMany()
+                        .HasForeignKey("MyFriendsLogin")
+                        .OnDelete(DeleteBehavior.ClientCascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Messenger.Entities.UserEnity.User", b =>

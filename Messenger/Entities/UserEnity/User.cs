@@ -9,10 +9,10 @@ namespace Messenger.Entities.UserEnity
 {
     public class User : ICloneable
     {
-        /*public ICollection<User> MyFriends { get; set; }
-            = new HashSet<User>(); // was created for database syntax*/
-        /*public ICollection<User> ItsFriends { get; set; }
-            = new HashSet<User>(); // was created for database syntax*/
+        public ICollection<User> MyFriends { get; set; }
+            = new HashSet<User>(); // was created for database syntax
+        public ICollection<User> ItsFriends { get; set; }
+            = new HashSet<User>(); // was created for database syntax
         public ICollection<MessageUser> Messages { get; set; } 
             = new HashSet<MessageUser>(); // was created for database syntax
         public ICollection<GroupChat> GroupChats { get; set; } 
@@ -21,6 +21,8 @@ namespace Messenger.Entities.UserEnity
             = new HashSet<PersonalChat>(); // was created for database syntax
         public ICollection<PersonalChat> PersonalChatsFromInterlocutor { get; set; } 
             = new HashSet<PersonalChat>(); // was created for database syntax
+        public ICollection<GroupChat> ModeratorOfGroupChats { get; set; }
+            = new HashSet<GroupChat>(); // was created for database syntax
 
         public string Login { get; set; } = null!;
         public string Password { get; set; } = null!;

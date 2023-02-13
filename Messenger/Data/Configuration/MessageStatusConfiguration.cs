@@ -21,6 +21,8 @@ namespace Messenger.Data.Configuration
                 new MessageStatus(MessageStatusEnum.Read) { Id = 2 },
                 new MessageStatus(MessageStatusEnum.Changed) { Id = 3 }
                 );
+
+            builder.ToTable("MessageStatus");
         }
     }
 }

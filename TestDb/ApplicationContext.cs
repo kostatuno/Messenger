@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace TestDb
 {
-    public class TestDbContext : DbContext
+    public class ApplicationContext : DbContext
     {
         public DbSet<User> Users { get; set; } = null!;
         public DbSet<Employee> Employees { get; set; } = null!;
         public DbSet<Manager> Managers { get; set; } = null!;
 
-        public TestDbContext()
+        public ApplicationContext()
         {
             Database.EnsureDeleted();
             Database.EnsureCreated();

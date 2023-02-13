@@ -17,7 +17,7 @@ namespace Messenger.Data.Configuration
                 .HasOne(p => p.User)
                 .WithMany(p => p.Messages)
                 .OnDelete(DeleteBehavior.Restrict);
-
+            
             builder
                 .HasMany(p => p.GroupChats)
                 .WithMany(p => p.Messages)

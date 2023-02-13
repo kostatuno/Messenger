@@ -15,10 +15,8 @@ namespace Messenger.Data
         public DbSet<PersonalChat> PersonalChats { get; set; } = null!;
         public DbSet<Moderator> Moderators { get; set; } = null!;
         public DbSet<GroupChat> GroupChats { get; set; } = null!;
-        public DbSet<GroupChatStatus> GroupChatStatus { get; set; } = null!;
         public DbSet<User> Users { get; set; } = null!;
         public DbSet<MessageUser> Messages { get; set; } = null!;
-        public DbSet<MessageStatus> StatusMessege { get; set; } = null!;
 
         public ApplicationDbContext()
         {
@@ -39,7 +37,6 @@ namespace Messenger.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new ChatConfiguration());
             modelBuilder.ApplyConfiguration(new PersonalChatConfiguration());
             modelBuilder.ApplyConfiguration(new GroupChatConfiguration());
             modelBuilder.ApplyConfiguration(new GroupChatStatusConfiguration());
