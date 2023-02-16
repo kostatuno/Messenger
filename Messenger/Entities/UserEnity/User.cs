@@ -1,5 +1,6 @@
 ﻿using Messenger.Data;
 using Messenger.Entities.ChatEntity;
+using Messenger.Entities.FriendRequestEntity;
 using Messenger.Entities.MessageEntity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics.Internal;
@@ -10,6 +11,10 @@ namespace Messenger.Entities.UserEnity
 {
     public class User : ICloneable
     {
+        public ICollection<FriendRequest> MyRequests { get; set; }
+            = new HashSet<FriendRequest>(); // was created for database syntax
+        /*public ICollection<FriendRequest> ItsRequests { get; set; }
+            = new HashSet<FriendRequest>(); // was created for database syntax*/
         public ICollection<User> MyFriends { get; set; }
             = new HashSet<User>(); // was created for database syntax
         public ICollection<User> ItsFriends { get; set; }
@@ -65,6 +70,9 @@ namespace Messenger.Entities.UserEnity
         {
             using (var db = new ApplicationDbContext())
             {
+                if (PersonalChatsFromSelf.Any(u => u.SecondUserLogin == login))
+                    throw new Exception("There is already the chat");
+
                 var interlocutor = db.Users
                     .FirstOrDefault(p => p.Login == login);
 
@@ -73,12 +81,9 @@ namespace Messenger.Entities.UserEnity
                 else
                 {
                     var chat = new PersonalChat(this, interlocutor);
-
                     interlocutor.PersonalChatsFromInterlocutor.Add(chat);
                     PersonalChatsFromSelf.Add(chat);
-
                     db.Update(chat);
-
                     db.SaveChanges(); 
                 }
             }
@@ -130,9 +135,28 @@ namespace Messenger.Entities.UserEnity
 
         }
 
-        public void AddToFriends()
+        public void SendFriendRequest(string login)
         {
 
+        }
+
+        private void AddToFriends(string login)
+        {
+            using (var db = new ApplicationDbContext())
+            {
+                if (MyFriends.Any(u => u.Login == login))
+                    throw new Exception("This user is already your friend");
+
+                var interlocutor = db.Users
+                    .FirstOrDefault(p => p.Login == login);
+
+                if (interlocutor is null)
+                    throw new Exception("There is no such login");
+                else
+                {
+
+                }
+            }
         }
 
         public void LeaveChat(Chat chat)
