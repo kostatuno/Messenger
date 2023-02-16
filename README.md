@@ -1,4 +1,4 @@
-# Messanger Shkiper
+# Messenger Shkiper
 
 # Status: is being developed; doesn't work correctly (13.02.2023)
 
