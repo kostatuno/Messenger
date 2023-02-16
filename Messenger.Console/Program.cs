@@ -17,20 +17,42 @@ namespace Messenger.Console
     {
         static void Main(string[] args)
         {
-            /*var client = new ConsoleClient(
+            var client = new ConsoleClient(
                 new Registration(),
-                new Authorization());*/
+                new Authorization());
 
-            using (var db = new ApplicationDbContext())
+            /*using (var db = new ApplicationDbContext())
             {
+                *//*db.Users.Add(new User("123", "123", "123"));
+                db.Users.Add(new User("111", "111", "111"));*//*
+
                 var user = db.Users.FirstOrDefault(u => u.Login == "123");
                 var user2 = db.Users.FirstOrDefault(u => u.Login == "111");
 
-                var chat = new PersonalChat(user!, user2!);
+                foreach (var item in db.PersonalChats)
+                {
+                    System.Console.WriteLine(item.Id);
+                }
+
+                db.Users.Include(u => u.PersonalChatsFromSelf).Load();
+
+                foreach (var item in user.PersonalChatsFromSelf)
+                {
+                    System.Console.WriteLine(item.Id);
+                }
+
+                System.Console.WriteLine();
+
+                foreach (var item in user2.PersonalChatsFromSelf)
+                {
+                    System.Console.WriteLine(item.Id);
+                }
+
+                *//*var chat = new PersonalChat(user2!, user!);
 
                 db.PersonalChats.Add(chat);
-                db.SaveChanges();
-            }
+                db.SaveChanges();*//*
+            }*/
         }
     }
 }

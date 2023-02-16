@@ -13,7 +13,7 @@ namespace Messenger.Entities.ChatEntity
     {
         public string FirstUserLogin { get; set; } = null!;
         public User? FirstUser { get; init; }
-        public string SecondUserLogin { get; set; }
+        public string SecondUserLogin { get; set; } = null!;
         public User? SecondUser { get; init; }
 
         public PersonalChat(User firstUser, User secondUser)

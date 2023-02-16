@@ -56,6 +56,7 @@ namespace Messenger.Entities.UserEnity
                 {
                     var users = db.Users.Where(p => p.Login == login).ToList();
                     db.GroupChats.Add(new GroupChat(this, nameChat, length));
+                    db.SaveChanges();
                 }
             }
         }
@@ -72,8 +73,12 @@ namespace Messenger.Entities.UserEnity
                 else
                 {
                     var chat = new PersonalChat(this, interlocutor);
-                    db.PersonalChats.Load();
-                    db.PersonalChats.Add(chat);
+
+                    interlocutor.PersonalChatsFromInterlocutor.Add(chat);
+                    PersonalChatsFromSelf.Add(chat);
+
+                    db.Update(chat);
+
                     db.SaveChanges(); 
                 }
             }
@@ -159,7 +164,12 @@ namespace Messenger.Entities.UserEnity
             }
         }
             
-        public object Clone() => new User(Name!, Login, Password);
+        public object Clone()
+        {
+            User user = (User)this.MemberwiseClone();
+            return user;
+        }
+
         public override string ToString() => $"Name: {Name}, Login: {Login}, Password: {Password}";
         public override bool Equals(object? obj)
         {

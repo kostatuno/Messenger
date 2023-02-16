@@ -52,15 +52,18 @@ namespace Messenger.Console.Entities
                             while (true)
                             {
                                 string login = System.Console.ReadLine()!;
-                                try
+                                /*try
                                 {
                                     User!.CreatePersonalChat(login);
                                     break;
                                 }
-                                catch
+                                catch (Exception x)
                                 {
                                     System.Console.WriteLine("\rIncorrect input. Try again");
-                                }
+                                }*/
+
+                                User!.CreatePersonalChat(login);
+                                break;
                             } 
                             break;
                         /*case 2:

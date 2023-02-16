@@ -19,11 +19,11 @@ namespace Messenger.Services
         
         public Registration()
         {
-            db = new ApplicationDbContext();
         }
 
         public void CreateAccount(User user)
         {
+            using var db = new ApplicationDbContext();
             db.Users.Add(user);
             db.SaveChanges();
         }
