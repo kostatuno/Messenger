@@ -28,27 +28,60 @@ namespace Messenger.Console.Entities
 
         public override void RunReady()
         {
-            MethodInfo[] methods = typeof(User).GetCreatedMethods();
 
             System.Console.WriteLine("\nYou are welcome" +
                 "\nWhat do you want?\n");
 
-            for (int i = 0; i < methods.Length; i++)
-            {
-                System.Console.WriteLine($"{i + 1}. {methods[i].Name}");
-            }
-
-            System.Console.WriteLine("\nSelect your action(number):");
+            System.Console.WriteLine($"1. {nameof(User.CreatePersonalChat)}");
+            System.Console.WriteLine($"2. {nameof(User.CreateGroupChat)}");
+            System.Console.WriteLine($"3. {nameof(User.SendMessageTo)}");
+            System.Console.WriteLine($"4. {nameof(User.DeleteChat)}");
 
             while (true)
             {
                 int.TryParse(System.Console.ReadLine(), out int answer);
 
-                if (answer <= 0 || answer > methods.Length)
+                if (answer <= 0 || answer > 5)
                     System.Console.WriteLine("\rIncorrect input. Try again");
                 else
                 {
-                    RunReady();
+                    switch (answer)
+                    {
+                        case 1:
+                            System.Console.WriteLine("Input login your interlocutor: "); 
+                            while (true)
+                            {
+                                string login = System.Console.ReadLine()!;
+                                try
+                                {
+                                    User!.CreatePersonalChat(login);
+                                    break;
+                                }
+                                catch
+                                {
+                                    System.Console.WriteLine("\rIncorrect input. Try again");
+                                }
+                            } 
+                            break;
+                        /*case 2:
+                            System.Console.WriteLine("Input name of group chat: ");
+                            while (true)
+                            {
+                                string login = System.Console.ReadLine()!;
+
+                            }
+                            User.CreateGroupChat();
+                            break;
+                        case 3:
+                            User.SendMessageTo();
+                            break;
+                        case 4:
+                            User.DeleteChat();
+                            break;*/
+                        default:
+                            break;
+                    }
+                    break;
                 }
             }
         }

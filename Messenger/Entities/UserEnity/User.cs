@@ -2,6 +2,7 @@
 using Messenger.Entities.ChatEntity;
 using Messenger.Entities.MessageEntity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics.Internal;
 using System.ComponentModel.DataAnnotations;
 using System.Xml.Linq;
 
@@ -63,13 +64,15 @@ namespace Messenger.Entities.UserEnity
         {
             using (var db = new ApplicationDbContext())
             {
-                var interlocutor = db.Users.FirstOrDefault(p => p.Login == login);
-                
+                var interlocutor = db.Users
+                    .FirstOrDefault(p => p.Login == login);
+
                 if (interlocutor is null)
                     throw new Exception("There is no such login");
                 else
                 {
                     var chat = new PersonalChat(this, interlocutor);
+                    db.PersonalChats.Load();
                     db.PersonalChats.Add(chat);
                     db.SaveChanges(); 
                 }
@@ -137,6 +140,25 @@ namespace Messenger.Entities.UserEnity
 
         }
 
+        public void AddUserToGroupChat(string nameGroupChat, string login)
+        {
+            using var db = new ApplicationDbContext();
+            
+            var chat = GroupChats.FirstOrDefault(p => p.Name == nameGroupChat);
+            var user = db.Users.FirstOrDefault(p => p.Login == login);
+
+            if (chat is null)
+                throw new Exception("There is no such chat where you are");
+
+            else if (user is null)
+                throw new Exception("There is no such user");
+
+            if (!chat.IsFull)
+            {
+                chat.AddUser(user);
+            }
+        }
+            
         public object Clone() => new User(Name!, Login, Password);
         public override string ToString() => $"Name: {Name}, Login: {Login}, Password: {Password}";
         public override bool Equals(object? obj)

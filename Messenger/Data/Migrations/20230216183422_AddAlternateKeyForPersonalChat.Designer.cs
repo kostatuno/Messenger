@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Database.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230213174605_FriendTable")]
-    partial class FriendTable
+    [Migration("20230216183422_AddAlternateKeyForPersonalChat")]
+    partial class AddAlternateKeyForPersonalChat
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -78,6 +78,9 @@ namespace Database.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("IsFull")
+                        .HasColumnType("bit");
 
                     b.Property<int>("Length")
                         .HasColumnType("int");
@@ -156,7 +159,7 @@ namespace Database.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("FirstUserLogin");
+                    b.HasAlternateKey("FirstUserLogin", "SecondUserLogin");
 
                     b.HasIndex("SecondUserLogin");
 

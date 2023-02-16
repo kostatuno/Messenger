@@ -9,7 +9,7 @@ namespace Messenger.Entities.ClientEntity
 {
     public abstract class Client
     {
-        public User? User { get; set; }
+        public User? User { get; set; } = null;
         public abstract void RunWelcome();
         public abstract void RunReady();
     }

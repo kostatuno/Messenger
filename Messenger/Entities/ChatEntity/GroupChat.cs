@@ -12,6 +12,8 @@ namespace Messenger.Entities.ChatEntity
 {
     public class GroupChat : Chat
     {
+        private bool isFull;
+
         public ICollection<User> Users { get; set; }
             = new HashSet<User>(); // was created for database syntax
         public string Name { get; set; } = null!;
@@ -21,6 +23,20 @@ namespace Messenger.Entities.ChatEntity
         [ForeignKey("ModeratorId")]
         public Moderator? Moderator { get; set; } // was created for database syntax
         public int Length { get; protected init; }
+        
+        public bool IsFull
+        {
+            get 
+            {
+                if (Length > Users.Count)
+                    return false;
+                else return true;
+            }
+            private set 
+            { 
+                isFull = value;
+            }
+        }
 
         public GroupChat()
         { }
@@ -39,11 +55,12 @@ namespace Messenger.Entities.ChatEntity
             if (Users.Contains(user))
                 throw new Exception("User is already existing");
 
-            if (Users.Count < Length)
+            if (!IsFull)
             {
                 Users.Add(user);
             }
-            else throw new Exception("Room is full");
+            else
+                throw new Exception("Chat is full");
         }
 
         public void RemoveUser(int id)

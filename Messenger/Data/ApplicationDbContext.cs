@@ -20,6 +20,7 @@ namespace Messenger.Data
 
         public ApplicationDbContext()
         {
+
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

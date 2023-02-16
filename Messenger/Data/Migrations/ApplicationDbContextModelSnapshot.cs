@@ -76,6 +76,9 @@ namespace Database.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<bool>("IsFull")
+                        .HasColumnType("bit");
+
                     b.Property<int>("Length")
                         .HasColumnType("int");
 
@@ -153,7 +156,7 @@ namespace Database.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("FirstUserLogin");
+                    b.HasAlternateKey("FirstUserLogin", "SecondUserLogin");
 
                     b.HasIndex("SecondUserLogin");
 

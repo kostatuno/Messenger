@@ -8,6 +8,8 @@ using Messenger.Data;
 using Messenger.Entities.ClientEntity;
 using Messenger.Console.Entities;
 using Messenger.Entities.UserEnity;
+using Microsoft.EntityFrameworkCore;
+using Messenger.Entities.ChatEntity;
 
 namespace Messenger.Console
 {
@@ -19,7 +21,16 @@ namespace Messenger.Console
                 new Registration(),
                 new Authorization());*/
 
-            using var db = new ApplicationDbContext();
+            using (var db = new ApplicationDbContext())
+            {
+                var user = db.Users.FirstOrDefault(u => u.Login == "123");
+                var user2 = db.Users.FirstOrDefault(u => u.Login == "111");
+
+                var chat = new PersonalChat(user!, user2!);
+
+                db.PersonalChats.Add(chat);
+                db.SaveChanges();
+            }
         }
     }
 }

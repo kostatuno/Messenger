@@ -13,6 +13,9 @@ namespace Messenger.Data.Configuration
     {
         public void Configure(EntityTypeBuilder<PersonalChat> builder)
         {
+            builder.HasKey(c => c.Id);  
+            builder.HasAlternateKey(p => new { p.FirstUserLogin, p.SecondUserLogin });
+
             builder
                 .HasOne(p => p.FirstUser)
                 .WithMany(p => p.PersonalChatsFromSelf)
