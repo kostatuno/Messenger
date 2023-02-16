@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Messenger.Console", "Messen
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Messenger.WinForms", "Messenger.WinForms\Messenger.WinForms.csproj", "{D9735A45-4E26-4BEB-996C-61D24FA771A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDb", "TestDb\TestDb.csproj", "{D03E9164-7640-4387-B27A-FC919D828DAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestDb", "TestDb\TestDb.csproj", "{D03E9164-7640-4387-B27A-FC919D828DAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messenger.Tests", "Messenger.Tests\Messenger.Tests.csproj", "{31E0F042-91A8-460F-B66E-FDBD350FCA75}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{D03E9164-7640-4387-B27A-FC919D828DAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D03E9164-7640-4387-B27A-FC919D828DAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D03E9164-7640-4387-B27A-FC919D828DAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31E0F042-91A8-460F-B66E-FDBD350FCA75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31E0F042-91A8-460F-B66E-FDBD350FCA75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31E0F042-91A8-460F-B66E-FDBD350FCA75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31E0F042-91A8-460F-B66E-FDBD350FCA75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
