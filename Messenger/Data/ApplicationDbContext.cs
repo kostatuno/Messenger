@@ -7,6 +7,7 @@ using Messenger.Entities.MessageEntity;
 using Messenger.Entities.UserEnity;
 using Messenger.Data.Configuration;
 using System.Drawing;
+using Messenger.Entities.FriendRequestEntity;
 
 namespace Messenger.Data
 {
@@ -17,10 +18,10 @@ namespace Messenger.Data
         public DbSet<GroupChat> GroupChats { get; set; } = null!;
         public DbSet<User> Users { get; set; } = null!;
         public DbSet<MessageUser> Messages { get; set; } = null!;
+        //public DbSet<FriendRequest> FriendRequests { get; set; } = null!;
 
         public ApplicationDbContext()
         {
-
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -38,6 +39,7 @@ namespace Messenger.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            //modelBuilder.ApplyConfiguration(new FriendRequestConfiguration());
             modelBuilder.ApplyConfiguration(new PersonalChatConfiguration());
             modelBuilder.ApplyConfiguration(new GroupChatConfiguration());
             modelBuilder.ApplyConfiguration(new GroupChatStatusConfiguration());

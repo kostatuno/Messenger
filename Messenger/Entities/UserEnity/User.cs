@@ -11,8 +11,8 @@ namespace Messenger.Entities.UserEnity
 {
     public class User : ICloneable
     {
-        public ICollection<FriendRequest> MyRequests { get; set; }
-            = new HashSet<FriendRequest>(); // was created for database syntax
+        /*public ICollection<FriendRequest> MyRequests { get; set; }
+            = new HashSet<FriendRequest>(); */// was created for database syntax
         /*public ICollection<FriendRequest> ItsRequests { get; set; }
             = new HashSet<FriendRequest>(); // was created for database syntax*/
         public ICollection<User> MyFriends { get; set; }

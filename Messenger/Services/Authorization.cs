@@ -1,6 +1,7 @@
 ﻿using Messenger.Data;
 using Messenger.Entities.ClientEntity;
 using Messenger.Entities.UserEnity;
+using Messenger.Entities.UserManagerEntity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -18,13 +19,15 @@ namespace Messenger.Services
 
         public override void Run(Client client)
         {
-            var input = ConsoleInputDataAboutUser();
+            var userInput = ConsoleInputDataAboutUser();
             User? user;
+
+            UserManager.TryValidate()
 
             using (var db = new ApplicationDbContext())
             {
                 user = db.Users
-                    .FirstOrDefault(u => u.Login == input.Login && u.Password == input.Password);
+                    .FirstOrDefault(u => u.Login == userInput.Login && u.Password == userInput.Password);
                 db.SaveChanges();
             }
             

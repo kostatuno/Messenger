@@ -51,13 +51,13 @@ namespace ShkiperWinForms
         private void button2_Click(object sender, EventArgs e)
         {
             var user = new User() { Login = textBox1.Text, Password = textBox2.Text };
-            if (authorization.Validate(user))
+            /*if (authorization.Validate(user))
                 GetFormReady(user);
             else
             {
                 MessageBox.Show("Немає такого користувача. Сбробуйте знову, або ж створіть новий аккаунт");
                 textBox2.Clear();
-            }
+            }*/
         }
 
         private void GetFormReady(User user)

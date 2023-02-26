@@ -13,7 +13,7 @@ namespace Messenger.Data.Configuration
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {
-            builder.UseTphMappingStrategy();
+            builder.UseTptMappingStrategy();
             builder.HasKey(p => p.Login);
             builder.Ignore(p => p.IsWriting);
             builder.Property(p => p.Name).IsRequired();
