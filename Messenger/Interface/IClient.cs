@@ -7,8 +7,8 @@ using Messenger.Entities.UserEnity;
 
 namespace Messenger.Interface
 {
-    public interface IModerator : IUser
+    public interface IClient
     {
-        void RemoveUser(User user);
+        public User? User { get; set; }
     }
 }

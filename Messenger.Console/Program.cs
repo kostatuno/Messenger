@@ -5,21 +5,27 @@ using System.Reflection;
 using Messenger.Entities;
 using Messenger.Services;
 using Messenger.Data;
-using Messenger.Entities.ClientEntity;
-using Messenger.Console.Entities;
 using Messenger.Entities.UserEnity;
 using Microsoft.EntityFrameworkCore;
 using Messenger.Entities.ChatEntity;
 
-namespace Messenger.Console
+namespace Messenger
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            var client = new ConsoleClient(
-                new Registration(),
-                new Authorization());
+            try
+            {
+                int x = 5;
+                int y = x / 0;
+                Console.WriteLine($"Результат: {y}");
+            }
+            catch
+            {
+                Console.WriteLine("Возникло исключение!");
+            }
+            Console.WriteLine("Конец программы");
 
             /*using (var db = new ApplicationDbContext())
             {

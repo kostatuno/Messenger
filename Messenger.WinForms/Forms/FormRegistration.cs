@@ -12,21 +12,25 @@ using Messenger;
 using Messenger.Data;
 using Messenger.Entities;
 using Messenger.Entities.UserEnity;
+using Messenger.Interface;
 using Messenger.Services;
 
 namespace ShkiperWinForms
 {
-    public partial class FormRegistration : Form
+    public partial class FormRegistration : Form, IService
     {
-        Registration registration { get; set; }
-        public FormRegistration()
+        private Registration registration { get; set; }
+        public IClient Client { get; set; }
+        public FormRegistration(IClient client)
         {
-            registration = new Registration();  
+            Client = client;
+            registration = new Registration(Client);  
             InitializeComponent();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             if (textBox2.Text != textBox4.Text)
             {
                 MessageBox.Show("Паролі не збігається, єбло ти))");
@@ -58,6 +62,16 @@ namespace ShkiperWinForms
         private void FormRegistration_Load(object sender, EventArgs e)
         {
             
+        }
+
+        public void RunWelcome()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RunReady()
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -1,7 +1,8 @@
 ﻿using Messenger.Data;
-using Messenger.Entities.ClientEntity;
 using Messenger.Entities.UserEnity;
 using Messenger.Entities.UserManagerEntity;
+using Messenger.Exceptions;
+using Messenger.Interface;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -11,36 +12,24 @@ using System.Threading.Tasks;
 
 namespace Messenger.Services
 {
-    public class Authorization : Service
+    public class Authorization : IService
     {
-        public Authorization()
+        public IClient Client { get; set; }
+        public Authorization(IClient client)
         {
+            Client = client;
         }
 
-        public override void Run(Client client)
+        public User Validate(string login, string password)
         {
-            var userInput = ConsoleInputDataAboutUser();
-            User? user;
+            UserManager.ValidateLogin(login, out User? inBetweenUser);
 
-            UserManager.TryValidate()
-
-            using (var db = new ApplicationDbContext())
-            {
-                user = db.Users
-                    .FirstOrDefault(u => u.Login == userInput.Login && u.Password == userInput.Password);
-                db.SaveChanges();
-            }
+            if (inBetweenUser is null)
+                throw new AuthorizationNotFoundException("Login is not found");
+            else if(inBetweenUser!.Password != password)
+                throw new AuthorizationWrongPassword("Invalid password. Try again");
             
-            if (user is not null)
-            {
-                client.User = user;
-                client.RunReady();
-            }
-            else
-            {
-                Console.WriteLine("\nValidation failed\n");
-                client.RunWelcome();
-            }
+            return inBetweenUser;
         }
 
         User ConsoleInputDataAboutUser()

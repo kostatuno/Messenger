@@ -6,19 +6,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Messenger.Data;
-using Messenger.Entities.ClientEntity;
 using Messenger.Entities.UserEnity;
+using Messenger.Interface;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 
 namespace Messenger.Services
 {
-    public class Registration : Service
+    public class Registration : IService
     {
-        public User? User { get; set; }
-        
-        public Registration()
+        public IClient Client { get; set; }
+
+        public Registration(IClient client)
         {
+            Client = client;
         }
 
         public void CreateAccount(User user)
@@ -28,12 +29,6 @@ namespace Messenger.Services
             db.SaveChanges();
         }
 
-        public override void Run(Client client)
-        {
-            var user = ConsoleInputInformationAboutNewAccount();
-            CreateAccount(user);
-            client.RunWelcome();
-        }
 
         User ConsoleInputInformationAboutNewAccount()
         {

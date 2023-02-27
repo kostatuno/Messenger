@@ -6,58 +6,57 @@ using Microsoft.VisualBasic.ApplicationServices;
 using Messenger.Interface;
 using Microsoft.EntityFrameworkCore;
 using User = Messenger.Entities.UserEnity.User;
+using Messenger.Entities.UserManagerEntity;
+using Messenger.Exceptions;
 
 namespace ShkiperWinForms
 {
-    public partial class FormWelcome : Form
+    public partial class FormWelcome : Form, IClient
     {        
-        Authorization authorization { get; set; }
+        private Authorization authorization { get; set; }
+        public User? User { get; set; }
         public FormWelcome()
         {
-            authorization = new Authorization();
+            authorization = new Authorization(this);
             InitializeComponent();
-            textBox1.Validating += textBox1_Validation;
-            textBox2.Validating += textBox2_Validation;
+
+            textBoxLogin.Validating += textBoxLogin_Validation!;
+            textBoxPassword.Validating += textBoxPassword_Validation!;
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void textBoxLogin_Validation(object sender, EventArgs e)
         {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_Validation(object sender, EventArgs e)
-        {
-            if (String.IsNullOrEmpty(textBox1.Text))
+            if (String.IsNullOrEmpty(textBoxLogin.Text))
             {
-                errorProvider1.SetError(textBox1, "Де текст проєбав?");
+                errorProvider1.SetError(textBoxLogin, "Де текст проєбав?");
             }
             else errorProvider1.Clear();
         }
 
-        private void textBox2_Validation(object sender, EventArgs e)
+        private void textBoxPassword_Validation(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(textBox2.Text))
+            if (String.IsNullOrEmpty(textBoxPassword.Text))
             {
-                errorProvider1.SetError(textBox2, "а пароль?");
+                errorProvider1.SetError(textBoxPassword, "а пароль?");
             }
             else errorProvider1.Clear();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            var user = new User() { Login = textBox1.Text, Password = textBox2.Text };
-            /*if (authorization.Validate(user))
+            try
+            {
+                var user = authorization.Validate(textBoxLogin.Text, textBoxPassword.Text);
                 GetFormReady(user);
-            else
+            }
+            catch (AuthorizationNotFoundException)
             {
-                MessageBox.Show("Немає такого користувача. Сбробуйте знову, або ж створіть новий аккаунт");
-                textBox2.Clear();
-            }*/
+                MessageBox.Show("Такого користувача не існує");
+            }
+            catch (AuthorizationWrongPassword)
+            {
+                MessageBox.Show("Невірний пароль. Спробуйте ще раз");
+            }
         }
 
         private void GetFormReady(User user)
@@ -67,9 +66,9 @@ namespace ShkiperWinForms
             form.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            var form = new FormRegistration();
+            var form = new FormRegistration(this);
             LockButtons(form);
             form.Show();
         }
@@ -79,18 +78,18 @@ namespace ShkiperWinForms
             laucnhingform.FormClosing += (sender, e) => {
                 button1.Enabled = true;
                 button2.Enabled = true;
-                textBox1.Enabled = true;
-                textBox2.Enabled = true;
+                textBoxLogin.Enabled = true;
+                textBoxPassword.Enabled = true;
             };
             button1.Enabled = false;
             button2.Enabled = false;
-            textBox1.Enabled = false;
-            textBox2.Enabled = false;
+            textBoxLogin.Enabled = false;
+            textBoxPassword.Enabled = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
-        } 
+        }
     }
 }

@@ -48,7 +48,7 @@
             this.textBoxMessage.BackColor = System.Drawing.SystemColors.Menu;
             this.textBoxMessage.Location = new System.Drawing.Point(213, 299);
             this.textBoxMessage.Name = "textBoxMessage";
-            this.textBoxMessage.Size = new System.Drawing.Size(328, 23);
+            this.textBoxMessage.Size = new System.Drawing.Size(415, 23);
             this.textBoxMessage.TabIndex = 1;
             // 
             // listBoxChat

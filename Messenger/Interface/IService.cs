@@ -1,15 +1,14 @@
 ﻿using Messenger.Data;
-using Messenger.Entities.ClientEntity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Messenger.Services
+namespace Messenger.Interface
 {
-    public abstract class Service
+    public interface IService
     {
-        public abstract void Run(Client client);
+        IClient Client { get; set; }
     }
 }
