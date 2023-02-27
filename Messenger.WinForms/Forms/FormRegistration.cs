@@ -12,6 +12,7 @@ using Messenger;
 using Messenger.Data;
 using Messenger.Entities;
 using Messenger.Entities.UserEnity;
+using Messenger.Exceptions.RegistrationExceptions;
 using Messenger.Interface;
 using Messenger.Services;
 
@@ -28,50 +29,36 @@ namespace ShkiperWinForms
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
-            if (textBox2.Text != textBox4.Text)
+            try
             {
-                MessageBox.Show("Паролі не збігається, єбло ти))");
-                MessageBox.Show("У тебе шо рукі з жопи... по кнопкай попади баран");
-                textBox2.Clear();
-                textBox4.Clear();
-                return;
+                registration.CreateAccount(
+                    textBoxName.Text,
+                    textBoxLogin.Text,
+                    textBoxPw.Text,
+                    textBoxPwAgain.Text);
             }
-
-            else if (textBox1.Text == "" || textBox3.Text == "" )
+            catch (RegistrationPasswordMismatchException)
             {
-                MessageBox.Show("Не вистачає параметру якогось. Спробуй знову");
+                MessageBox.Show("Паролі не збігаються. Спробуйте знову");
+                textBoxPw.Clear();
+                textBoxPwAgain.Clear();
+            }
+            catch (RegistrationEmptyValuesNameOrLoginException)
+            {
+                MessageBox.Show("Ваш логін або пароль не корекні");
                 foreach (var item in Controls)
                 {
                     if (item is TextBox obj)
                         obj.Clear();
                 }
             }
-
-            else
-            {
-                registration.CreateAccount(new User(textBox3.Text, textBox1.Text, textBox2.Text));       
-                MessageBox.Show("Намана, бистріше залітай в чат любчику");
-                this.Close();
-            }
-            
         }
 
         private void FormRegistration_Load(object sender, EventArgs e)
         {
-            
-        }
 
-        public void RunWelcome()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void RunReady()
-        {
-            throw new NotImplementedException();
         }
     }
 }

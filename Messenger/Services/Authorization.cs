@@ -1,7 +1,7 @@
 ﻿using Messenger.Data;
 using Messenger.Entities.UserEnity;
 using Messenger.Entities.UserManagerEntity;
-using Messenger.Exceptions;
+using Messenger.Exceptions.AuthorizationExceptions;
 using Messenger.Interface;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -27,20 +27,9 @@ namespace Messenger.Services
             if (inBetweenUser is null)
                 throw new AuthorizationNotFoundException("Login is not found");
             else if(inBetweenUser!.Password != password)
-                throw new AuthorizationWrongPassword("Invalid password. Try again");
+                throw new AuthorizationWrongPasswordException("Invalid password. Try again");
             
             return inBetweenUser;
-        }
-
-        User ConsoleInputDataAboutUser()
-        {
-            Console.WriteLine("\nAuthorization\n");
-            Console.WriteLine($"Login: ");
-            var login = Console.ReadLine();
-            Console.WriteLine($"Password: ");
-            var password = Console.ReadLine();
-
-            return new User() { Login = login!, Password = password! };
         }
     }
 }

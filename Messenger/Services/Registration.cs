@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Messenger.Data;
 using Messenger.Entities.UserEnity;
+using Messenger.Exceptions.RegistrationExceptions;
 using Messenger.Interface;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
@@ -22,33 +23,19 @@ namespace Messenger.Services
             Client = client;
         }
 
-        public void CreateAccount(User user)
+        public void CreateAccount(string name, string login, string pw, string pwAgain)
         {
+            if (name == "" || login == "")
+                throw new RegistrationEmptyValuesNameOrLoginException
+                    ("Name or login have empty values");
+
+            if (pw != pwAgain)
+                throw new RegistrationPasswordMismatchException
+                    ("Registration did not pass the check for repeating the value of the passport field");
+
             using var db = new ApplicationDbContext();
-            db.Users.Add(user);
+            db.Users.Add(new User(login, pw, name));
             db.SaveChanges();
-        }
-
-
-        User ConsoleInputInformationAboutNewAccount()
-        {
-            Console.WriteLine("\nRegistration\n");
-            Console.WriteLine($"Login: ");
-            var login = Console.ReadLine();
-            Console.WriteLine($"Name: ");
-            var name = Console.ReadLine();
-            Console.WriteLine($"Password: ");
-            var password = Console.ReadLine();
-            Console.WriteLine($"Password again: ");
-            var pwAgain = Console.ReadLine();
-
-            if (password != pwAgain)
-            {
-                Console.WriteLine("Your passwords aren't equal. Try again");
-                ConsoleInputInformationAboutNewAccount();
-            }
-
-            return new User(login, password, name);
         }
     }
 }

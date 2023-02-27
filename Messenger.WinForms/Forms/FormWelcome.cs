@@ -53,7 +53,7 @@ namespace ShkiperWinForms
             {
                 MessageBox.Show("Такого користувача не існує");
             }
-            catch (AuthorizationWrongPassword)
+            catch (AuthorizationWrongPasswordException)
             {
                 MessageBox.Show("Невірний пароль. Спробуйте ще раз");
             }

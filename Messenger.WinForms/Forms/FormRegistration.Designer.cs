@@ -33,10 +33,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.textBoxLogin = new System.Windows.Forms.TextBox();
+            this.textBoxPw = new System.Windows.Forms.TextBox();
+            this.textBoxPwAgain = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -85,33 +85,33 @@
             this.label5.TabIndex = 18;
             this.label5.Text = "Repeat Password";
             // 
-            // textBox1
+            // textBoxName
             // 
-            this.textBox1.Location = new System.Drawing.Point(168, 133);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(128, 23);
-            this.textBox1.TabIndex = 19;
+            this.textBoxName.Location = new System.Drawing.Point(168, 133);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(128, 23);
+            this.textBoxName.TabIndex = 19;
             // 
-            // textBox2
+            // textBoxLogin
             // 
-            this.textBox2.Location = new System.Drawing.Point(168, 162);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(128, 23);
-            this.textBox2.TabIndex = 20;
+            this.textBoxLogin.Location = new System.Drawing.Point(168, 162);
+            this.textBoxLogin.Name = "textBoxLogin";
+            this.textBoxLogin.Size = new System.Drawing.Size(128, 23);
+            this.textBoxLogin.TabIndex = 20;
             // 
-            // textBox3
+            // textBoxPw
             // 
-            this.textBox3.Location = new System.Drawing.Point(168, 191);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(128, 23);
-            this.textBox3.TabIndex = 21;
+            this.textBoxPw.Location = new System.Drawing.Point(168, 191);
+            this.textBoxPw.Name = "textBoxPw";
+            this.textBoxPw.Size = new System.Drawing.Size(128, 23);
+            this.textBoxPw.TabIndex = 21;
             // 
-            // textBox4
+            // textBoxPwAgain
             // 
-            this.textBox4.Location = new System.Drawing.Point(168, 219);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(128, 23);
-            this.textBox4.TabIndex = 22;
+            this.textBoxPwAgain.Location = new System.Drawing.Point(168, 219);
+            this.textBoxPwAgain.Name = "textBoxPwAgain";
+            this.textBoxPwAgain.Size = new System.Drawing.Size(128, 23);
+            this.textBoxPwAgain.TabIndex = 22;
             // 
             // button1
             // 
@@ -121,6 +121,7 @@
             this.button1.TabIndex = 23;
             this.button1.Text = "Move";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormRegistration
             // 
@@ -129,10 +130,10 @@
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(449, 371);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxPwAgain);
+            this.Controls.Add(this.textBoxPw);
+            this.Controls.Add(this.textBoxLogin);
+            this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
@@ -152,10 +153,10 @@
         private Label label2;
         private Label label1;
         private Label label5;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
+        private TextBox textBoxName;
+        private TextBox textBoxLogin;
+        private TextBox textBoxPw;
+        private TextBox textBoxPwAgain;
         private Button button1;
     }
 }

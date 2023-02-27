@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Messenger.Exceptions.AuthorizationExceptions
 {
-    public class AuthorizationWrongPassword : Exception
+    public class AuthorizationWrongPasswordException : Exception
     {
-        public AuthorizationWrongPassword(string message)
+        public AuthorizationWrongPasswordException(string message)
             : base(message) { }
     }
 }

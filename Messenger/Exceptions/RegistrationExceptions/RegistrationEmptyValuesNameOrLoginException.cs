@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Messenger.Exceptions.RegistrationExceptions
 {
-    public class RegistrationPasswordMismatchException : Exception
+    public class RegistrationEmptyValuesNameOrLoginException : Exception
     {
-        public RegistrationPasswordMismatchException(string message)
-            : base (message) { }
+        public RegistrationEmptyValuesNameOrLoginException(string message)
+            : base(message) { }
     }
 }
