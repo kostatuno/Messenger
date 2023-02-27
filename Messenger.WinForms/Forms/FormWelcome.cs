@@ -7,7 +7,7 @@ using Messenger.Interface;
 using Microsoft.EntityFrameworkCore;
 using User = Messenger.Entities.UserEnity.User;
 using Messenger.Entities.UserManagerEntity;
-using Messenger.Exceptions;
+using Messenger.Exceptions.AuthorizationExceptions;
 
 namespace ShkiperWinForms
 {

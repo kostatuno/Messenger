@@ -5,11 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Messenger.Exceptions
+namespace Messenger.Exceptions.AuthorizationExceptions
 {
     public class AuthorizationNotFoundException : Exception
     {
-        public AuthorizationNotFoundException(string message) 
+        public AuthorizationNotFoundException(string message)
             : base(message) { }
     }
 }

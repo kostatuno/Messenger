@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Messenger.Exceptions
+namespace Messenger.Exceptions.AuthorizationExceptions
 {
     public class AuthorizationWrongPassword : Exception
     {
