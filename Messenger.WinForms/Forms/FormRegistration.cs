@@ -15,18 +15,32 @@ using Messenger.Entities.UserEnity;
 using Messenger.Exceptions.RegistrationExceptions;
 using Messenger.Interface;
 using Messenger.Services;
+using Microsoft.EntityFrameworkCore;
 
 namespace ShkiperWinForms
 {
     public partial class FormRegistration : Form, IService
     {
+        private FormWelcome formWelcome { get; set; }
         private Registration registration { get; set; }
         public IClient Client { get; set; }
-        public FormRegistration(IClient client)
+        
+        public FormRegistration(FormWelcome formWelcome)
         {
-            Client = client;
-            registration = new Registration(Client);  
+            this.formWelcome = formWelcome;
+            registration = new Registration(formWelcome);  
             InitializeComponent();
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            formWelcome.Show();
+            base.OnFormClosing(e);
+        }
+
+        private void FormRegistration_Load(object sender, EventArgs e)
+        {
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -38,27 +52,26 @@ namespace ShkiperWinForms
                     textBoxLogin.Text,
                     textBoxPw.Text,
                     textBoxPwAgain.Text);
+                MessageBox.Show("Добре. Заходь");
+                Close();
             }
             catch (RegistrationPasswordMismatchException)
             {
                 MessageBox.Show("Паролі не збігаються. Спробуйте знову");
-                textBoxPw.Clear();
-                textBoxPwAgain.Clear();
             }
             catch (RegistrationEmptyValuesNameOrLoginException)
             {
-                MessageBox.Show("Ваш логін або пароль не корекні");
-                foreach (var item in Controls)
-                {
-                    if (item is TextBox obj)
-                        obj.Clear();
-                }
+                MessageBox.Show("Ваш логін або нік не корекні");
             }
-        }
-
-        private void FormRegistration_Load(object sender, EventArgs e)
-        {
-
+            catch (DbUpdateException)
+            {
+                MessageBox.Show("Вже є такий логін. Змініть на інший");
+            }
+            finally
+            {
+                textBoxPw.Clear();
+                textBoxPwAgain.Clear();
+            }
         }
     }
 }

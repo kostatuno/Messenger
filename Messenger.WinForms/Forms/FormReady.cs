@@ -14,61 +14,75 @@ using Messenger;
 using Messenger.Data;
 using Messenger.Entities.MessageEntity;
 using Messenger.Entities.UserEnity;
+using Messenger.Interface;
+using Messenger.Entities.ChatEntity;
+using Microsoft.EntityFrameworkCore;
 
 namespace ShkiperWinForms
 {
-    public partial class FormReady : Form
+    public partial class FormReady : Form, IClient
     {
-        protected static ListBox listBoxOnline;
-        protected static List<User> UsersOnline;
-        protected User CurrentUser;
-
-        private static FormReady formReady;
-
-        public static FormReady GetInstanse(User user)
+        private FormWelcome formWelcome { get; set; }
+        public User? User { get; set; }
+        public FormReady(FormWelcome formWelcome)
         {
-            if (formReady == null)
-            {
-                formReady = new FormReady(user);
-                return formReady;
-            }
-            listBoxOnline.Items.Remove(formReady.CurrentUser);
-            formReady.CurrentUser = user;
-            listBoxOnline.Items.Add(user.Name);
-            UsersOnline.Add(user);
-            return formReady;
-        }
-
-        static FormReady()
-        {
-            UsersOnline = new List<User>();
-            InitializeStaticComponent();
-        }
-
-        private static void InitializeStaticComponent()
-        {
-            // listBoxOnline
-            listBoxOnline = new ListBox();
-            listBoxOnline.FormattingEnabled = true;
-            listBoxOnline.ItemHeight = 15;
-            listBoxOnline.Location = new System.Drawing.Point(12, 58);
-            listBoxOnline.Name = "listBox1";
-            listBoxOnline.Size = new System.Drawing.Size(167, 139);
-            listBoxOnline.TabIndex = 1;
-        }
-
-        public FormReady(User currentUser)
-        {
-            Controls.Add(listBoxOnline);
-            CurrentUser = currentUser;
-            UsersOnline.Add(currentUser);
+            this.formWelcome = formWelcome;
+            User = formWelcome.User;
 
             InitializeComponent();
 
-            listBoxOnline.Items.Add(CurrentUser.Name);
-          
-            FormClosing += fomrReady_FormClosing;
-            textBoxMessage.KeyDown += textBox1_KeyEnter;
+            LoadChats();
+        }
+
+        public void LoadChats()
+        {
+            using var db = new ApplicationDbContext();
+
+            User = db.Users
+                .Include(P => P.PersonalChatsFromSelf)
+                .Include(g => g.GroupChats)
+                .FirstOrDefault(p => p.Login == User!.Login);
+
+            foreach (var personalChat in User?.PersonalChatsFromSelf)
+            {
+                var button = new Button();
+                button.UseVisualStyleBackColor = true;
+                button.Width = 108;
+                button.Height = 30;
+                button.Text = personalChat.SecondUserLogin;
+                button.Click += Chat_FirstClick;
+                ChatPanel.Controls.Add(button);
+            }
+
+            foreach (var groupChat in User?.GroupChats)
+            {
+                var button = new Button();
+                button.UseVisualStyleBackColor = true;
+                button.Width = 108;
+                button.Height = 30;
+                button.Text = groupChat.Name;
+                button.Click += Chat_FirstClick;
+                ChatPanel.Controls.Add(button);
+            }
+        }
+
+        private void Chat_FirstClick(object? sender, EventArgs e)
+        {
+            textBoxMessage.Enabled = true;
+            var button = (Button)sender!;
+            button.Click -= Chat_FirstClick;
+            button.Click += Chat_Click;
+        }
+
+        private void Chat_Click(object? sender, EventArgs e)
+        {
+            
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            formWelcome.Show();
+            base.OnFormClosing(e);
         }
 
         private void textBox1_KeyEnter(object sender, KeyEventArgs e)
@@ -77,7 +91,7 @@ namespace ShkiperWinForms
             {
                 using (ApplicationDbContext db = new ApplicationDbContext())
                 {
-                    MessageUser message = new MessageUser((User)CurrentUser.Clone(), textBoxMessage.Text, MessageStatusEnum.NotRead);
+                    MessageUser message = new MessageUser((User)User.Clone(), textBoxMessage.Text, MessageStatusEnum.NotRead);
                     listBoxChat.Items.Add(message);
                     //db.Messages.Add(message);
                     db.SaveChanges();
@@ -86,27 +100,9 @@ namespace ShkiperWinForms
             }
         }
 
-        private void fomrReady_FormClosing(object sender, FormClosingEventArgs e)
+        private void FormReady_Load(object sender, EventArgs e)
         {
-            ExitFromFormReady();
-            Hide();
-            e.Cancel = true;
-        }
-
-        private void ExitFromFormReady()
-        {
-            listBoxOnline.Items.Remove(CurrentUser.Name);
-            UsersOnline.Remove(CurrentUser);
-            listBoxChat.Items.Add("");
-            listBoxChat.Items.Add($"[{CurrentUser.Name} вишов з чату]");
-            listBoxChat.Items.Add("");
-        }
-
-        public void Show()
-        {
-            base.Show();
-            listBoxChat.Items.Add($"[{CurrentUser.Name} зашов в чат]");
-            listBoxChat.Items.Add("");
+            textBoxMessage.Enabled = false;
         }
     }
 }

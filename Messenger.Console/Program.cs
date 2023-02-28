@@ -15,50 +15,6 @@ namespace Messenger
     {
         static void Main(string[] args)
         {
-            try
-            {
-                int x = 5;
-                int y = x / 0;
-                Console.WriteLine($"Результат: {y}");
-            }
-            catch
-            {
-                Console.WriteLine("Возникло исключение!");
-            }
-            Console.WriteLine("Конец программы");
-
-            /*using (var db = new ApplicationDbContext())
-            {
-                *//*db.Users.Add(new User("123", "123", "123"));
-                db.Users.Add(new User("111", "111", "111"));*//*
-
-                var user = db.Users.FirstOrDefault(u => u.Login == "123");
-                var user2 = db.Users.FirstOrDefault(u => u.Login == "111");
-
-                foreach (var item in db.PersonalChats)
-                {
-                    System.Console.WriteLine(item.Id);
-                }
-
-                db.Users.Include(u => u.PersonalChatsFromSelf).Load();
-
-                foreach (var item in user.PersonalChatsFromSelf)
-                {
-                    System.Console.WriteLine(item.Id);
-                }
-
-                System.Console.WriteLine();
-
-                foreach (var item in user2.PersonalChatsFromSelf)
-                {
-                    System.Console.WriteLine(item.Id);
-                }
-
-                *//*var chat = new PersonalChat(user2!, user!);
-
-                db.PersonalChats.Add(chat);
-                db.SaveChanges();*//*
-            }*/
         }
     }
 }

@@ -47,7 +47,10 @@ namespace ShkiperWinForms
             try
             {
                 var user = authorization.Validate(textBoxLogin.Text, textBoxPassword.Text);
-                GetFormReady(user);
+                User = user;
+                Hide();
+                var form = new FormReady(this);
+                form.Show();
             }
             catch (AuthorizationNotFoundException)
             {
@@ -59,32 +62,12 @@ namespace ShkiperWinForms
             }
         }
 
-        private void GetFormReady(User user)
-        {
-            var form = FormReady.GetInstanse((User)user.Clone());
-            LockButtons(form);
-            form.Show();
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Hide();
             var form = new FormRegistration(this);
-            LockButtons(form);
             form.Show();
-        }
-
-        private void LockButtons(Form laucnhingform)
-        {
-            laucnhingform.FormClosing += (sender, e) => {
-                button1.Enabled = true;
-                button2.Enabled = true;
-                textBoxLogin.Enabled = true;
-                textBoxPassword.Enabled = true;
-            };
-            button1.Enabled = false;
-            button2.Enabled = false;
-            textBoxLogin.Enabled = false;
-            textBoxPassword.Enabled = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
