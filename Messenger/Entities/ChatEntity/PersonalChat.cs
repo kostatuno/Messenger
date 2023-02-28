@@ -21,8 +21,5 @@ namespace Messenger.Entities.ChatEntity
             FirstUser = firstUser;
             SecondUser = secondUser;
         }
-
-        public PersonalChat()
-        { }
     }
 }

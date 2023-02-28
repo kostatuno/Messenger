@@ -103,6 +103,38 @@ namespace Messenger.Entities.UserEnity
             }
         }
 
+        public void SendMessageTo(Chat chat, string text)
+        {
+            using (var db = new ApplicationDbContext())
+            {
+                if (chat is PersonalChat personalChat)
+                {
+                    if (db.Entry(this).Collection(p => p.PersonalChatsFromSelf).IsLoaded)
+                    {
+                        SendMessageTo(personalChat.SecondUser, text);
+                    }
+                    else
+                    {
+                        db.Entry(this).Collection(p => p.PersonalChatsFromSelf).Load();
+                        SendMessageTo(personalChat.SecondUser, text);
+                    }
+                        
+                }
+                else if (chat is GroupChat)
+                {
+
+                }
+
+                /*var chat = PersonalChatsFromSelf.FirstOrDefault(p => p.SecondUser!.Equals(user));
+                if (chat is not null)
+                {
+                    chat.Messages.Add(new MessageUser(this, text));
+                    db.SaveChanges();
+                }
+                else CreatePersonalChat(user.Login);*/
+            }
+        }
+
         public void DeleteChat(Chat chat, bool deleteForAll)
         {
             using var db = new ApplicationDbContext();

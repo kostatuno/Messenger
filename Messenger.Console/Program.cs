@@ -15,6 +15,14 @@ namespace Messenger
     {
         static void Main(string[] args)
         {
+            if ()
+            {
+                Console.WriteLine("true");
+            }
+            else
+            {
+                Console.WriteLine("false");
+            }
         }
     }
 }
